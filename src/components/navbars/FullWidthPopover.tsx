@@ -14,7 +14,7 @@ function ComplexPopover() {
     const featuredArticles = [
         { title: "How to build a beautiful and scalable products", image: "Article1.png" },
         { title: "Best way to ship products that  your users find useful", image: "Article2.png" },
-        { title: "How Top 5 boring fonts for your next side project", image: "Article3.png" }
+        { title: "Top 5 boring fonts for your next side project", image: "Article3.png" }
     ]
 
     return (
@@ -25,9 +25,9 @@ function ComplexPopover() {
             </PopoverButton>
             <PopoverPanel
                 transition
-                className="absolute left-0 z-10 mt-4 flex gap-2 w-full max-w-full transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-full max-w-full flex justify-between overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
-                    <div className="p-2">
+                className="absolute left-0 z-10 mt-4 w-full max-w-full transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
+                <div className="w-full flex justify-between overflow-hidden rounded-xl bg-popover text-sm leading-6 shadow-lg border">
+                    <div className="p-2 flex-1">
                         <div className="p-2 font-medium leading-5 text-foreground">
                             Solution
                         </div>
@@ -46,7 +46,12 @@ function ComplexPopover() {
                             </div>
                         ))}
                     </div>
-                    <div className="p-2 border-l border-secondary">
+
+                    <div className="border">
+
+                    </div>
+
+                    <div className="p-2 flex-1">
                         <div className="p-2 font-medium leading-5 text-foreground">
                             Features
                         </div>
@@ -65,7 +70,10 @@ function ComplexPopover() {
                             </div>
                         ))}
                     </div>
-                    <div className="p-2 border-l border-secondary">
+                    <div className="border">
+
+                    </div>
+                    <div className="p-2 flex-1">
                         <div className="p-2 font-medium leading-5 text-foreground">
                             Featured Articles
                         </div>

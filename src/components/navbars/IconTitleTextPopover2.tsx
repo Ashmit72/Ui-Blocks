@@ -21,8 +21,8 @@ function IconTItleTextPopover2() {
             <PopoverPanel
                 transition
                 className="absolute left-1/2 z-10 mt-4 flex gap-2 w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-screen max-w-max flex overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
-                    <div className="p-2">
+                <div className="w-screen max-w-max flex gap-2 overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
+                    <div className="p-2 flex-1">
                         {features.map((item) => (
                             <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
                                 <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
@@ -38,7 +38,7 @@ function IconTItleTextPopover2() {
                             </div>
                         ))}
                     </div>
-                    <div className="p-2">
+                    <div className="p-2 flex-1">
                         {features.map((item) => (
                             <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
                                 <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">

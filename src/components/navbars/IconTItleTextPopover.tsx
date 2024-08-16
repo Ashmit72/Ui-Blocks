@@ -13,7 +13,7 @@ function IconTItleTextPopover() {
 
     return (
         <Popover className="relative">
-            <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-gray-900 outline-none">
+            <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
             </PopoverButton>
@@ -21,19 +21,19 @@ function IconTItleTextPopover() {
             <PopoverPanel
                 transition
                 className="absolute left-1/2 z-10 mt-4 flex w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-screen max-w-md flex-auto overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg border border-[#F2F4F7]">
+                <div className="w-screen max-w-md flex-auto overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
                     <div className="p-2">
                         {features.map((item) => (
-                            <div key={item.name} className="group relative flex gap-x-3 rounded-lg p-2 hover:bg-gray-50">
-                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border rounded-lg bg-white">
-                                    <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600" />
+                            <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
+                                    <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div className='text-[0.875rem] leading-5'>
-                                    <a href={item.href} className="font-semibold  text-gray-900">
+                                    <a href={item.href} className="font-semibold  text-foreground">
                                         {item.name}
                                         <span className="absolute inset-0" />
                                     </a>
-                                    <p className="mt-1 text-gray-600">{item.description}</p>
+                                    <p className="mt-1 text-muted-foreground">{item.description}</p>
                                 </div>
                             </div>
                         ))}

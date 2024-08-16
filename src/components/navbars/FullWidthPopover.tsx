@@ -26,60 +26,60 @@ function ComplexPopover() {
             <PopoverPanel
                 transition
                 className="absolute left-0 z-10 mt-4 flex gap-2 w-full max-w-full transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-full max-w-full flex justify-between overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg border border-[#F2F4F7]">
+                <div className="w-full max-w-full flex justify-between overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
                     <div className="p-2">
-                        <div className="p-2 font-medium leading-5 text-primary">
+                        <div className="p-2 font-medium leading-5 text-foreground">
                             Solution
                         </div>
                         {features.map((item) => (
-                            <div key={item.name} className="group relative flex gap-x-3 rounded-lg p-2 hover:bg-gray-50">
-                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-secondary rounded-lg bg-white">
-                                    <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600" />
+                            <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-secondary rounded-xl bg-background">
+                                    <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div className='text-[0.875rem] leading-5'>
-                                    <a href={item.href} className="font-semibold text-primary">
+                                    <a href={item.href} className="font-semibold text-foreground">
                                         {item.name}
                                         <span className="absolute inset-0" />
                                     </a>
-                                    <p className="mt-1 text-gray-600">{item.description}</p>
+                                    <p className="mt-1 text-muted-foreground">{item.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="p-2 border-l border-secondary">
-                        <div className="p-2 font-medium leading-5 text-primary">
+                        <div className="p-2 font-medium leading-5 text-foreground">
                             Features
                         </div>
                         {features.map((item) => (
-                            <div key={item.name} className="group relative flex gap-x-3 rounded-lg p-2 hover:bg-gray-50">
-                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-secondary rounded-lg bg-white">
-                                    <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600" />
+                            <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                                <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-secondary rounded-xl bg-background">
+                                    <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div className='text-[0.875rem] leading-5'>
-                                    <a href={item.href} className="font-semibold  text-primary">
+                                    <a href={item.href} className="font-semibold  text-foreground">
                                         {item.name}
                                         <span className="absolute inset-0" />
                                     </a>
-                                    <p className="mt-1 text-gray-600">{item.description}</p>
+                                    <p className="mt-1 text-muted-foreground">{item.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="p-2 border-l border-secondary">
-                        <div className="p-2 font-medium leading-5 text-primary">
+                        <div className="p-2 font-medium leading-5 text-foreground">
                             Featured Articles
                         </div>
                         {featuredArticles.map((item) => (
-                            <div key={item.title} className="group relative flex gap-x-3 rounded-lg p-2 hover:bg-gray-50">
-                                <div className="mt-1 flex h-[90px] w-[120px] flex-none items-center justify-center border border-secondary rounded-lg bg-white">
+                            <div key={item.title} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                                <div className="mt-1 flex h-[90px] w-[120px] flex-none items-center justify-center border border-secondary rounded-xl bg-background">
                                     <img src={item.image} alt='image' className="object-cover" />
                                 </div>
                                 <div className='text-[0.875rem]  font-medium leading-5 flex flex-col justify-center'>
-                                    <a href={item.title} className="font-semibold  text-primary">
+                                    <a href={item.title} className="font-semibold  text-foreground">
                                         {item.title}
                                         <span className="absolute inset-0" />
                                     </a>
-                                    <p className="mt-1 text-gray-600">Read Story {'>'}</p>
+                                    <p className="mt-1 text-muted-foreground">Read Story {'>'}</p>
                                 </div>
                             </div>
                         ))}

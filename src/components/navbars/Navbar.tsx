@@ -1,7 +1,7 @@
 
 import { Button } from '../ui/button'
-import TitlePopover from './SimplePopover'
 import IconTitlePopover from './IconTitlePopover'
+import TitlePopover from './TitlePopover'
 import IconTitleTextPopover from './IconTItleTextPopover'
 import IconTItleTextPopover2 from './IconTitleTextPopover2'
 import FullScreenPopover from './FullWidthPopover'
@@ -13,10 +13,10 @@ function Navbar() {
                 <img src="Radian.png" alt="Logo" />
                 <ul className='flex items-center justify-center gap-8'>
                     <li>
-                        <IconTitlePopover />
+                        <TitlePopover />
                     </li>
                     <li>
-                        <TitlePopover />
+                        <IconTitlePopover />
                     </li>
                     <li>
                         <IconTitleTextPopover />

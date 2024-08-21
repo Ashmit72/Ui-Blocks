@@ -15,11 +15,11 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <div>
-        {/* <Navbar1 /> */}
+        <Navbar1 />
 
         {/* <Navbar2 /> */}
 
-        <NavbarV2 />
+        {/* <NavbarV2 /> */}
 
         <div className="min-h-screen mt-20">
           <HeroSection1 />

@@ -24,11 +24,11 @@ function NavbarV2() {
     return (
         <main className={`${isScrolled ? 'bg-background/80 backdrop:blur' : 'bg-background'} fixed top-0 left-0 w-screen`}>
             <div className="relative w-screen">
-                <nav className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2.5' : 'py-5'} max-w-screen-xl mx-auto`}>
+                <nav className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-4 lg:py-3' : 'py-6 lg:py-5'} max-w-screen-xl mx-auto`}>
                     <div className="flex items-center justify-between">
 
                         {/* Logo or Title  */}
-                        <img src="Radian.png" alt="Logo" />
+                        <img src="Radian.png" alt="Logo" className='h-9' />
                         {/* Logo or Title  */}
 
                         {/* Menu Bar- For Responsiveness */}

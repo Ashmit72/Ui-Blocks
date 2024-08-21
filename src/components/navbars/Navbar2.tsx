@@ -30,7 +30,7 @@ function Navbar2() {
                 - border
                 */}
                 <div className="flex items-center justify-between relative">
-                    <img src="Radian.png" alt="Logo" />
+                    <img src="Radian.png" alt="Logo" className='h-9' />
                     <ul className='flex items-center justify-center gap-8'>
                         <li>
                             <TitlePopover />

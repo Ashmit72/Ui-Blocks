@@ -1,5 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { ChevronDown, Flag06, BookOpen01, HelpCircle, FaceSmile, LifeBuoy02 } from '@untitled-ui/icons-react'
+import { ChevronDown, Flag06, BookOpen01, HelpCircle, FaceSmile, LifeBuoy02, Flag01 } from '@untitled-ui/icons-react'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
 
 const solutions = [
     { name: 'About', href: '#', icon: Flag06 },
@@ -38,5 +39,29 @@ export default function SimplePopover() {
                 </div>
             </PopoverPanel>
         </Popover>
+    )
+}
+
+export function IconTitleAccordion() {
+    return (
+        <AccordionItem value="icon-title-accordion">
+            <AccordionTrigger>Features</AccordionTrigger>
+            <AccordionContent>
+                <div className="w-full flex flex-col">
+                    {solutions.map((item, index) => (
+                        <div key={index} className="flex gap-x-3 py-3 hover:bg-border/50">
+                            <div className="flex-none items-center justify-center rounded-xl">
+                                <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
+                            </div>
+                            <div>
+                                <a href={item.href} className="font-medium text-base text-foreground">
+                                    {item.name}
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </AccordionContent>
+        </AccordionItem>
     )
 }

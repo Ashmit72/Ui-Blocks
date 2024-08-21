@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
-
+import { BookOpen01, ChevronDown, ChevronRight, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
+import { Link } from 'react-router-dom'
 function ComplexPopover() {
 
     const features = [
@@ -26,9 +26,9 @@ function ComplexPopover() {
             <PopoverPanel
                 transition
                 className="absolute left-0 z-10 mt-4 w-full max-w-full transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-full flex justify-between overflow-hidden rounded-xl bg-popover text-sm leading-6 shadow-lg border">
+                <div className="w-full flex justify-between overflow-hidden rounded-xl bg-popover text-sm shadow-lg border">
                     <div className="p-2 flex-1">
-                        <div className="p-2 font-medium leading-5 text-foreground">
+                        <div className="px-2 py-2.5 font-medium text-sm text-foreground">
                             Solution
                         </div>
                         {features.map((item) => (
@@ -45,6 +45,10 @@ function ComplexPopover() {
                                 </div>
                             </div>
                         ))}
+                        <a href='#' className="px-2 py-2.5 font-medium text-sm text-muted-foreground flex items-center gap-1">
+                            <span className='inline-block'>Explore all solutions </span>
+                            <ChevronRight className='size-4' />
+                        </a>
                     </div>
 
                     <div className="border">
@@ -52,7 +56,7 @@ function ComplexPopover() {
                     </div>
 
                     <div className="p-2 flex-1">
-                        <div className="p-2 font-medium leading-5 text-foreground">
+                        <div className="px-2 py-2.5 font-medium text-sm text-foreground">
                             Features
                         </div>
                         {features.map((item) => (
@@ -69,12 +73,16 @@ function ComplexPopover() {
                                 </div>
                             </div>
                         ))}
+                        <a href='#' className="px-2 py-2.5 font-medium text-sm text-muted-foreground flex items-center gap-1">
+                            <span className='inline-block'>Explore all solutions </span>
+                            <ChevronRight className='size-4' />
+                        </a>
                     </div>
                     <div className="border">
 
                     </div>
                     <div className="p-2 flex-1">
-                        <div className="p-2 font-medium leading-5 text-foreground">
+                        <div className="px-2 py-2.5 font-medium text-sm text-foreground">
                             Featured Articles
                         </div>
                         {featuredArticles.map((item) => (
@@ -91,6 +99,7 @@ function ComplexPopover() {
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 </div>
             </PopoverPanel>

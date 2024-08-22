@@ -3,8 +3,8 @@ import { Button } from '../ui/button'
 import IconTitlePopover, { IconTitleAccordion } from './IconTitlePopover'
 import TitlePopover, { TitleAccordion } from './TitlePopover'
 import IconTitleTextPopover, { IconTitleTextAccordion } from './IconTItleTextPopover'
-import IconTItleTextPopover2 from './IconTitleTextPopover2'
-import FullScreenPopover from './FullWidthPopover'
+import IconTItleTextPopover2, { IconTitleTextAccordion2 } from './IconTitleTextPopover2'
+import FullScreenPopover, { ComplexAccordion } from './FullWidthPopover'
 import { useEffect, useState } from 'react'
 import { Menu01, X } from '@untitled-ui/icons-react'
 import { Accordion } from '../ui/custom/custom-accordion'
@@ -24,20 +24,10 @@ function Navbar1() {
         };
     }, []);
 
-    // Handle body overflow when mobile nav is open
-    useEffect(() => {
-        if (isOpen) {
-            document.body.classList.add('overflow-hidden')
-        } else {
-            document.body.classList.remove('overflow-hidden')
-            document.body.classList.add('overflow-auto')
-        }
-    }, [isOpen]);
-
     return (
         <>
             {/* Navigation Links and Popovers For Large and Extra Large Devices*/}
-            <nav className={`${isScrolled ? 'bg-background/80 backdrop:blur' : 'bg-background'} fixed top-0 left-0 w-screen`}>
+            <nav className={`${isScrolled ? 'bg-background/80 backdrop-blur' : 'bg-background'} fixed top-0 left-0 w-screen`}>
                 <div className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-4 lg:py-3' : 'py-5'} max-w-screen-xl mx-auto`}>
                     <div className="flex items-center justify-between relative">
 
@@ -60,7 +50,7 @@ function Navbar1() {
                         </div>
 
 
-                        <ul className='hidden lg:flex lg:items-center lg:justify-center lg:gap-8'>
+                        <ul className='hidden lg:flex items-center justify-center gap-8'>
                             <li>
                                 <TitlePopover />
                             </li>
@@ -93,8 +83,7 @@ function Navbar1() {
                             <X className='size-6 text-foreground shrink-0' />
                         </div>
                     </div>
-                    <div className="flex flex-col px-5 gap-4">
-
+                    <div className="flex flex-col px-5 pb-5 gap-4">
                         <Accordion type="single" collapsible>
                             <a href='#' className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
                                 Non Accordion
@@ -103,10 +92,12 @@ function Navbar1() {
                             <TitleAccordion />
                             <IconTitleAccordion />
                             <IconTitleTextAccordion />
+                            <IconTitleTextAccordion2 />
+                            <ComplexAccordion />
                         </Accordion>
                         <div className='flex flex-col gap-4 '>
-                            <Button variant={"outline"} className='w-full'>Login</Button>
-                            <Button className='w-full'>Get Started</Button>
+                            <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>
+                            <Button className='w-full' size={"lg"}>Get Started</Button>
                         </div>
                     </div>
 

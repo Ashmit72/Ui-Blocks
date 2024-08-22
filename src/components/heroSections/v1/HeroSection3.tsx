@@ -1,5 +1,5 @@
-import { Badge } from '../ui/badge'
-import { Button } from '../ui/button'
+import { Badge } from '../../ui/badge'
+import { Button } from '../../ui/button'
 
 function HeroSection3() {
     return (
@@ -23,8 +23,8 @@ function HeroSection3() {
                 </div>
 
                 <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:items-center justify-center w-full">
-                    <Button className='w-full md:w-fit'>Browse Components</Button>
-                    <Button className='w-full md:w-fit' variant={"outline"}>Get Started</Button>
+                    <Button className='w-full md:w-fit' size={"lg"}>Browse Components</Button>
+                    <Button className='w-full md:w-fit' variant={"outline"} size={"lg"}>Get Started</Button>
                 </div>
             </div>
         </div>

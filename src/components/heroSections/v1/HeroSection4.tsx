@@ -1,19 +1,17 @@
-import { Badge } from '../ui/badge'
-import { Button } from '../ui/button'
+import { Badge } from '../../ui/badge'
+import { Button } from '../../ui/button'
 
-function HeroSection2() {
+function HeroSection4() {
     return (
         // CONFUSION:Vertical padding in lg-devices
         <div className='min-w-screen px-5 py-14 md:px-6 md:py-20 lg:p-20'>
-
             <div className="max-w-screen-lg mx-auto  flex gap-8 md:gap-9 lg:gap-10 flex-col items-center">
                 <div className="flex flex-col gap-5 md:gap-6 lg:gap-9 items-center">
-                    {/* Badge Start */}
-                    {/* CONFUSION: Text color for the badge */}
-                    <Badge variant={"outline"} className='bg-border/50 rounded-full px-3 py-1'>
-                        <span className='text-sm text-foreground capitalize'>Ultimate Product Library</span>
-                    </Badge>
-                    {/* Badge End */}
+
+                    <div className='uppercase text-center text-sm md:text-base text-muted-foreground font-medium tracking:[0.14px] md:tracking-[0.16px]'>
+                        Ultimate Product Library
+                    </div>
+
 
                     {/* Slogan Start */}
                     <div className="text-center text-foreground text-4xl md:text-5xl lg:text-6xl leading-[2.75rem] md:leading-[3.75rem] lg:leading-[4.5rem] font-semibold -tracking-[0.72px] md:-tracking-[0.96px] lg:-tracking-[1.2px]">
@@ -31,12 +29,12 @@ function HeroSection2() {
                 </div>
 
                 <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:items-center justify-center w-full">
-                    <Button className='w-full md:w-fit'>Browse Components</Button>
-                    <Button className='w-full md:w-fit' variant={"outline"}>Get Started</Button>
+                    <Button className='w-full md:w-fit' size={"lg"}>Browse Components</Button>
+                    <Button className='w-full md:w-fit' variant={"outline"} size={"lg"}>Get Started</Button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default HeroSection2
+export default HeroSection4

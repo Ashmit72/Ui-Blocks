@@ -22,14 +22,14 @@ export default function SimplePopover() {
                 transition
                 className="absolute left-1/2 z-10 mt-4 flex max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
                 <div className="w-60 max-w-md flex-auto overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
-                    <div className="p-2  flex flex-col gap-y-0.5">
+                    <div className="p-2  flex flex-col gap-0.5">
                         {solutions.map((item) => (
                             <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50 ">
                                 <div className="flex-none items-center justify-center rounded-xl">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
                                 </div>
                                 <div>
-                                    <a href={item.href} className="font-semibold text-[0.875rem] leading-5 text-foreground">
+                                    <a href={item.href} className="font-medium text-sm text-foreground">
                                         {item.name}
                                     </a>
                                 </div>

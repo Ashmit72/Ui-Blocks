@@ -1,9 +1,7 @@
-import React from 'react'
-import { Badge } from '../ui/badge'
-import { ArrowRight } from '@untitled-ui/icons-react'
-import { Button } from '../ui/button'
+import { Badge } from '../../ui/badge'
+import { Button } from '../../ui/button'
 
-function HeroSection1() {
+function HeroSection2() {
     return (
         // CONFUSION:Vertical padding in lg-devices
         <div className='min-w-screen px-5 py-14 md:px-6 md:py-20 lg:p-20'>
@@ -12,12 +10,8 @@ function HeroSection1() {
                 <div className="flex flex-col gap-5 md:gap-6 lg:gap-9 items-center">
                     {/* Badge Start */}
                     {/* CONFUSION: Text color for the badge */}
-                    <Badge variant={"outline"} className='bg-border/50 rounded-full d-flex items-center justify-center p-1 gap-2 text-sm'>
-                        <Badge variant={"outline"} className='rounded-full bg-background text-foreground'>Version 1.0</Badge>
-                        <div className="flex gap-1 items-center justify-center ">
-                            <span className='inline-block text-sm text-foreground'>Announcement News</span>
-                            <ArrowRight className='size-4' />
-                        </div>
+                    <Badge variant={"outline"} className='bg-border/50 rounded-full px-3 py-1'>
+                        <span className='text-sm text-foreground capitalize'>Ultimate Product Library</span>
                     </Badge>
                     {/* Badge End */}
 
@@ -37,12 +31,12 @@ function HeroSection1() {
                 </div>
 
                 <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:items-center justify-center w-full">
-                    <Button className='w-full md:w-fit'>Browse Components</Button>
-                    <Button className='w-full md:w-fit' variant={"outline"}>Get Started</Button>
+                    <Button className='w-full md:w-fit' size={"lg"}>Browse Components</Button>
+                    <Button className='w-full md:w-fit' variant={"outline"} size={"lg"}>Get Started</Button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default HeroSection1
+export default HeroSection2

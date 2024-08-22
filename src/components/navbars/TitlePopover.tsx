@@ -22,11 +22,11 @@ export default function TitlePopover() {
                 transition
                 className="absolute left-1/2 z-10 mt-4 flex max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
                 <div className="w-60 max-w-full flex-auto overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
-                    <div className="p-2 flex flex-col gap-y-0.5">
+                    <div className="p-2 flex flex-col gap-0.5">
                         {solutions.map((item) => (
                             <div key={item.name} className="rounded-xl py-2 px-2.5 hover:bg-border/50 ">
                                 <div>
-                                    <a href={item.href} className="font-semibold text-foreground">
+                                    <a href={item.href} className="font-medium text-foreground">
                                         {item.name}
                                     </a>
                                 </div>
@@ -45,7 +45,7 @@ export function TitleAccordion() {
         <AccordionItem value="title-accordion">
             <AccordionTrigger>Features</AccordionTrigger>
             <AccordionContent>
-                <div className="w-full flex flex-col">
+                <div className="flex flex-col gap-0.5">
                     {solutions.map((item, index) => (
                         <div key={index} className='py-3 text-foreground text-base font-medium cursor-pointer hover:bg-border/50'>
                             {item.name}

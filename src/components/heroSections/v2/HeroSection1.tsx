@@ -4,15 +4,14 @@ import { Button } from '../../ui/button'
 
 function HeroSection1() {
     return (
-        // CONFUSION:Vertical padding in lg-devices
-        <div className='min-w-screen py-14 md:py-20'>
+        <div className='min-w-screen py-14 md:py-20 lg:py-[8.25rem]'>
             <div className="max-w-screen-xl px-5 mx-auto flex flex-col gap-14 md:gap-20 lg:flex-row justify-between">
                 <div className="flex flex-col justify-center md:w-[640px] ">
-                    <div className="flex flex-col gap-9">
+                    <div className="flex flex-col gap-6 md:gap-8 lg:gap-9">
                         <div className="flex flex-col gap-5 md:gap-6">
                             {/* Badge Start */}
                             {/* CONFUSION: Text color for the badge */}
-                            <Badge variant={"outline"} className='bg-border/50 rounded-full w-fit d-flex items-center justify-center p-1 gap-2 text-sm'>
+                            <Badge variant={"outline"} className='bg-background rounded-full w-fit d-flex items-center justify-center p-1 gap-2 text-sm'>
                                 <Badge variant={"outline"} className='rounded-full bg-background text-foreground'>Version 1.0</Badge>
                                 <div className="flex gap-1 items-center justify-center ">
                                     <span className='inline-block text-sm text-foreground'>Announcement News</span>
@@ -22,7 +21,7 @@ function HeroSection1() {
                             {/* Badge End */}
 
                             {/* Slogan Start */}
-                            <div className="text-foreground text-4xl md:text-5xl lg:text-6xl leading-[2.75rem] md:leading-[3.75rem] lg:leading-[4.5rem] font-semibold -tracking-[0.72px] md:-tracking-[0.96px] lg:-tracking-[1.2px]">
+                            <div className="text-foreground text-4xl md:text-5xl lg:text-6xl leading-[2.75rem] md:leading-[3.75rem] lg:leading-[4.5rem] font-semibold -tracking-[0.045rem] md:-tracking-[0.06rem] lg:-tracking-[0.075rem]">
                                 Ship high performing products fast
                             </div>
                             {/* Slogan End */}
@@ -37,14 +36,14 @@ function HeroSection1() {
                         </div>
                     </div>
                     {/* CONFUSION: Regarding the size of the buttons */}
-                    <div className="flex flex-col gap-3 md:flex-row md:gap-4 items-center mt-10">
+                    <div className="flex flex-col items-center gap-3 mt-8 md:flex-row md:gap-4 md:mt-9 lg:mt-10">
                         <Button className='w-full md:w-fit' size={"lg"}>Browse Components</Button>
                         <Button className='w-full md:w-fit' size={"lg"} variant={"outline"}>Get Started</Button>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-center h-[13.75rem] md:h-[25.313rem] lg:lg:w-[31.375rem] lg:h-[29.75rem]">
-                    <img src="Background.png" alt="No preview" className='size-full object-cover rounded-2xl' />
+                <div className="flex items-center justify-center h-[13.75rem] md:h-[25.313rem] lg:w-[31.375rem] lg:h-[29.75rem]">
+                    <img src="Hero.jpg" alt="No preview" className='size-full object-cover rounded-2xl' />
                 </div>
             </div>
         </div>

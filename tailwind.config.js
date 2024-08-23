@@ -18,8 +18,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "nav-gradient":
-          "background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%)"
+        "social-proof-gradient":
+          "linear-gradient(90deg, hsl(var(--background) / 1) 0%, hsl(var(--background) / 0.00) 25%, hsl(var(--background) / 0.00) 75%, hsl(var(--background) / 1) 100%)"
       },
       colors: {
         border: "hsl(var(--border))",
@@ -69,11 +69,16 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" }
+        },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-scroll": "infinite-scroll 15s linear infinite"
       }
     }
   },

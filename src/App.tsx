@@ -12,6 +12,7 @@ import HeroSection4 from './components/heroSections/v2/HeroSection4'
 import SocialProofCompanies1 from './components/socialProofCompanies/socialProofCompanies1'
 import Footer1 from './components/footers/Footer1'
 import Footer2 from './components/footers/Footer2'
+import Footer3 from './components/footers/Footer3'
 
 function App() {
 
@@ -37,8 +38,9 @@ function App() {
         </div>
 
         <div className='mt-10'>
-          <Footer1/>
-          {/* <Footer2/> */}
+          {/* <Footer1/> */}
+          <Footer2/>
+          {/* <Footer3/> */}
         </div>
 
 

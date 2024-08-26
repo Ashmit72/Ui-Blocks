@@ -10,6 +10,9 @@ import HeroSection2 from './components/heroSections/v2/HeroSection2'
 import HeroSection3 from './components/heroSections/v2/HeroSection3'
 import HeroSection4 from './components/heroSections/v2/HeroSection4'
 import SocialProofCompanies1 from './components/socialProofCompanies/socialProofCompanies1'
+import CTA1 from './components/CTAs/CTA1'
+import CTA2 from './components/CTAs/CTA2'
+import CTA3 from './components/CTAs/CTA3'
 
 function App() {
 
@@ -22,28 +25,19 @@ function App() {
 
         {/* <NavbarV2 /> */}
 
-        <div className="min-h-screen mt-20">
+        <div className="min-h-screen mt-20 flex flex-col gap-4">
           <HeroSection1 />
           <HeroSection2 />
           <HeroSection3 />
           <HeroSection4 />
-          <SocialProofCompanies1 />
+          <CTA1 />
+          <CTA2 />
+          <CTA3 />
         </div>
 
         <div className='text-center'>
           <ModeToggle />
         </div>
-
-
-        {/* <form className="max-w-xs mx-auto">
-          <label htmlFor="default-search" className="mb-2 text-sm font-medium text-foreground sr-only">Search</label>
-          <div className="relative">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <SearchMd className='h-4 w-4 text-muted-foreground' />
-            </div>
-            <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-foreground border border-border/5 rounded-md bg-background" placeholder="Search components" required />
-          </div>
-        </form> */}
       </div>
     </ThemeProvider>
   )

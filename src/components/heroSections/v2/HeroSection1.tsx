@@ -5,7 +5,7 @@ import { Button } from '../../ui/button'
 function HeroSection1() {
     return (
         <div className='min-w-screen py-14 md:py-20 lg:py-[8.25rem]'>
-            <div className="max-w-screen-xl px-5 mx-auto flex flex-col gap-14 md:gap-20 lg:flex-row justify-between">
+            <div className="max-w-screen-xl px-5 mx-auto flex flex-col gap-14 md:px-6 md:gap-20  lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center md:w-[640px] ">
                     <div className="flex flex-col gap-6 md:gap-8 lg:gap-9">
                         <div className="flex flex-col gap-5 md:gap-6">

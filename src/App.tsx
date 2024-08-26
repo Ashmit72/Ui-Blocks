@@ -10,6 +10,8 @@ import HeroSection2 from './components/heroSections/v2/HeroSection2'
 import HeroSection3 from './components/heroSections/v2/HeroSection3'
 import HeroSection4 from './components/heroSections/v2/HeroSection4'
 import SocialProofCompanies1 from './components/socialProofCompanies/socialProofCompanies1'
+import Footer1 from './components/footers/Footer1'
+import Footer2 from './components/footers/Footer2'
 
 function App() {
 
@@ -32,6 +34,11 @@ function App() {
 
         <div className='text-center'>
           <ModeToggle />
+        </div>
+
+        <div className='mt-10'>
+          <Footer1/>
+          {/* <Footer2/> */}
         </div>
 
 

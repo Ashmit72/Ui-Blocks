@@ -51,10 +51,10 @@ export default function ComplexPopover() {
                         </a>
                     </div>
 
-                    <div className="border">
-
+                    <div>
+                        <Separator orientation='vertical' />
                     </div>
-
+                    
                     <div className="p-2 flex-1 flex flex-col gap-0.5">
                         <div className="px-2 py-2.5 font-medium text-sm text-foreground">
                             Features
@@ -77,8 +77,8 @@ export default function ComplexPopover() {
                             <ChevronRight className='size-4' />
                         </a>
                     </div>
-                    <div className="border">
-
+                    <div>
+                        <Separator orientation='vertical' />
                     </div>
                     <div className="p-2 flex-1 flex flex-col gap-1">
                         <div className="px-2 py-2.5 font-medium text-sm text-foreground">

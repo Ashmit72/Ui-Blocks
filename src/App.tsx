@@ -10,11 +10,13 @@ import HeroSection4 from './components/heroSections/v2/HeroSection4'
 import SocialProofCompanies1 from './components/socialProofCompanies/socialProofCompanies1'
 import Footer1 from './components/footers/Footer1'
 import Footer2 from './components/footers/Footer2'
+import Footer3 from './components/footers/Footer3'
 import CTA1 from './components/CTAs/CTA1'
 import CTA2 from './components/CTAs/CTA2'
 import CTA3 from './components/CTAs/CTA3'
 import CTA4 from './components/CTAs/CTA4'
 import SideBar from './components/SideBar'
+import React from 'react'
 
 function App() {
 
@@ -45,8 +47,9 @@ function App() {
           <CTA4 />
         </div>
         <div className='mt-10'>
-          {/* <Footer1 /> */}
-          <Footer2 />
+          {/* <Footer1/> */}
+          <Footer2/>
+          {/* <Footer3/> */}
         </div>
         <SideBar />
       </main>

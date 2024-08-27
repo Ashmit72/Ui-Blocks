@@ -1,5 +1,3 @@
-
-import { SearchMd } from '@untitled-ui/icons-react'
 import { ModeToggle } from './components/ModeSwitch'
 import Navbar1 from './components/navbars/Navbar1'
 import Navbar2 from './components/navbars/Navbar2'
@@ -16,15 +14,16 @@ import CTA1 from './components/CTAs/CTA1'
 import CTA2 from './components/CTAs/CTA2'
 import CTA3 from './components/CTAs/CTA3'
 import CTA4 from './components/CTAs/CTA4'
+import SideBar from './components/SideBar'
 
 function App() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div>
-        <Navbar1 />
+      <main>
+        {/* <Navbar1 /> */}
 
-        {/* <Navbar2 /> */}
+        <Navbar2 />
 
         {/* <NavbarV2 /> */}
 
@@ -32,29 +31,26 @@ function App() {
           <HeroSection1 />
           <br></br>
           <HeroSection2 />
-          <br/>
+          <br />
           <HeroSection3 />
-          <br/>
+          <br />
           <HeroSection4 />
-          <br/>
+          <br />
           <CTA1 />
-          <br/>
+          <br />
           <CTA2 />
-          <br/>
+          <br />
           <CTA3 />
           <br />
           <CTA4 />
         </div>
-
-        <div className='text-center'>
-          <ModeToggle />
-        </div>
-
         <div className='mt-10'>
           {/* <Footer1 /> */}
           <Footer2 />
         </div>
-      </div>
+        <SideBar />
+      </main>
+
     </ThemeProvider>
   )
 }

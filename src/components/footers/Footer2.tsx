@@ -22,68 +22,172 @@ const Footer2 = () => {
             </p>
           </div>
 
-        {/* Center sections */}
-        <div className="w-full lg:w-4/5 flex flex-wrap justify-between">
-          <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-            <h3 className="text-sm font-semibold mb-3">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm">Watch Demo</a></li>
-              <li><a href="#" className="text-sm">Pricing</a></li>
-              <li><a href="#" className="text-sm">Features</a></li>
-              <li><a href="#" className="text-sm">Product Roadmap</a></li>
-              <li><a href="#" className="text-sm">Download app</a></li>
-              <li><a href="#" className="text-sm">My Custom Link</a></li>
-            </ul>
-          </div>
+          {/* Center sections */}
+          <div className="w-full lg:w-3/5 flex flex-col lg:flex-wrap lg:flex-row lg:justify-between">
+            <div className="hidden lg:flex w-full lg:flex-wrap lg:flex-row lg:justify-between">
+              <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
+                <h3 className="text-sm font-semibold mb-5">Product</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="#" className="text-sm">
+                      Watch Demo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Product Roadmap
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Download app
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      My Custom Link
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-          <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-            <h3 className="text-sm font-semibold mb-3">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm">About</a></li>
-              <li><a href="#" className="text-sm">Careers</a></li>
-              <li><a href="#" className="text-sm">Customers</a></li>
-              <li><a href="#" className="text-sm">Newsroom</a></li>
-              <li><a href="#" className="text-sm">Become a partner</a></li>
-            </ul>
-          </div>
+              <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
+                <h3 className="text-sm font-semibold mb-5">Company</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="#" className="text-sm">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Customers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Newsroom
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Become a partner
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-          <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-            <h3 className="text-sm font-semibold mb-3">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm">Help Center</a></li>
-              <li><a href="#" className="text-sm">Blog Articles</a></li>
-              <li><a href="#" className="text-sm">FAQs</a></li>
-              <li><a href="#" className="text-sm">Contact us</a></li>
-              <li><a href="#" className="text-sm">Community</a></li>
-            </ul>
-          </div>
+              <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
+                <h3 className="text-sm font-semibold mb-5">Resources</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="#" className="text-sm">
+                      Help Center
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Blog Articles
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      FAQs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Contact us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Community
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-          <div className="w-1/2 sm:w-1/4">
-            <h3 className="text-sm font-semibold mb-3">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm">Terms of Service</a></li>
-              <li><a href="#" className="text-sm">Privacy Policy</a></li>
-              <li><a href="#" className="text-sm">Cookie Policy</a></li>
-              <li><a href="#" className="text-sm">Other Policies</a></li>
-            </ul>
+              <div className="w-1/2 sm:w-1/4">
+                <h3 className="text-sm font-semibold mb-5">Legal</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="#" className="text-sm">
+                      Terms of Service
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Cookie Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-sm">
+                      Other Policies
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="lg:hidden">
+              <Accordion type="single" collapsible>
+                <ProductAccordion />
+                <CompanyAccordion/>
+                <ResourceAccordion/>
+                <LegalAccordion/>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="flex flex-wrap-reverse items-center justify-between border-t pt-5 mt-5 text-sm text-left md:text-center">
+          <p className="w-full md:w-auto mt-4 lg:mt-0">
+            &copy; 2024 Radian OS LLC. All Rights Reserved
+          </p>
+          <div className="flex space-x-4 mt-5 md:mt-0">
+            {/* Social media icons */}
+            <a href="#" aria-label="LinkedIn">
+              <Youtube />
+            </a>
+            <a href="#" aria-label="YouTube">
+            <Youtube />
+
+            </a>
+            <a href="#" aria-label="Twitter">
+            <Youtube />
+
+            </a>
+            <a href="#" aria-label="Instagram">
+            <Youtube />
+
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Bottom section */}
-      <div className="flex flex-wrap items-center justify-between border-t pt-5 mt-5 text-sm text-left md:text-center">
-        <p className="w-full md:w-auto">&copy; 2024 Radian OS LLC. All Rights Reserved</p>
-        <div className="flex space-x-4 mt-5 md:mt-0">
-          {/* Social media icons */}
-          <a href="#" aria-label="LinkedIn"><img src="/path/to/linkedin.png" alt="LinkedIn" className="h-5 w-5"/></a>
-          <a href="#" aria-label="YouTube"><img src="/path/to/youtube.png" alt="YouTube" className="h-5 w-5"/></a>
-          <a href="#" aria-label="Twitter"><img src="/path/to/twitter.png" alt="Twitter" className="h-5 w-5"/></a>
-          <a href="#" aria-label="Instagram"><img src="/path/to/instagram.png" alt="Instagram" className="h-5 w-5"/></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  )
-}
+    </footer>
+  );
+};
 
 export default Footer2;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
-import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 
 const solutions = [
@@ -14,8 +14,8 @@ const solutions = [
 ]
 
 export default function ProductPopOver() {
-  return (
-    <Popover className="relative">
+    return (
+        <Popover className="relative">
             <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
                 <span>Product</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
@@ -42,7 +42,7 @@ export default function ProductPopOver() {
                 </div>
             </PopoverPanel>
         </Popover>
-  )
+    )
 }
 
 export function ProductAccordion() {

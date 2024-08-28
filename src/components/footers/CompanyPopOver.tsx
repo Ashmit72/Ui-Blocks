@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { ChevronDown } from '@untitled-ui/icons-react'
-import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
+import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 
 
 const solutions = [
@@ -12,8 +12,8 @@ const solutions = [
 ]
 
 export default function CompanyPopOver() {
-  return (
-    <Popover className="relative">
+    return (
+        <Popover className="relative">
             <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
                 <span>Company</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
@@ -39,7 +39,7 @@ export default function CompanyPopOver() {
                 </div>
             </PopoverPanel>
         </Popover>
-  )
+    )
 }
 
 export function CompanyAccordion() {

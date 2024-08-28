@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { ChevronDown, Flag06, BookOpen01, HelpCircle, FaceSmile, LifeBuoy02, Flag01 } from '@untitled-ui/icons-react'
-import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 const solutions = [
     { name: 'About', href: '#', icon: Flag06 },

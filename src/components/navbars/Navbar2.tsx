@@ -7,7 +7,7 @@ import IconTItleTextPopover2, { IconTitleTextAccordion2 } from './IconTitleTextP
 import FullScreenPopover, { ComplexAccordion } from './FullWidthPopover'
 import { useState } from 'react'
 import { Menu01, X } from '@untitled-ui/icons-react'
-import { Accordion } from '../ui/custom/custom-accordion'
+import { Accordion } from '../ui/custom/mobile-nav-accordion'
 
 function Navbar2() {
     const [isScrolled, setIsScrolled] = useState(false);

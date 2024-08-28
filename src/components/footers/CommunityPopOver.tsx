@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { ChevronDown } from '@untitled-ui/icons-react'
-import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 
 const solutions = [

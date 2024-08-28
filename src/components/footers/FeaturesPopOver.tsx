@@ -1,15 +1,14 @@
-import React from 'react'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
+import { ChevronDown } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/custom-accordion'
 
 
 const solutions = [
-    { name: 'Radian Components', href: '#', icon: Flag06 },
-    { name: 'Starter Kit', href: '#', icon: BookOpen01 },
-    { name: 'Modular Themes', href: '#', icon: HelpCircle },
-    { name: 'Logo Dark Mode', href: '#', icon: FaceSmile },
-    { name: 'Build me a webiste', href: '#', icon: FaceSmile },
+    { name: 'Radian Components', href: '#'},
+    { name: 'Starter Kit', href: '#'},
+    { name: 'Modular Themes', href: '#'},
+    { name: 'Logo Dark Mode', href: '#'},
+    { name: 'Build me a webiste', href: '#'},
 ]
 
 export default function FeaturesPopOver() {
@@ -28,7 +27,6 @@ export default function FeaturesPopOver() {
                         {solutions.map((item) => (
                             <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50 ">
                                 <div className="flex-none items-center justify-center rounded-xl">
-                                    <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
                                 </div>
                                 <div>
                                     <a href={item.href} className="font-medium text-sm text-foreground">
@@ -47,11 +45,11 @@ export default function FeaturesPopOver() {
 export function FeaturesAccordion() {
     return (
         <AccordionItem value="features-accordion">
-            <AccordionTrigger>Features</AccordionTrigger>
+            <AccordionTrigger className="text-[1rem] leading-[1.5rem] font-medium text-primary">Features</AccordionTrigger>
             <AccordionContent>
-                <div className="flex flex-col gap-0.5">
+                <div className="flex flex-col">
                     {solutions.map((item, index) => (
-                        <div key={index} className='py-3 text-foreground text-base font-medium cursor-pointer hover:bg-border/50'>
+                        <div key={index} className='py-3 text-muted-foreground text-sm cursor-pointer hover:bg-border/50'>
                             {item.name}
                         </div>
                     ))}

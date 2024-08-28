@@ -1,5 +1,4 @@
 import { Youtube } from "@untitled-ui/icons-react";
-import React from "react";
 import { ProductAccordion } from "./ProductPopOver";
 import { Accordion } from "../ui/accordion";
 import { CompanyAccordion } from "./CompanyPopOver";
@@ -16,8 +15,8 @@ const Footer3 = () => {
           <div className="w-full flex flex-col lg:flex-wrap lg:flex-row lg:justify-between">
             <div className="hidden lg:flex w-full lg:flex-wrap lg:flex-row lg:justify-between">
               <div className="w-1/2 sm:w-1/5 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Product</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Product</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Watch Demo
@@ -53,8 +52,8 @@ const Footer3 = () => {
 
             
               <div className="w-1/2 sm:w-1/5">
-                <h3 className="text-sm font-semibold mb-5">Features</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Features</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Radian Components
@@ -84,8 +83,8 @@ const Footer3 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/5 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Company</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Company</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       About
@@ -115,8 +114,8 @@ const Footer3 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/5 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Resources</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Resources</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Help Center
@@ -146,8 +145,8 @@ const Footer3 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/5">
-                <h3 className="text-sm font-semibold mb-5">Legal</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Legal</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Terms of Service
@@ -186,7 +185,7 @@ const Footer3 = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="flex flex-wrap-reverse items-center justify-between border-t pt-5 pb-8 lg:pb-5  text-sm text-left md:text-center">
+        <div className="flex flex-wrap-reverse items-center justify-between border-t pt-5 pb-8 lg:pb-5  text-sm text-left md:text-center text-muted-foreground">
           <p className="w-full md:w-auto mt-4 lg:mt-0">
             &copy; 2024 Radian OS LLC. All Rights Reserved
           </p>

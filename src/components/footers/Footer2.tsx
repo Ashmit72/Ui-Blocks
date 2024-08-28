@@ -1,5 +1,4 @@
 import { Youtube } from "@untitled-ui/icons-react";
-import React from "react";
 import { ProductAccordion } from "./ProductPopOver";
 import { Accordion } from "../ui/accordion";
 import { CompanyAccordion } from "./CompanyPopOver";
@@ -17,7 +16,7 @@ const Footer2 = () => {
               {/* Logo */}
               <img src="Radian.png" alt="Radian Logo" className="" />
             </div>
-            <p className="text-sm text-wrap">
+            <p className="text-sm text-wrap text-muted-foreground">
               Empowering next generation of digital thinkers and creatives
             </p>
           </div>
@@ -26,8 +25,8 @@ const Footer2 = () => {
           <div className="w-full lg:w-3/5 flex flex-col lg:flex-wrap lg:flex-row lg:justify-between">
             <div className="hidden lg:flex w-full lg:flex-wrap lg:flex-row lg:justify-between">
               <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Product</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Product</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Watch Demo
@@ -62,8 +61,8 @@ const Footer2 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Company</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Company</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       About
@@ -93,8 +92,8 @@ const Footer2 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/4 mb-8 lg:mb-0">
-                <h3 className="text-sm font-semibold mb-5">Resources</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Resources</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Help Center
@@ -124,8 +123,8 @@ const Footer2 = () => {
               </div>
 
               <div className="w-1/2 sm:w-1/4">
-                <h3 className="text-sm font-semibold mb-5">Legal</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium mb-5">Legal</h3>
+                <ul className="space-y-4 text-muted-foreground text-sm">
                   <li>
                     <a href="#" className="text-sm">
                       Terms of Service
@@ -163,10 +162,10 @@ const Footer2 = () => {
 
         {/* Bottom section */}
         <div className="flex flex-wrap-reverse items-center justify-between border-t pt-5 mt-5 text-sm text-left md:text-center">
-          <p className="w-full md:w-auto mt-4 lg:mt-0">
+          <p className="w-full md:w-auto mt-4 lg:mt-0 text-muted-foreground">
             &copy; 2024 Radian OS LLC. All Rights Reserved
           </p>
-          <div className="flex space-x-4 mt-5 md:mt-0">
+          <div className="flex space-x-4 mt-5 md:mt-0 text-muted-foreground">
             {/* Social media icons */}
             <a href="#" aria-label="LinkedIn">
               <Youtube />

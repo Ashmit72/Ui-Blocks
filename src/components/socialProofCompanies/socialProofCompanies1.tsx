@@ -33,15 +33,15 @@ function SocialProofCompanies1() {
                 >
                     <ul x-ref="logos" className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                         {companies.map((company, index) => (
-                            <li key={index}>
-                                <img className="h-8" src={company} />
+                            <li key={index} className='bg-background'>
+                                <img className="h-8 mix-blend-multiply grayscale brightness-50 saturate-0 dark:invert" src={company} />
                             </li>
                         ))}
                     </ul>
                     <ul x-ref="logos" className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                         {companies.map((company, index) => (
-                            <li key={index}>
-                                <img className="h-8" src={company} />
+                            <li key={index} className='bg-background'>
+                                <img className="h-8 mix-blend-multiply grayscale brightness-50 saturate-0 dark:invert" src={company} />
                             </li>
                         ))}
                     </ul>

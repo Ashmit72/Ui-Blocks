@@ -17,43 +17,16 @@ import CTA3 from './components/CTAs/CTA3'
 import CTA4 from './components/CTAs/CTA4'
 import SideBar from './components/SideBar'
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <main>
-        {/* <Navbar1 /> */}
-
-        <Navbar2 />
-
-        {/* <NavbarV2 /> */}
-
-        <div className="min-h-screen mt-20">
-          <HeroSection1 />
-          <br></br>
-          <HeroSection2 />
-          <br />
-          <HeroSection3 />
-          <br />
-          <HeroSection4 />
-          <br />
-          <CTA1 />
-          <br />
-          <CTA2 />
-          <br />
-          <CTA3 />
-          <br />
-          <CTA4 />
-        </div>
-        <div className='mt-10'>
-          {/* <Footer1/> */}
-          <Footer2/>
-          {/* <Footer3/> */}
-        </div>
+      <main className='min-h-[120vh] mt-20'>
+        <Outlet />
         <SideBar />
       </main>
-
     </ThemeProvider>
   )
 }

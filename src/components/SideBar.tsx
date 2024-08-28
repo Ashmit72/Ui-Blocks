@@ -21,31 +21,31 @@ function SideBar() {
                 },
             ]
         },
-        {
-            name: "Navbar Dropdown",
-            variations: [
-                {
-                    name: "Navbar Dropdown 1",
-                    route: "navbar-dropdown-1"
-                },
-                {
-                    name: "Navbar Dropdown 2",
-                    route: "navbar-dropdown-2"
-                },
-                {
-                    name: "Navbar Dropdown 3",
-                    route: "navbar-dropdown-3"
-                },
-                {
-                    name: "Navbar Dropdown 4",
-                    route: "navbar-dropdown-4"
-                },
-                {
-                    name: "Navbar Dropdown 5",
-                    route: "navbar-dropdown-5"
-                },
-            ]
-        },
+        // {
+        //     name: "Navbar Dropdown",
+        //     variations: [
+        //         {
+        //             name: "Navbar Dropdown 1",
+        //             route: "navbar-dropdown-1"
+        //         },
+        //         {
+        //             name: "Navbar Dropdown 2",
+        //             route: "navbar-dropdown-2"
+        //         },
+        //         {
+        //             name: "Navbar Dropdown 3",
+        //             route: "navbar-dropdown-3"
+        //         },
+        //         {
+        //             name: "Navbar Dropdown 4",
+        //             route: "navbar-dropdown-4"
+        //         },
+        //         {
+        //             name: "Navbar Dropdown 5",
+        //             route: "navbar-dropdown-5"
+        //         },
+        //     ]
+        // },
         {
             name: "Hero Section",
             variations: [
@@ -69,21 +69,58 @@ function SideBar() {
                     name: "Hero Section 5",
                     route: "hero-section-5"
                 },
+                {
+                    name: "Hero Section 6",
+                    route: "hero-section-6"
+                },
+                {
+                    name: "Hero Section 7",
+                    route: "hero-section-7"
+                },
+                {
+                    name: "Hero Section 8",
+                    route: "hero-section-8"
+                },
+
+
             ]
         },
+        // {
+        //     name: "Trusted Companies",
+        //     variations: [
+        //         {
+        //             name: "Trusted Companies 1",
+        //             route: "trusted-companies-1"
+        //         }
+        //     ]
+        // },
         {
-            name: "Trusted Companies",
+            name: "CTA",
             variations: [
                 {
-                    name: "Trusted Companies 1",
-                    route: "trusted-companies-1"
-                }
+                    name: "CTA 1",
+                    route: "cta-1"
+                },
+                {
+                    name: "CTA 2",
+                    route: "cta-2"
+                },
+                {
+                    name: "CTA 3",
+                    route: "cta-3"
+                },
+                {
+                    name: "CTA 4",
+                    route: "cta-4"
+                },
+
             ]
         }
+
     ]
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <Router>
+        <>
             {!isOpen ?
                 <div onClick={() => setIsOpen(true)} className="fixed border p-3 rounded-xl bg-background flex items-center justify-center z-99 bottom-3 left-3 cursor-pointer">
                     <Settings02 className='size-6 animate-spin' />
@@ -106,14 +143,13 @@ function SideBar() {
                         </div>
 
 
-                        <div className='px-3 flex flex-col gap-2'>
+                        <div className='px-3 flex flex-col gap-2 h-[calc(100vh-15rem)] overflow-y-scroll no-scrollbar'>
                             {/* Website Components */}
                             <div>
                                 <div className="text-sm font-semibold py-2">
                                     Website Components
                                 </div>
                                 <Accordion type='single' collapsible>
-                                    {/* Navigation Bar Start */}
                                     {websiteComponents.map((component) => (
                                         <AccordionItem key={component.name} value={component.name}>
                                             <AccordionTrigger className='text-sm font-normal'>{component.name}</AccordionTrigger>
@@ -136,12 +172,12 @@ function SideBar() {
                                             </AccordionContent>
                                         </AccordionItem>
                                     ))}
-                                    {/* Navigation Bar End */}
                                 </Accordion>
                             </div>
 
+
                             {/* Application Components */}
-                            <div>
+                            <div className=''>
                                 <div className="text-sm font-semibold py-2">
                                     Application Components
                                 </div>
@@ -195,7 +231,7 @@ function SideBar() {
 
                     </div>
                 </div>}
-        </Router>
+        </>
     )
 }
 

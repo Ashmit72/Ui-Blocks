@@ -34,7 +34,7 @@ function Navbar2() {
                 - border
                 */}
                 <div className="flex items-center justify-between relative">
-                    <img src="Radian.png" alt="Logo" className='h-8' />
+                    <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
                     {/* Menu Bar- For Responsiveness */}
                     <div className='lg:hidden'>
                         {!isOpen ?

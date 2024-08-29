@@ -32,7 +32,7 @@ function Navbar1() {
                     <div className="flex items-center justify-between relative">
 
                         {/* Logo or Title  */}
-                        <img src="Radian.png" alt="Logo" className='h-8' />
+                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
 
 
                         {/* Menu Bar- For Responsiveness */}
@@ -78,7 +78,7 @@ function Navbar1() {
                 <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-50  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
                     <div className="flex justify-between items-center px-5 py-5">
                         {/* Logo and Close Button */}
-                        <img src="Radian.png" alt="Logo" className='h-8' />
+                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
                         <div onClick={() => setIsOpen(false)} className="size-10 flex items-center justify-center bg-border/50 rounded-md">
                             <X className='size-6 text-foreground shrink-0' />
                         </div>

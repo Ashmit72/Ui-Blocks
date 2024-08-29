@@ -1,14 +1,13 @@
-import React from 'react'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 
 const solutions = [
-    { name: 'Terms of Service', href: '#', icon: Flag06 },
-    { name: 'Privacy Policy', href: '#', icon: BookOpen01 },
-    { name: 'Cookie Policy', href: '#', icon: HelpCircle },
-    { name: 'Other Policies', href: '#', icon: FaceSmile },
+    { name: 'Terms of Service', href: '#'},
+    { name: 'Privacy Policy', href: '#'},
+    { name: 'Cookie Policy', href: '#'},
+    { name: 'Other Policies', href: '#'},
 ]
 
 export default function LegalPopOver() {
@@ -27,7 +26,6 @@ export default function LegalPopOver() {
                         {solutions.map((item) => (
                             <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50 ">
                                 <div className="flex-none items-center justify-center rounded-xl">
-                                    <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
                                 </div>
                                 <div>
                                     <a href={item.href} className="font-medium text-sm text-foreground">
@@ -46,11 +44,11 @@ export default function LegalPopOver() {
 export function LegalAccordion() {
     return (
         <AccordionItem value="legal-accordion">
-            <AccordionTrigger>Legal</AccordionTrigger>
+            <AccordionTrigger className='text-[1rem] leading-[1.5rem] font-medium text-primary'>Legal</AccordionTrigger>
             <AccordionContent>
-                <div className="flex flex-col gap-0.5">
+                <div className="flex flex-col">
                     {solutions.map((item, index) => (
-                        <div key={index} className='py-3 text-foreground text-base font-medium cursor-pointer hover:bg-border/50'>
+                        <div key={index} className='py-3 text-muted-foreground text-sm cursor-pointer hover:bg-border/50'>
                             {item.name}
                         </div>
                     ))}

@@ -1,5 +1,3 @@
-import React from 'react'
-
 function SocialProofCompanies1() {
 
 
@@ -14,8 +12,6 @@ function SocialProofCompanies1() {
         'Company4.png',
         'Company4.png'
     ];
-
-
     return (
         <div className='min-w-screen bg-background'>
             <div className="max-w-screen-xl mx-auto flex flex-col items-center px-6 py-20  gap-10">

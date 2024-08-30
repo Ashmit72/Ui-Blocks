@@ -11,6 +11,7 @@ import { heroVariations } from './liveViewer/heroViewer'
 import { CTAVariations } from './liveViewer/ctaViewer'
 import { footerVariations } from './liveViewer/footerViewer'
 import { faqVariations } from './liveViewer/faqViewer'
+import { socialProofVariations } from './liveViewer/socialProofCompanies'
 
 export type component = {
     name: string,
@@ -31,20 +32,26 @@ function SideBar() {
             variations: Object.keys(heroVariations)
         },
         {
+            name: 'Social Proof Company',
+            componentType: 'socialProofCompany',
+            variations: Object.keys(socialProofVariations)
+        },
+        {
             name: 'CTA',
             componentType: 'cta',
             variations: Object.keys(CTAVariations)
+        },
+        {
+            name: 'FAQ',
+            componentType: 'faq',
+            variations: Object.keys(faqVariations)
         },
         {
             name: 'Footer',
             componentType: 'footer',
             variations: Object.keys(footerVariations)
         },
-        {
-            name: 'FAQ',
-            componentType: 'faq',
-            variations: Object.keys(faqVariations)
-        }
+        
     ]
 
     const [isOpen, setIsOpen] = useState(false)

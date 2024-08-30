@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 
 function CTA4() {
     return (
-        <div className="max-w-screen-xl mx-auto px-5 sm:px-6">
+        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 py-14 md:py-20 lg:py-20">
             <div className="border rounded-2xl flex flex-col gap-14  sm:gap-12 lg:flex-row lg:justify-between">
                 <div className="flex flex-col gap-8 justify-center pt-16 px-6 sm:pt-20 lg:w-[480px] lg:pt-0 lg:pl-16">
                     <div className="flex flex-col gap-6 ">

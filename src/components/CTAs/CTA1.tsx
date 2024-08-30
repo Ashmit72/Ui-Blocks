@@ -3,7 +3,7 @@ import { Button } from '../ui/button'
 
 function CTA1() {
     return (
-        <div className='max-w-screen-xl mx-auto px-5 sm:px-6'>
+        <div className='max-w-screen-xl mx-auto px-5 sm:px-6 py-14 md:py-20 lg:py-20'>
             <div className=" px-6 py-16 flex flex-col border rounded-2xl sm:py-20 lg:py-24">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col items-center gap-6">

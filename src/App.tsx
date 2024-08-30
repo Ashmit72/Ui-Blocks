@@ -17,6 +17,12 @@ import CTA3 from './components/CTAs/CTA3'
 import CTA4 from './components/CTAs/CTA4'
 import React from 'react'
 import Footer4 from './components/footers/Footer4'
+import FAQ1 from './components/FAQs/FAQ1'
+import FAQ2 from './components/FAQs/FAQ2'
+import FAQ4 from './components/FAQs/FAQ4'
+import FAQ3 from './components/FAQs/FAQ3'
+import FAQ5 from './components/FAQs/FAQ5'
+import FAQ6 from './components/FAQs/FAQ6'
 
 function App() {
 
@@ -51,11 +57,20 @@ function App() {
           <ModeToggle />
         </div>
 
+        <div>
+          <FAQ1/>
+          {/* <FAQ2/> */}
+          {/* <FAQ3/> */}
+          {/* <FAQ4/> */}
+          {/* <FAQ5/> */}
+          {/* <FAQ6/> */}
+        </div>
+
         <div className='mt-10'>
-          <Footer1/>
+          {/* <Footer1/> */}
           {/* <Footer2/> */}
           {/* <Footer3/> */}
-          {/* <Footer4/> */}
+          <Footer4/>
         </div>
       </div>
     </ThemeProvider>

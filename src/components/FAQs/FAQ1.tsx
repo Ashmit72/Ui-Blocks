@@ -1,46 +1,8 @@
 import { useState } from 'react';
 import { Badge } from '../ui/badge';
 import { ChevronDown, ChevronUp } from '@untitled-ui/icons-react'
+import faqs from "./faq-content.json"
 
-
-const faqs = [
-  {
-    question: "What is Radian?",
-    answer: "",
-  },
-  {
-    question: "How can Radian speed up my development process?",
-    answer: "",
-  },
-  {
-    question: "Which technologies does Radian support?",
-    answer: "Radian accelerates development by offering ready-to-use components that eliminate the need to start from scratch. This allows you to build and deploy beautiful products in weeks rather than months.",
-  },
-  {
-    question: "Is Radian suitable for developers of all skill levels?",
-    answer: "",
-  },
-  {
-    question: "Can I customize the components provided by Radian?",
-    answer: "",
-  },
-  {
-    question: "Does Radian offer documentation and support?",
-    answer: "",
-  },
-  {
-    question: "How do I get started with Radian?",
-    answer: "",
-  },
-  {
-    question: "Is Radian compatible with existing projects?",
-    answer: "",
-  },
-  {
-    question: "Can Radian be used for large-scale projects?",
-    answer: "",
-  },
-];
 
 const FAQ1 = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -50,7 +12,7 @@ const FAQ1 = () => {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto pt-14 md:pt-20 lg:pt-20 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
+    <section className="max-w-screen-xl mx-auto py-14 md:py-20 lg:py-20 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
       <div className="mx-auto text-center space-y-6 px-6">
         <div className='space-y-3'>
         <Badge variant={"outline"} className='bg-background rounded-full px-3 py-1 w-fit'>

@@ -7,7 +7,6 @@ function SocialProofCompanies1() {
         'Company3.png',
         'Company4.png',
         'Company5.png',
-        'Radian.png',
         'Company4.png',
         'Company4.png',
         'Company4.png'

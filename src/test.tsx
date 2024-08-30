@@ -9,7 +9,7 @@ import { ModeToggle } from "./components/ModeSwitch"
 
 function Test() {
     return (
-        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <ThemeProvider defaultTheme="light" storageKey="radian-ui-theme">
             <ComponentProvider>
                 <main className='min-h-[120vh] mt-20'>
                     <Navbar1 />
@@ -18,7 +18,7 @@ function Test() {
                     <SocialProofCompanies1 />
                     <Footer2 />
                     <div className="fixed bottom-3 left-3">
-                        <ModeToggle/>
+                        <ModeToggle />
                     </div>
                 </main>
             </ComponentProvider>

@@ -39,7 +39,6 @@ export default function TitlePopover() {
     )
 }
 
-
 export function TitleAccordion() {
     return (
         <AccordionItem value="title-accordion">

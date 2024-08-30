@@ -4,121 +4,57 @@ import { Check, Settings02 } from '@untitled-ui/icons-react'
 import { Badge } from './ui/badge'
 import { ModeToggle } from './ModeSwitch'
 import { useState } from 'react'
-import { BrowserRouter as Router, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { navbarVariations } from './liveViewer/navbarViewer'
+import { ComponentType, useComponentContext } from '@/providers/ComponentProvider'
+import { heroVariations } from './liveViewer/heroViewer'
+import { CTAVariations } from './liveViewer/ctaViewer'
+import { footerVariations } from './liveViewer/footerViewer'
+import { faqVariations } from './liveViewer/faqViewer'
+
+export type component = {
+    name: string,
+    componentType: ComponentType,
+    variations: string[]
+}
 
 function SideBar() {
-    const websiteComponents = [
+    const websiteComponents: component[] = [
         {
-            name: "Navigation Bar",
-            variations: [
-                {
-                    name: "Navigation Bar 1",
-                    route: "/navigation-bar-1"
-                },
-                {
-                    name: "Navigation Bar 2",
-                    route: "/navigation-bar-2"
-                },
-            ]
+            name: 'Navigation Bar',
+            componentType: 'navbar',
+            variations: Object.keys(navbarVariations)
         },
-        // {
-        //     name: "Navbar Dropdown",
-        //     variations: [
-        //         {
-        //             name: "Navbar Dropdown 1",
-        //             route: "navbar-dropdown-1"
-        //         },
-        //         {
-        //             name: "Navbar Dropdown 2",
-        //             route: "navbar-dropdown-2"
-        //         },
-        //         {
-        //             name: "Navbar Dropdown 3",
-        //             route: "navbar-dropdown-3"
-        //         },
-        //         {
-        //             name: "Navbar Dropdown 4",
-        //             route: "navbar-dropdown-4"
-        //         },
-        //         {
-        //             name: "Navbar Dropdown 5",
-        //             route: "navbar-dropdown-5"
-        //         },
-        //     ]
-        // },
         {
-            name: "Hero Section",
-            variations: [
-                {
-                    name: "Hero Section 1",
-                    route: "hero-section-1"
-                },
-                {
-                    name: "Hero Section 2",
-                    route: "hero-section-2"
-                },
-                {
-                    name: "Hero Section 3",
-                    route: "hero-section-3"
-                },
-                {
-                    name: "Hero Section 4",
-                    route: "hero-section-4"
-                },
-                {
-                    name: "Hero Section 5",
-                    route: "hero-section-5"
-                },
-                {
-                    name: "Hero Section 6",
-                    route: "hero-section-6"
-                },
-                {
-                    name: "Hero Section 7",
-                    route: "hero-section-7"
-                },
-                {
-                    name: "Hero Section 8",
-                    route: "hero-section-8"
-                },
-
-
-            ]
+            name: 'Hero Section',
+            componentType: 'hero',
+            variations: Object.keys(heroVariations)
         },
-        // {
-        //     name: "Trusted Companies",
-        //     variations: [
-        //         {
-        //             name: "Trusted Companies 1",
-        //             route: "trusted-companies-1"
-        //         }
-        //     ]
-        // },
         {
-            name: "CTA",
-            variations: [
-                {
-                    name: "CTA 1",
-                    route: "cta-1"
-                },
-                {
-                    name: "CTA 2",
-                    route: "cta-2"
-                },
-                {
-                    name: "CTA 3",
-                    route: "cta-3"
-                },
-                {
-                    name: "CTA 4",
-                    route: "cta-4"
-                },
-
-            ]
+            name: 'CTA',
+            componentType: 'cta',
+            variations: Object.keys(CTAVariations)
+        },
+        {
+            name: 'Footer',
+            componentType: 'footer',
+            variations: Object.keys(footerVariations)
+        },
+        {
+            name: 'FAQ',
+            componentType: 'faq',
+            variations: Object.keys(faqVariations)
         }
-
     ]
+
     const [isOpen, setIsOpen] = useState(false)
+
+    const { selectedComponents, setComponentVariation } = useComponentContext();
+
+    const handleComponentChange = (type: ComponentType, variation: string) => {
+        setComponentVariation(type, variation);
+    };
+
     return (
         <>
             {!isOpen ?
@@ -131,9 +67,11 @@ function SideBar() {
 
                         <div>
                             {/* Logo */}
-                            <div className="px-3.5 py-2">
-                                <img src="Radian.png" alt="Radian" className='h-6' />
-                            </div>
+                            <Link to={"/"}>
+                                <div className="px-3.5 py-2">
+                                    <img src="Radian.png" alt="Radian" className='h-6 dark:saturate-0 dark:brightness-50 dark:invert' />
+                                </div>
+                            </Link>
                             <div className="px-2.5 py-2">
                                 {/* Badge */}
                                 <Badge variant={"outline"} className='bg-background rounded-full px-3 py-1 w-fit'>
@@ -149,30 +87,23 @@ function SideBar() {
                                 <div className="text-sm font-semibold py-2">
                                     Website Components
                                 </div>
-                                <Accordion type='single' collapsible>
-                                    {websiteComponents.map((component) => (
-                                        <AccordionItem key={component.name} value={component.name}>
+                                {websiteComponents.map((component, index) => (
+                                    <Accordion type='single' collapsible>
+                                        <AccordionItem key={`${component.componentType}-${index}`} value={`${component.componentType}-${index}`}>
                                             <AccordionTrigger className='text-sm font-normal'>{component.name}</AccordionTrigger>
                                             <AccordionContent >
                                                 <div className="flex flex-col gap-0.5">
-                                                    {component.variations.map((variation) => (
-                                                        <NavLink key={variation.name} to={variation.route}
-                                                            className={({ isActive }) =>
-                                                                `inline-flex items-center justify-between px-2 py-3 cursor-pointer rounded-xl ${isActive ? 'bg-secondary' : 'hover:bg-secondary'}`
-                                                            }>
-                                                            {({ isActive }) => (
-                                                                <>
-                                                                    <span>{variation.name}</span>
-                                                                    {isActive && <Check className="size-4" />}
-                                                                </>
-                                                            )}
-                                                        </NavLink>
+                                                    {component.variations.map((variation, index) => (
+                                                        <div key={index} onClick={() => { handleComponentChange(component.componentType, variation) }} className={`inline-flex items-center justify-between px-2 py-3 cursor-pointer rounded-xl hover:bg-secondary ${variation === selectedComponents[component.componentType] && 'bg-secondary'}`}>
+                                                            <span>{variation}</span>
+                                                            {variation === selectedComponents[component.componentType] && <Check className="size-4" />}
+                                                        </div>
                                                     ))}
                                                 </div>
                                             </AccordionContent>
                                         </AccordionItem>
-                                    ))}
-                                </Accordion>
+                                    </Accordion>
+                                ))}
                             </div>
 
 
@@ -183,33 +114,17 @@ function SideBar() {
                                 </div>
                                 <Accordion type='single' collapsible>
                                     <AccordionItem value="navigation-bar">
-                                        <AccordionTrigger className='text-sm font-normal'>Navigation Bar</AccordionTrigger>
+                                        <AccordionTrigger className='text-sm font-normal'>Login</AccordionTrigger>
                                         <AccordionContent >
                                             <div className="flex flex-col">
                                                 <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
+                                                    Login 1
                                                 </div>
                                                 <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
+                                                    Login 2
                                                 </div>
                                                 <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
-                                                </div>
-                                            </div>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="navbar-dropdown">
-                                        <AccordionTrigger className='text-sm font-normal'>Navigation Bar</AccordionTrigger>
-                                        <AccordionContent>
-                                            <div className="flex flex-col">
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
-                                                </div>
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
-                                                </div>
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Navigation Bar 1
+                                                    Login 3
                                                 </div>
                                             </div>
                                         </AccordionContent>

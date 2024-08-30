@@ -1,33 +1,40 @@
-import { Button } from '../../ui/button'
+import { Button } from "../../ui/button";
 
 function HeroSection3() {
     return (
         // CONFUSION:Vertical padding in lg-devices
-        <div className='min-w-screen px-5 py-14 md:px-6 md:py-20 lg:p-20'>
-
-            <div className="max-w-screen-lg mx-auto flex flex-col gap-8 md:gap-9 lg-gap-10">
-                <div className="flex gap-6 md:gap-8 lg:gap-9 flex-col items-center">
+        <div className="mx-auto max-w-screen-xl space-y-14 px-5 py-14 sm:space-y-20 sm:px-6 sm:py-20 lg:space-y-24">
+            <div className="mx-auto flex max-w-screen-lg flex-col gap-8 md:gap-9 lg:gap-10">
+                <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-9">
                     {/* Slogan Start */}
-                    <div className="text-center text-foreground text-4xl md:text-5xl lg:text-6xl leading-[2.75rem] md:leading-[3.75rem] lg:leading-[4.5rem] font-semibold -tracking-[0.72px] md:-tracking-[0.96px] lg:-tracking-[1.2px]">
+                    <div className="text-center text-4xl font-semibold leading-[2.75rem] -tracking-[0.72px] text-foreground md:text-5xl md:leading-[3.75rem] md:-tracking-[0.96px] lg:text-6xl lg:leading-[4.5rem] lg:-tracking-[1.2px]">
                         Build beautiful products not in months but weeks
                     </div>
                     {/* Slogan End */}
 
-                    <div className="text-base md:text-lg lg:max-w-3xl  mx-auto text-center font-normal text-foreground">
-                        Start your product with high quality industry standard interfaces. Copy and paste code directly in your app. Built with
-                        {" "}
-                        <span className='font-semibold'>React, Typescript, Tailwind CSS</span>
-                        {" "}and{" "}
-                        <span className='font-semibold'>shadcn/ui</span>.
+                    <div className="mx-auto text-center text-base font-normal text-foreground md:text-lg lg:max-w-3xl">
+                        Start your product with high quality industry standard interfaces.
+                        Copy and paste code directly in your app. Built with{" "}
+                        <span className="font-semibold">
+                            React, Typescript, Tailwind CSS
+                        </span>{" "}
+                        and <span className="font-semibold">shadcn/ui</span>.
                     </div>
                 </div>
-                <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:items-center justify-center w-full">
-                    <Button className='w-full md:w-fit' size={"lg"}>Browse Components</Button>
-                    <Button className='w-full md:w-fit' variant={"outline"} size={"lg"}>Get Started</Button>
+                <div className="flex w-full flex-col justify-center gap-3 md:flex-row md:items-center md:gap-4">
+                    <Button className="w-full md:w-fit" size={"lg"}>
+                        Browse Components
+                    </Button>
+                    <Button className="w-full md:w-fit" variant={"outline"} size={"lg"}>
+                        Get Started
+                    </Button>
                 </div>
             </div>
+            <div className="h-[13.75rem] sm:h-[25.3125rem] lg:h-[43.3125rem]">
+                <img src="HeroV1.png" alt="Hero" className="size-full object-cover" />
+            </div>
         </div>
-    )
+    );
 }
 
-export default HeroSection3
+export default HeroSection3;

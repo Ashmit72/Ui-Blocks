@@ -1,4 +1,4 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 import { Separator } from '../ui/separator'
@@ -13,20 +13,16 @@ const features = [
 ]
 
 export default function IconTItleTextPopover2() {
-
-
-
     return (
-        <Popover className="relative">
-            <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
+        <Popover>
+            <PopoverTrigger className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
-            </PopoverButton>
+            </PopoverTrigger>
 
-            <PopoverPanel
-                transition
-                className="absolute left-1/2 z-10 mt-4 flex gap-2 w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-                <div className="w-screen max-w-max flex gap-2 overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
+            <PopoverContent
+                className="mt-4 flex gap-2 w-screen max-w-max rounded-xl p-0">
+                <div className="w-screen max-w-max flex gap-2 overflow-hidden text-sm leading-6">
                     <div className="p-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item) => (
                             <div key={item.name} className="flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
@@ -58,7 +54,7 @@ export default function IconTItleTextPopover2() {
                         ))}
                     </div>
                 </div>
-            </PopoverPanel>
+            </PopoverContent>
         </Popover>
     )
 }

@@ -12,7 +12,7 @@ function SocialProofCompanies1() {
         'Company4.png'
     ];
     return (
-        <div className='min-w-screen bg-background'>
+        <div className='min-w-screen bg-background py-14 md:py-20 lg:py-20'>
             <div className="max-w-screen-xl mx-auto flex flex-col items-center px-6 py-20  gap-10">
                 <div className="max-w-screen-lg text-center text-lg font-medium text-foreground">
                     Thousands of businesses trust Radian to build their products

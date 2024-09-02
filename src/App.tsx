@@ -5,7 +5,8 @@ import { ComponentProvider } from './providers/ComponentProvider'
 import HeroViewer from './components/liveViewer/heroViewer'
 import CTAViewer from './components/liveViewer/ctaViewer'
 import FooterViewer from './components/liveViewer/footerViewer'
-import { FilterLines } from '@untitled-ui/icons-react'
+import FAQViewer from './components/liveViewer/faqViewer'
+import SocialProofViewer from './components/liveViewer/socialProofCompanies'
 
 function App() {
 
@@ -15,7 +16,10 @@ function App() {
         <main className='min-h-[120vh] mt-20'>
           <NavbarViewer />
           <HeroViewer />
+          <SocialProofViewer/>
           <CTAViewer />
+          <FAQViewer/>
+          <br />
           <FooterViewer />
           <SideBar />
         </main>

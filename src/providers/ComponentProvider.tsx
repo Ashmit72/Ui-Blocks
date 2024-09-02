@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'social proof companies';
+export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany';
 
 export type ComponentContextType = {
     selectedComponents: Record<ComponentType, string>;
@@ -11,11 +11,12 @@ const ComponentContext = createContext<ComponentContextType | undefined>(undefin
 
 export const ComponentProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [selectedComponents, setSelectedComponents] = useState<Record<ComponentType, string>>({
-        "navbar": 'Navigation Bar 1',
-        "hero": 'Hero Section 1',
-        "footer": 'Footer 1',
-        "cta": 'CTA 1',
-        "social proof companies": 'Social Proof Companies 1'
+        navbar: 'Navigation Bar 1',
+        hero: 'Hero Section 1',
+        footer: 'Footer 1',
+        cta: 'CTA 1',
+        faq: 'faq 1',
+        socialProofCompany: 'Social Proof Companies 1'
     });
 
     const setComponentVariation = (type: ComponentType, variation: string) => {

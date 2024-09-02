@@ -1,0 +1,44 @@
+
+[
+    {
+      "question": "What is Radian?",
+      "answer": "Radian is a development tool that helps you build high-quality, industry-standard interfaces quickly. It provides pre-built components and code snippets that integrate seamlessly with React, TypeScript, Tailwind CSS, and shadcn/ui."
+    },
+    {
+      "question": "How can Radian speed up my development process?",
+      "answer": "Radian accelerates development by offering ready-to-use components that eliminate the need to start from scratch. This allows you to build and deploy beautiful products in weeks rather than months."
+    },
+    {
+      "question": "Which technologies does Radian support?",
+      "answer": "Radian supports modern web development technologies, including React, TypeScript, Tailwind CSS, and shadcn/ui, ensuring compatibility with your existing projects."
+    },
+    {
+      "question": "Is Radian suitable for developers of all skill levels?",
+      "answer": "Yes, Radian is designed for both beginners and experienced developers. The intuitive components and detailed documentation make it easy to get started, regardless of your experience level."
+    },
+    {
+      "question": "Can I customize the components provided by Radian?",
+      "answer": "Yes, all components in Radian are fully customizable. You can modify styles, layouts, and functionalities to suit your specific project requirements."
+    },
+    {
+      "question": "Does Radian offer documentation and support?",
+      "answer": "Yes, Radian comes with comprehensive documentation that guides you through the setup, integration, and customization of components. Support is also available to assist with any issues or questions."
+    },
+    {
+      "question": "How do I get started with Radian?",
+      "answer": "You can get started by clicking the (Get Started) button on the Radian website. This will take you through the installation process and show you how to integrate Radian components into your project."
+    },
+    {
+      "question": "Is Radian compatible with existing projects?",
+      "answer": "Yes, Radian is designed to be easily integrated into existing projects that use React, TypeScript, and Tailwind CSS, allowing you to enhance your current applications quickly."
+    },
+    {
+      "question": "Can Radian be used for large-scale projects?",
+      "answer": "Absolutely! Radian is scalable and can be used for both small and large-scale projects, providing the flexibility and performance needed for complex applications."
+    },
+    {
+        "question": "What makes Radian different from other UI component libraries?",
+        "answer": "Radian stands out by offering a combination of high-quality, customizable components that are easy to integrate and built with modern technologies. It focuses on reducing development time while maintaining industry standards."
+    }
+  ]
+  

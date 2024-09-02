@@ -6,6 +6,8 @@ import CTA3 from "./components/CTAs/CTA3"
 import SocialProofCompanies1 from "./components/socialProofCompanies/socialProofCompanies1"
 import Footer2 from "./components/footers/Footer2"
 import { ModeToggle } from "./components/ModeSwitch"
+import Features1 from "./components/features/Features1"
+import Features2 from "./components/features/Features2"
 
 function Test() {
     return (
@@ -14,6 +16,7 @@ function Test() {
                 <main className='min-h-[120vh] mt-20'>
                     <Navbar1 />
                     <HeroSection1 />
+                    <Features2/>
                     <CTA3 />
                     <SocialProofCompanies1 />
                     <Footer2 />

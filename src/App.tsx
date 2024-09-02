@@ -7,6 +7,7 @@ import CTAViewer from './components/liveViewer/ctaViewer'
 import FooterViewer from './components/liveViewer/footerViewer'
 import FAQViewer from './components/liveViewer/faqViewer'
 import SocialProofViewer from './components/liveViewer/socialProofCompanies'
+import FeaturesViewer from './components/liveViewer/featuresViewer'
 
 function App() {
 
@@ -16,9 +17,10 @@ function App() {
         <main className='min-h-[120vh] mt-20'>
           <NavbarViewer />
           <HeroViewer />
-          <SocialProofViewer/>
+          <SocialProofViewer />
+          <FeaturesViewer />
           <CTAViewer />
-          <FAQViewer/>
+          <FAQViewer />
           <br />
           <FooterViewer />
           <SideBar />

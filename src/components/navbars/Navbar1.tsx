@@ -27,7 +27,7 @@ function Navbar1() {
     return (
         <>
             {/* Navigation Links and Popovers For Large and Extra Large Devices*/}
-            <nav className={`${isScrolled ? 'bg-background/80 backdrop-blur' : 'bg-background'} fixed top-0 left-0 w-screen`}>
+            <nav className={`${isScrolled ? 'bg-background/80 backdrop-blur' : 'bg-background'} fixed z-50 top-0 left-0 w-screen`}>
                 <div className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-4 lg:py-3' : 'py-5'} max-w-screen-xl mx-auto`}>
                     <div className="flex items-center justify-between relative">
 

@@ -12,6 +12,7 @@ import { CTAVariations } from './liveViewer/ctaViewer'
 import { footerVariations } from './liveViewer/footerViewer'
 import { faqVariations } from './liveViewer/faqViewer'
 import { socialProofVariations } from './liveViewer/socialProofCompanies'
+import { featuresVariations } from './liveViewer/featuresViewer'
 
 export type component = {
     name: string,
@@ -37,6 +38,11 @@ function SideBar() {
             variations: Object.keys(socialProofVariations)
         },
         {
+            name: 'Features',
+            componentType: 'features',
+            variations: Object.keys(featuresVariations)
+        },
+        {
             name: 'CTA',
             componentType: 'cta',
             variations: Object.keys(CTAVariations)
@@ -51,7 +57,7 @@ function SideBar() {
             componentType: 'footer',
             variations: Object.keys(footerVariations)
         },
-        
+
     ]
 
     const [isOpen, setIsOpen] = useState(false)
@@ -65,11 +71,11 @@ function SideBar() {
     return (
         <>
             {!isOpen ?
-                <div onClick={() => setIsOpen(true)} className="fixed border p-3 rounded-xl bg-background flex items-center justify-center z-99 bottom-3 left-3 cursor-pointer">
+                <div onClick={() => setIsOpen(true)} className="fixed border p-3 rounded-xl bg-background flex items-center justify-center z-50 bottom-3 left-3 cursor-pointer">
                     <Settings02 className='size-6 animate-spin' />
                 </div>
                 :
-                <div className="fixed top-0 left-0 w-fit bg-background h-screen py-3 pl-3">
+                <div className="fixed top-0 left-0 w-fit bg-background z-50 h-screen py-3 pl-3">
                     <div className="relative w-[17.5rem] border rounded-xl h-full py-3 flex flex-col gap-2">
 
                         <div>

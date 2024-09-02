@@ -36,8 +36,8 @@ function HeroSection4() {
                     </Button>
                 </div>
             </div>
-            <div className="h-[13.75rem] sm:h-[25.3125rem] lg:h-[43.3125rem]">
-                <img src="HeroV1.png" alt="Hero" className="size-full object-cover" />
+            <div className="h-[13.75rem] sm:h-[25.3125rem] lg:h-[43.3125rem] border">
+                <img src="Article1.png" alt="Hero" className="size-full object-cover" />
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import { ComponentProvider } from './providers/ComponentProvider'
 import HeroViewer from './components/liveViewer/heroViewer'
 import CTAViewer from './components/liveViewer/ctaViewer'
 import FooterViewer from './components/liveViewer/footerViewer'
+import { FilterLines } from '@untitled-ui/icons-react'
 
 function App() {
 
@@ -15,7 +16,6 @@ function App() {
           <NavbarViewer />
           <HeroViewer />
           <CTAViewer />
-          <br />
           <FooterViewer />
           <SideBar />
         </main>

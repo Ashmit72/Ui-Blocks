@@ -1,12 +1,12 @@
-import { ProductAccordion } from "./ProductPopOver";
+import { ProductAccordion } from "./ProductAccordion";
 import { Accordion } from "../ui/accordion";
-import { CompanyAccordion } from "./CompanyPopOver";
-import { ResourceAccordion } from "./ResourcePopOver";
-import { LegalAccordion } from "./LegalPopOver";
-import { FeaturesAccordion } from "./FeaturesPopOver";
-import { ComparisonAccordion } from "./ComparisonPopOver";
-import { IntegrationsAccordion } from "./IntegrationsPopOver";
-import { CommunityAccordion } from "./CommunityPopOver";
+import { CompanyAccordion } from "./CompanyAccordion";
+import { ResourceAccordion } from "./ResourceAccordion";
+import { LegalAccordion } from "./LegalAccordion";
+import { FeaturesAccordion } from "./FeaturesAccordion";
+import { ComparisonAccordion } from "./ComparisonAccordion";
+import { IntegrationsAccordion } from "./IntegrationsAccordion";
+import { CommunityAccordion } from "./CommunityAccordion";
 
 const Footer4 = () => {
   return (

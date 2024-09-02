@@ -1,9 +1,9 @@
 import { Youtube } from "@untitled-ui/icons-react";
-import { ProductAccordion } from "./ProductPopOver";
+import { ProductAccordion } from "./ProductAccordion";
 import { Accordion } from "../ui/accordion";
-import { CompanyAccordion } from "./CompanyPopOver";
-import { ResourceAccordion } from "./ResourcePopOver";
-import { LegalAccordion } from "./LegalPopOver";
+import { CompanyAccordion } from "./CompanyAccordion";
+import { ResourceAccordion } from "./ResourceAccordion";
+import { LegalAccordion } from "./LegalAccordion";
 
 const Footer2 = () => {
   return (

@@ -23,10 +23,10 @@ function Navbar2() {
     window.addEventListener("scroll", changeNavbarColor);
 
     return (
-        <main className='bg-gradient-to-b from-background/20 backdrop-blur to-transparent  pt-4 fixed top-0 left-0 w-screen'>
+        <main className='bg-gradient-to-b from-background/20 backdrop-blur to-transparent pt-4 z-10 fixed top-0 left-0 overflow-y-scroll w-screen'>
             {/* CONFUSION: Regarding the border and its opacity */}
             {/* CONFUSION:Regarding the padding on the navbar which is equal in all sides in this variant */}
-            <nav className={`px-3.5 py-3 max-w-screen-xl mx-auto ${isScrolled ? 'bg-background/60 backdrop-blur border border-border/80' : ''} transition-all ease-in-out rounded-xl`}>
+            <nav className={`px-5 sm:px-6 lg:px-3.5 py-3 max-w-[1260px] mx-auto ${isScrolled ? 'lg:bg-background/60 lg:backdrop-blur lg:border lg:border-border/80' : ''} transition-all ease-in-out rounded-xl`}>
                 {/* 
                 When the page is scrolled the following classes should be added in the nav element:
                 - bg-background/60 
@@ -75,14 +75,14 @@ function Navbar2() {
 
             {/* Navigation Links and Accordions For Small and Medium Devices */}
             <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-50  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
-                <div className="flex justify-between items-center px-5 py-5">
+                <div className="flex justify-between items-center px-5 sm:px-6 py-5">
                     {/* Logo and Close Button */}
                     <img src="Radian.png" alt="Logo" className='h-8' />
                     <div onClick={() => setIsOpen(false)} className="size-10 flex items-center justify-center bg-border/50 rounded-md">
                         <X className='size-6 text-foreground shrink-0' />
                     </div>
                 </div>
-                <div className="flex flex-col px-5 pb-5 gap-4">
+                <div className="flex flex-col px-5 sm:px-6 pb-5 gap-4">
                     <Accordion type="single" collapsible>
                         <a href='#' className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
                             Non Accordion

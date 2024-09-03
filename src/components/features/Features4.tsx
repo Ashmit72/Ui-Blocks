@@ -20,68 +20,63 @@ function Features4() {
                     product than fixing boring responsive designs and pixel peeping
                 </p>
             </div>
-            <div className="grid gap-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
-                                <div className="font-semibold text-lg">
-                                    Seamless Integration
-                                </div>
-                                <p className="text-sm text-muted-foreground">
-                                    Blend seamlessly with the tools you already use, allowing for a smooth development process
-                                </p>
+            <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-6 gap-5">
+                <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
+                    <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
+                        <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2 ">
+                            <div className="font-semibold text-lg">
+                                Seamless Integration
                             </div>
-                        </div>
-                    </div>
-                    <div className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
-                                <div className="font-semibold text-lg">
-                                    Seamless Integration
-                                </div>
-                                <p className="text-sm text-muted-foreground">
-                                    Blend seamlessly with the tools you already use, allowing for a smooth development process
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
-                                <div className="font-semibold text-lg">
-                                    Seamless Integration
-                                </div>
-                                <p className="text-sm text-muted-foreground">
-                                    Blend seamlessly with the tools you already use, allowing for a smooth development process
-                                </p>
-                            </div>
+                            <p className="text-sm text-muted-foreground">
+                                Blend seamlessly with the tools you already use, allowing for a smooth development process
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-5">
-                    <div className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
-                                <div className="font-semibold text-lg">
-                                    Seamless Integration
-                                </div>
-                                <p className="text-sm text-muted-foreground">
-                                    Blend seamlessly with the tools you already use, allowing for a smooth development process
-                                </p>
+                <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
+                    <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
+                        <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
+                            <div className="font-semibold text-lg">
+                                Ready-to-use Components
                             </div>
+                            <p className="text-sm text-muted-foreground">
+                                Comprehensive library of UI components that are ready to be implemented
+                            </p>
                         </div>
                     </div>
-                    <div className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
-                                <div className="font-semibold text-lg">
-                                    Seamless Integration
-                                </div>
-                                <p className="text-sm text-muted-foreground">
-                                    Blend seamlessly with the tools you already use, allowing for a smooth development process
-                                </p>
+                </div>
+                <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
+                    <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
+                        <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
+                            <div className="font-semibold text-lg">
+                                Advanced Component Version Control
                             </div>
+                            <p className="text-sm text-muted-foreground">
+                                Maintain control over component updates with Radian’s version control system                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="border h-[25rem] p-5 rounded-xl lg:col-span-3 sm:col-span-2">
+                    <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
+                        <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
+                            <div className="font-semibold text-lg">
+                                Customizable Themes
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                                Easily customize themes to match your brand and make your product stands out visually
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="border h-[25rem] p-5 rounded-xl lg:col-span-3 sm:col-span-4">
+                    <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
+                        <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
+                            <div className="font-semibold text-lg">
+                                Collaborative Design Libraries
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                                Blend seamlessly with the tools you already use, allowing for a smooth development process
+                            </p>
                         </div>
                     </div>
                 </div>

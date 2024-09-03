@@ -23,7 +23,7 @@ function Navbar2() {
     window.addEventListener("scroll", changeNavbarColor);
 
     return (
-        <main className='bg-gradient-to-b from-background/20 backdrop-blur to-transparent pt-4 z-10 fixed top-0 left-0 w-screen'>
+        <main className='bg-gradient-to-b from-background/20 backdrop-blur to-transparent pt-4 z-10 fixed top-0 left-0 overflow-y-scroll w-screen'>
             {/* CONFUSION: Regarding the border and its opacity */}
             {/* CONFUSION:Regarding the padding on the navbar which is equal in all sides in this variant */}
             <nav className={`px-5 sm:px-6 lg:px-3.5 py-3 max-w-[1260px] mx-auto ${isScrolled ? 'lg:bg-background/60 lg:backdrop-blur lg:border lg:border-border/80' : ''} transition-all ease-in-out rounded-xl`}>

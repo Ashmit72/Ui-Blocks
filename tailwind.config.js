@@ -17,6 +17,9 @@ module.exports = {
       }
     },
     extend: {
+      flex: {
+        '2': '2 2 0%'
+      },
       backgroundImage: {
         "social-proof-gradient":
           "linear-gradient(90deg, hsl(var(--background) / 1) 0%, hsl(var(--background) / 0.00) 25%, hsl(var(--background) / 0.00) 75%, hsl(var(--background) / 1) 100%)"
@@ -80,7 +83,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 15s linear infinite"
       }
-    }
+    },
   },
   plugins: [require("tailwindcss-animate")]
 };

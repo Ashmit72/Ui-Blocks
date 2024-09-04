@@ -6,6 +6,8 @@ import CTA3 from "./components/CTAs/CTA3"
 import SocialProofCompanies1 from "./components/socialProofCompanies/socialProofCompanies1"
 import Footer2 from "./components/footers/Footer2"
 import { ModeToggle } from "./components/ModeSwitch"
+import Pricing1 from "./components/Pricings/Pricing1"
+import Pricing2 from "./components/Pricings/Pricing2"
 
 function Test() {
     return (
@@ -16,6 +18,7 @@ function Test() {
                     <HeroSection1 />
                     <CTA3 />
                     <SocialProofCompanies1 />
+                    <Pricing1/>
                     <Footer2 />
                     <div className="fixed bottom-3 left-3">
                         <ModeToggle />

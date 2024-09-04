@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features' | 'testimonials';
+export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features' | 'testimonials' | 'pricing';
 
 export type ComponentContextType = {
     selectedComponents: Record<ComponentType, string>;
@@ -15,6 +15,7 @@ export const ComponentProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         hero: 'Hero Section 1',
         footer: 'Footer 1',
         cta: 'CTA 1',
+        pricing: 'Pricing 1',
         faq: 'faq 1',
         socialProofCompany: 'Social Proof Companies 1',
         features: 'Features 1',

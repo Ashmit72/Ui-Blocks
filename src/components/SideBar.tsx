@@ -13,6 +13,7 @@ import { footerVariations } from './liveViewer/footerViewer'
 import { faqVariations } from './liveViewer/faqViewer'
 import { socialProofVariations } from './liveViewer/socialProofCompanies'
 import { featuresVariations } from './liveViewer/featuresViewer'
+import { testimonialsVariations } from './liveViewer/testimonialsViewer'
 
 export type component = {
     name: string,
@@ -52,6 +53,11 @@ function SideBar() {
             name: 'CTA',
             componentType: 'cta',
             variations: Object.keys(CTAVariations)
+        },
+        {
+            name:'Testimonials',
+            componentType:'testimonials',
+            variations:Object.keys(testimonialsVariations)
         },
         {
             name: 'Footer',

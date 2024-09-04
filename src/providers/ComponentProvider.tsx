@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features';
+export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features' | 'testimonials';
 
 export type ComponentContextType = {
     selectedComponents: Record<ComponentType, string>;
@@ -17,7 +17,8 @@ export const ComponentProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         cta: 'CTA 1',
         faq: 'faq 1',
         socialProofCompany: 'Social Proof Companies 1',
-        features: 'Features 1'
+        features: 'Features 1',
+        testimonials: 'Testimonials 1'
     });
 
     const setComponentVariation = (type: ComponentType, variation: string) => {

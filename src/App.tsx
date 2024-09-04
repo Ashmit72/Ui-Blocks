@@ -15,6 +15,7 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <ComponentProvider>
         <NavbarViewer />
+        <div className="mt-6"></div> // This is to prevent the HeroSection overlap behind the Navbar which is fixed
         <HeroViewer />
         <SocialProofViewer />
         <FeaturesViewer />

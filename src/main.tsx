@@ -6,8 +6,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Test from '@/test.tsx'
-
 
 const router = createBrowserRouter([
   {
@@ -16,10 +14,6 @@ const router = createBrowserRouter([
     children: [
 
     ]
-  },
-  {
-    path: "/test",
-    element: <Test />
   }
 ]);
 

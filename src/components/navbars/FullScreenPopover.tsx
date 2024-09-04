@@ -18,12 +18,8 @@ export default function FullScreenPopover() {
     ]
 
     return (
-
-
-        // NEEDS SOME MODIFICATIONS
-
         <Popover>
-            <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
+            <PopoverButton className="inline-flex items-center gap-x-1 text-base font-medium outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
             </PopoverButton>

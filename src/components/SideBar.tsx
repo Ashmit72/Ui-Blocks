@@ -42,15 +42,16 @@ function SideBar() {
             componentType: 'features',
             variations: Object.keys(featuresVariations)
         },
-        {
-            name: 'CTA',
-            componentType: 'cta',
-            variations: Object.keys(CTAVariations)
-        },
+
         {
             name: 'FAQ',
             componentType: 'faq',
             variations: Object.keys(faqVariations)
+        },
+        {
+            name: 'CTA',
+            componentType: 'cta',
+            variations: Object.keys(CTAVariations)
         },
         {
             name: 'Footer',
@@ -94,7 +95,7 @@ function SideBar() {
                         </div>
 
 
-                        <div className='px-3 flex flex-col gap-2 h-[calc(100vh-15rem)] overflow-y-scroll no-scrollbar'>
+                        <div className='px-3 flex flex-col gap-2 h-[calc(100vh-15rem)] overflow-y-scroll scroll-smooth no-scrollbar'>
                             {/* Website Components */}
                             <div>
                                 <div className="text-sm font-semibold py-2">

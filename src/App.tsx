@@ -7,15 +7,12 @@ import CTAViewer from './components/liveViewer/ctaViewer'
 import FooterViewer from './components/liveViewer/footerViewer'
 import FAQViewer from './components/liveViewer/faqViewer'
 import SocialProofViewer from './components/liveViewer/socialProofCompanies'
-<<<<<<< HEAD
-import Testimonials1 from './components/testimonials/Testimonials1'
-import CTA1 from './components/CTAs/CTA1'
-import Testimonials3 from './components/testimonials/Testimonials3'
-import Testimonials2 from './components/testimonials/Testimonials2'
-import Testimonials4 from './components/testimonials/Testimonials4'
-=======
 import FeaturesViewer from './components/liveViewer/featuresViewer'
->>>>>>> 9e71351076c1fe19ee718855feaf04248ac2a456
+import CTA1 from './components/CTAs/CTA1'
+import Testimonials1 from './components/testimonials/Testimonials1'
+import Testimonials2 from './components/testimonials/Testimonials2'
+import Testimonials3 from './components/testimonials/Testimonials3'
+import Testimonials4 from './components/testimonials/Testimonials4'
 
 function App() {
 

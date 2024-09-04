@@ -7,22 +7,25 @@ import CTAViewer from './components/liveViewer/ctaViewer'
 import FooterViewer from './components/liveViewer/footerViewer'
 import FAQViewer from './components/liveViewer/faqViewer'
 import SocialProofViewer from './components/liveViewer/socialProofCompanies'
+import FeaturesViewer from './components/liveViewer/featuresViewer'
+import TestimonialViewer from './components/liveViewer/testimonialsViewer'
+
 
 function App() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <ComponentProvider>
-        <main className='min-h-[120vh] mt-20'>
-          <NavbarViewer />
-          <HeroViewer />
-          <SocialProofViewer/>
-          <CTAViewer />
-          <FAQViewer/>
-          <br />
-          <FooterViewer />
-          <SideBar />
-        </main>
+        <NavbarViewer />
+        <div className="mt-8" />
+        <HeroViewer />
+        <SocialProofViewer />
+        <FeaturesViewer />
+        <FAQViewer />
+        <CTAViewer />
+        <TestimonialViewer />
+        <FooterViewer />
+        <SideBar />
       </ComponentProvider>
     </ThemeProvider>
   )

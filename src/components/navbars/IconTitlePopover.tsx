@@ -10,16 +10,16 @@ const solutions = [
     { name: 'Documentation', href: '#', icon: LifeBuoy02 },
 ]
 
-export default function SimplePopover() {
+export default function IconTitlePopover() {
     return (
         <Popover>
-            <PopoverTrigger className="inline-flex items-center gap-x-1 text-base font-medium text-foreground outline-none">
+            <PopoverTrigger className="inline-flex items-center gap-x-1 text-base font-medium outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
             </PopoverTrigger>
 
             <PopoverContent
-                className="mt-4 flex max-w-max  rounded-xl bg-background p-0">
+                className="mt-4 flex max-w-max shadow-lg rounded-xl bg-popover p-0">
                 <div className="w-60 max-w-md flex-auto overflow-hidden text-sm leading-6">
                     <div className="p-2  flex flex-col gap-0.5">
                         {solutions.map((item) => (

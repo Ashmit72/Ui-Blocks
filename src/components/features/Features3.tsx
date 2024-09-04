@@ -24,8 +24,9 @@ function Features3() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {features.map((feature, index) => (
                     <div key={index} className="border h-[25rem] p-5 rounded-xl">
-                        <div className="relative bg-gradient-to-b from-secondary to-transparent rounded-lg size-full">
-                            <div className="absolute bottom-0 flex flex-col gap-2">
+                        <div className="relative bg-gradient-to-b from-transparent to-background rounded-lg size-full">
+                            <img src={feature.image} alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                            <div className="absolute bottom-0 max-w-[22.5rem] flex flex-col gap-2">
                                 <div className="font-semibold text-lg">
                                     {feature.title}
                                 </div>

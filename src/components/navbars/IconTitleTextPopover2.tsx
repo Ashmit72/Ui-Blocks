@@ -15,13 +15,13 @@ const features = [
 export default function IconTItleTextPopover2() {
     return (
         <Popover>
-            <PopoverTrigger className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
+            <PopoverTrigger className="inline-flex items-center gap-x-1 text-base font-medium outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
             </PopoverTrigger>
 
             <PopoverContent
-                className="mt-4 flex gap-2 w-screen max-w-max rounded-xl p-0">
+                className="mt-4 flex gap-2 w-screen max-w-max shadow-lg bg-popover rounded-xl p-0">
                 <div className="w-screen max-w-max flex gap-2 overflow-hidden text-sm leading-6">
                     <div className="p-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item) => (

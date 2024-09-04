@@ -14,17 +14,14 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <ComponentProvider>
-        <main className='min-h-[120vh] mt-20'>
-          <NavbarViewer />
-          <HeroViewer />
-          <SocialProofViewer />
-          <FeaturesViewer />
-          <CTAViewer />
-          <FAQViewer />
-          <br />
-          <FooterViewer />
-          <SideBar />
-        </main>
+        <NavbarViewer />
+        <HeroViewer />
+        <SocialProofViewer />
+        <FeaturesViewer />
+        <FAQViewer />
+        <CTAViewer />
+        <FooterViewer />
+        <SideBar />
       </ComponentProvider>
     </ThemeProvider>
   )

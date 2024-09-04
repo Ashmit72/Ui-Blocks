@@ -4,10 +4,11 @@ import IconTitlePopover, { IconTitleAccordion } from './IconTitlePopover'
 import TitlePopover, { TitleAccordion } from './TitlePopover'
 import IconTitleTextPopover, { IconTitleTextAccordion } from './IconTItleTextPopover'
 import IconTItleTextPopover2, { IconTitleTextAccordion2 } from './IconTitleTextPopover2'
-import FullScreenPopover, { ComplexAccordion } from './FullWidthPopover'
+import FullWidthPopover, { FullWidthAccordion } from './FullWidthPopover'
 import { useEffect, useState } from 'react'
 import { Menu01, X } from '@untitled-ui/icons-react'
 import { Accordion } from '../ui/custom/mobile-nav-accordion'
+
 
 function Navbar1() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -27,14 +28,11 @@ function Navbar1() {
     return (
         <>
             {/* Navigation Links and Popovers For Large and Extra Large Devices*/}
-            <nav className={`${isScrolled ? 'bg-background/80 backdrop-blur' : 'bg-background'} fixed z-50 top-0 left-0 overflow-y-scroll w-screen`}>
+            <nav className={`${isScrolled ? 'bg-background/80 backdrop-blur' : 'bg-background'} fixed z-50 top-0 left-0 w-full`}>
                 <div className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-4 lg:py-3' : 'py-5'} max-w-screen-xl mx-auto`}>
                     <div className="flex items-center justify-between relative">
-
                         {/* Logo or Title  */}
                         <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
-
-
                         {/* Menu Bar- For Responsiveness */}
                         <div className='lg:hidden'>
                             {!isOpen ?
@@ -64,7 +62,7 @@ function Navbar1() {
                                 <IconTItleTextPopover2 />
                             </li>
                             <li>
-                                <FullScreenPopover />
+                                <FullWidthPopover />
                             </li>
                         </ul>
                         <div className='hidden lg:flex lg:gap-2'>
@@ -75,7 +73,7 @@ function Navbar1() {
                 </div>
 
                 {/* Navigation Links and Accordions For Small and Medium Devices */}
-                <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-50  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
+                <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-10  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
                     <div className="flex justify-between items-center px-5 py-5">
                         {/* Logo and Close Button */}
                         <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
@@ -93,7 +91,7 @@ function Navbar1() {
                             <IconTitleAccordion />
                             <IconTitleTextAccordion />
                             <IconTitleTextAccordion2 />
-                            <ComplexAccordion />
+                            <FullWidthAccordion />
                         </Accordion>
                         <div className='flex flex-col gap-4 '>
                             <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>

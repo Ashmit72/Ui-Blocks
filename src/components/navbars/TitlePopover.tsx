@@ -13,13 +13,13 @@ const solutions = [
 export default function TitlePopover() {
     return (
         <Popover>
-            <PopoverTrigger className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
+            <PopoverTrigger className="inline-flex items-center gap-x-1 text-base font-medium outline-none">
                 <span>Features</span>
                 <ChevronDown aria-hidden="true" className="h-5 w-5" />
             </PopoverTrigger>
 
             <PopoverContent
-                className="z-10 mt-4 flex max-w-max p-0 rounded-xl">
+                className="mt-4 flex max-w-max p-0 shadow-lg bg-popover rounded-xl">
                 <div className="w-60 max-w-full flex-auto overflow-hidden text-sm leading-6">
                     <div className="p-2 flex flex-col gap-0.5">
                         {solutions.map((item) => (
@@ -35,32 +35,6 @@ export default function TitlePopover() {
                 </div>
             </PopoverContent>
         </Popover>
-
-        // This was done using the headless/ui
-        // <Popover className="relative">
-        //     <PopoverButton className="inline-flex items-center gap-x-1 text-[1rem] font-medium leading-6 text-foreground outline-none">
-        //         <span>Features</span>
-        //         <ChevronDown aria-hidden="true" className="h-5 w-5" />
-        //     </PopoverButton>
-
-        //     <PopoverPanel
-        //         transition
-        //         className="absolute left-1/2 z-10 mt-4 flex max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
-        //         <div className="w-60 max-w-full flex-auto overflow-hidden rounded-xl bg-background text-sm leading-6 shadow-lg border">
-        //             <div className="p-2 flex flex-col gap-0.5">
-        //                 {solutions.map((item) => (
-        //                     <div key={item.name} className="rounded-xl py-2 px-2.5 hover:bg-border/50 ">
-        //                         <div>
-        //                             <a href={item.href} className="font-medium text-foreground">
-        //                                 {item.name}
-        //                             </a>
-        //                         </div>
-        //                     </div>
-        //                 ))}
-        //             </div>
-        //         </div>
-        //     </PopoverPanel>
-        // </Popover>
     )
 }
 

@@ -5,7 +5,7 @@ const Testimonials2 = () => {
     return (
         // REFACTORED COMPONENT 
         <div className='max-w-screen bg-background' >
-            <div className="max-w-screen-xl mx-auto  md:py-20 px-6" >
+            <div className="max-w-screen-xl mx-auto py-8 md:py-[60px] px-6" >
                 <div className="flex flex-col items-center justify-between gap-5 sm:gap-6 sm:mb-12 mb-10" >
                     <Badge className='w-[101px] h-[28px]  rounded-full flex items-center justify-center text-sm font-medium px-1 py-3' variant="outline">Community</Badge>
                     <h1 className="font-semibold text-[30px] md:text-3xl lg:text-5xl text-center" >Loved by Builders and Creatives</h1>

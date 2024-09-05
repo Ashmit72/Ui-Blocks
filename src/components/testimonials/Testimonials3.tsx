@@ -1,7 +1,7 @@
 const Testimonials3 = () => {
   return (
 <div className="min-w-screen px-5 bg-secondary" >
-      <div className="flex mx-auto py-14 gap-6 max-w-screen-xl sm:py-20 sm:gap-8 md:px-16 flex-col items-center justify-center" >
+      <div className="flex mx-auto py-[60px] gap-6 max-w-screen-xl sm:py-20 sm:gap-8 md:px-16 flex-col items-center justify-center" >
             <div className="h-12 w-12 sm:h-16 sm:w-16" >
                 <img className="h-full w-full rounded-full object-cover" src="/assets/photo3.png" alt="image" />
             </div>

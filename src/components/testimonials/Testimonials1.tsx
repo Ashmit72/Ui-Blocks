@@ -1,6 +1,6 @@
 const Testimonials1 = () => {
 return (
-    <div className='max-w-screen-xl mx-auto px-5 sm:px-6 py-14 md:py-20 lg:py-20'>
+    <div className='max-w-screen-xl mx-auto px-5 sm:px-6 py-8 md:py-[60px]'>
         <div className="flex flex-col-reverse border lg:flex-row rounded-2xl overflow-hidden">
             <div className="p-6 sm:py-10 sm:gap-8 sm:px-10 flex flex-col items-start justify-center gap-5 lg:w-3/5 lg:px-16 lg:py-20" >
                 <span className="scale-75 md:scale-100 translate-x-[-15px] md:translate-x-[0px]" >

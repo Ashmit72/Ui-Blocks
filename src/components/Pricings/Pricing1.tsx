@@ -489,10 +489,10 @@ function Pricing1() {
           </div>
         </div>
 
-        {/* For large screen devices */}
+        {/* Pricing Details for large screen devices */}
         <div className="hidden lg:block">
           <div className="">
-          <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-6 border-b gap-8">
+          <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <div className="relative">
                 <h2 className="font-semibold text-lg absolute bottom-4">
                   Features
@@ -572,7 +572,7 @@ function Pricing1() {
             <div className="py-4 border-b">
               <h2 className="font-semibold text-base">Core Features</h2>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Ready-to-use UI Components
               </h4>
@@ -581,14 +581,14 @@ function Pricing1() {
               <h4 className="font-medium text-sm">Full Access</h4>
               <h4 className="font-medium text-sm">Customizable Access</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Customizable Themes</h4>
               <h4 className="font-medium text-sm">Basic</h4>
               <h4 className="font-medium text-sm">Standard</h4>
               <h4 className="font-medium text-sm">Advanced</h4>
               <h4 className="font-medium text-sm">Full Customization</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Integration with React</h4>
               <h4 className="font-medium text-sm">
                 <CheckCircle className="text-green-600" />
@@ -603,7 +603,7 @@ function Pricing1() {
                 <CheckCircle className="text-green-600" />
               </h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Integration with TypeScript
               </h4>
@@ -620,7 +620,7 @@ function Pricing1() {
                 <CheckCircle className="text-green-600" />
               </h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Integration with Tailwind CSS
               </h4>
@@ -637,7 +637,7 @@ function Pricing1() {
                 <CheckCircle className="text-green-600" />
               </h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Integration with shadcn/ui
               </h4>
@@ -654,7 +654,7 @@ function Pricing1() {
                 <CheckCircle className="text-green-600" />
               </h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Code Snippet Library</h4>
               <h4 className="font-medium text-sm">Basic</h4>
               <h4 className="font-medium text-sm">Standard</h4>
@@ -667,21 +667,21 @@ function Pricing1() {
             <div className="py-4 border-b">
               <h2 className="font-semibold text-base">Support & Maintenance</h2>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Documentation Access</h4>
               <h4 className="font-medium text-sm">Basic</h4>
               <h4 className="font-medium text-sm">Standard</h4>
               <h4 className="font-medium text-sm">Advanced</h4>
               <h4 className="font-medium text-sm">Priority Support</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Email Support</h4>
               <h4 className="font-medium text-sm">Communnity Only</h4>
               <h4 className="font-medium text-sm">Standard Support</h4>
               <h4 className="font-medium text-sm">24/7 Support</h4>
               <h4 className="font-medium text-sm">Dedicated Support</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Custom Component Requests</h4>
               <h4 className="font-medium text-sm">-</h4>
               <h4 className="font-medium text-sm">Limited</h4>
@@ -696,7 +696,7 @@ function Pricing1() {
                 Performance & Scalability
               </h2>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Component Load Optimization
               </h4>
@@ -705,7 +705,7 @@ function Pricing1() {
               <h4 className="font-medium text-sm">Advanced</h4>
               <h4 className="font-medium text-sm">Custom Optimization</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Scalability for Large Projects
               </h4>
@@ -714,7 +714,7 @@ function Pricing1() {
               <h4 className="font-medium text-sm">Advanced</h4>
               <h4 className="font-medium text-sm">Full Scalability</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Custom Hosting Integration
               </h4>
@@ -729,7 +729,7 @@ function Pricing1() {
             <div className="py-4 border-b">
               <h2 className="font-semibold text-base">Security & Compliance</h2>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Basic Security</h4>
               <h4 className="font-medium text-sm">
                 <CheckCircle className="text-green-600" />
@@ -742,14 +742,14 @@ function Pricing1() {
               </h4>
               <h4 className="font-medium text-sm">Custom Security</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">Role-Based Access Contol</h4>
               <h4 className="font-medium text-sm">-</h4>
               <h4 className="font-medium text-sm">Basic</h4>
               <h4 className="font-medium text-sm">Advanced</h4>
               <h4 className="font-medium text-sm">Custom</h4>
             </div>
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <h4 className="font-medium text-sm">
                 Compliance with industry Standards
               </h4>

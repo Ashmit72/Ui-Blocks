@@ -9,6 +9,7 @@ import FAQViewer from './components/liveViewer/faqViewer'
 import SocialProofViewer from './components/liveViewer/socialProofCompanies'
 import FeaturesViewer from './components/liveViewer/featuresViewer'
 import TestimonialViewer from './components/liveViewer/testimonialsViewer'
+import PricingViewer from './components/liveViewer/pricingViewer'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <HeroViewer />
         <SocialProofViewer />
         <FeaturesViewer />
+        <PricingViewer/>
         <FAQViewer />
         <CTAViewer />
         <TestimonialViewer />

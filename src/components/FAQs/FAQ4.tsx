@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Badge } from '../ui/badge';
 import { ChevronDown, ChevronUp } from '@untitled-ui/icons-react';
 import faqs from "./faq-content.json"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './customAccordion';
+
 
 const FAQ4 = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -31,7 +33,7 @@ const FAQ4 = () => {
 
       <div className="w-full lg:w-3/5 lg:pt-6">
         <div className="max-w-3xl mx-auto space-y-2">
-          {faqs.map((faq, index) => (
+          {/* {faqs.map((faq, index) => (
             <div key={index} className="border rounded-xl p-4 space-y-3">
               <button
                 className="w-full flex justify-between items-center text-left text-base focus:outline-none font-medium text-foreground"
@@ -52,7 +54,22 @@ const FAQ4 = () => {
                 </div>
               )}
             </div>
-          ))}
+          ))} */}
+
+{
+  faqs.map((faq, index) => (
+    <Accordion key={index} type="single" collapsible className="w-full">
+      <AccordionItem value={`item-${index + 1}`} className='border rounded-xl px-4'>
+        <AccordionTrigger className='w-full flex justify-between items-center text-left text-base focus:outline-none font-medium text-foreground hover:no-underline'>
+          {faq.question}
+        </AccordionTrigger>
+        <AccordionContent className='text-muted-foreground text-base'>
+          {faq.answer}
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  ))
+}
         </div>
       </div>
     </section>

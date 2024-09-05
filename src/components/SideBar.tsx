@@ -14,6 +14,7 @@ import { faqVariations } from './liveViewer/faqViewer'
 import { socialProofVariations } from './liveViewer/socialProofCompanies'
 import { featuresVariations } from './liveViewer/featuresViewer'
 import { testimonialsVariations } from './liveViewer/testimonialsViewer'
+import { pricingVariations } from './liveViewer/pricingViewer'
 
 export type component = {
     name: string,
@@ -42,6 +43,11 @@ function SideBar() {
             name: 'Features',
             componentType: 'features',
             variations: Object.keys(featuresVariations)
+        },
+        {
+            name: 'Pricing',
+            componentType: 'pricing',
+            variations: Object.keys(pricingVariations)
         },
 
         {

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Navbar1 from '../navbars/Navbar1'
 import Navbar2 from '../navbars/Navbar2'
 import { useComponentContext } from '@/providers/ComponentProvider'

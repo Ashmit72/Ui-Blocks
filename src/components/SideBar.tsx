@@ -45,11 +45,15 @@ function SideBar() {
             variations: Object.keys(featuresVariations)
         },
         {
+            name:'Testimonials',
+            componentType:'testimonials',
+            variations:Object.keys(testimonialsVariations)
+        },
+        {
             name: 'Pricing',
             componentType: 'pricing',
             variations: Object.keys(pricingVariations)
         },
-
         {
             name: 'FAQ',
             componentType: 'faq',
@@ -60,11 +64,7 @@ function SideBar() {
             componentType: 'cta',
             variations: Object.keys(CTAVariations)
         },
-        {
-            name:'Testimonials',
-            componentType:'testimonials',
-            variations:Object.keys(testimonialsVariations)
-        },
+       
         {
             name: 'Footer',
             componentType: 'footer',

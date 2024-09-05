@@ -10,25 +10,15 @@ function SocialProofCompanies1() {
                 <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                     <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                         {data.companies.map((company, index) => (
-                            //  ADJUSTED HEIGHT FOR 40PX AND WIDTH FOR AUTO 
-                            <li key={index} className='bg-background h-10 relative'>
-                                <div className="overlay absolute h-full w-auto">
-                                    <img className="h-full w-full grayscale saturate-0 contrast-200 dark:mix-blend-plus-lighter" src={company} />
-                                </div>
-                                <img className="h-full w-auto saturate-200 contrast-200 mix-blend-plus-darker dark:invert grayscale" src={company} />
-
-
+                            <li key={index} className='bg-background h-10'>
+                                <img className="h-full w-auto saturate-200 contrast-[300%]  dark:invert brightness-[70%] dark:brightness-[59%] grayscale" src={company} />
                             </li>
                         ))}
                     </ul>
                     <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-                        {data.companies.map((company, index) => (
-                            //  ADJUSTED HEIGHT FOR 40PX AND WIDTH FOR AUTO 
-                            <li key={index} className='bg-background h-10 relative'>
-                                <div className="overlay absolute h-full w-auto">
-                                    <img className="h-full w-full grayscale saturate-0 contrast-200 dark:mix-blend-plus-lighter" src={company} />
-                                </div>
-                                <img className="h-full w-auto saturate-200 contrast-200 mix-blend-plus-darker dark:invert grayscale" src={company} />
+                    {data.companies.map((company, index) => (
+                            <li key={index} className='bg-background h-10'>
+                                <img className="h-full w-auto saturate-200 contrast-[300%]  dark:invert brightness-[70%] dark:brightness-[59%] grayscale" src={company} />
                             </li>
                         ))}
                     </ul>

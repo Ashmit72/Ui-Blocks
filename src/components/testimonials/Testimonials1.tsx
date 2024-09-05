@@ -6,7 +6,7 @@ return (
                 <span className="scale-75 md:scale-100 translate-x-[-15px] md:translate-x-[0px]" >
                     <img className="grayscale contrast-100 dark:invert" src="/Radian.png" alt="radian" />
                 </span>
-                <p className="font-medium sm:text-base md:text-xl lg:text-2xl" >
+                <p className="font-medium text-base sm:text-xl md:text-2xl" >
                 “Building products in a large organization can be a very lengthy and expensive process. With Radian we were able to cut our development costs and time by more than 60%, which allowed our team to develop very high quality digital experiences”
                 </p>
                 <section>

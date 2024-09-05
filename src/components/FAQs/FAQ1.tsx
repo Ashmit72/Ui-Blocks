@@ -74,13 +74,13 @@ const FAQ1 = () => {
               key={index}
               type="single"
               collapsible
-              className="w-full  space-y-3"
+              className="w-full space-y-3"
             >
               <AccordionItem
                 value={`item-${index + 1}`}
                 className="border rounded-xl pl-4 pr-4"
               >
-                <AccordionTrigger className="w-full flex justify-between items-center text-left text-base font-medium focus:outline-none text-foreground hover:no-underline">
+                <AccordionTrigger className="w-full flex justify-between items-center text-left text-base font-medium focus:outline-none focus-visible:outline-none text-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base">

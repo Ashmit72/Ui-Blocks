@@ -17,7 +17,7 @@ const FAQ1 = () => {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto py-14 md:py-20 lg:py-20 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
+    <section className="max-w-screen-xl mx-auto py-8 md:py-15 lg:py-15 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
       <div className="mx-auto text-center space-y-6 px-6">
         <div className="space-y-3">
           <Badge

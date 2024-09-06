@@ -22,10 +22,10 @@ function App() {
         <HeroViewer />
         <SocialProofViewer />
         <FeaturesViewer />
+        <TestimonialViewer />
         <PricingViewer/>
         <FAQViewer />
         <CTAViewer />
-        <TestimonialViewer />
         <FooterViewer />
         <SideBar />
       </ComponentProvider>

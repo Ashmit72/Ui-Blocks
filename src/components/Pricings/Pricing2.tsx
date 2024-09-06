@@ -71,7 +71,7 @@ function Pricing2() {
         <p className="text-sm">Billed annually</p>
       </div>
 
-      <div className="lg:hidden border flex -mx-5 md:-mx-6 sticky top-[4.5rem]  bg-background">
+      <div className="lg:hidden border flex -mx-5 md:-mx-6 sticky top-[4.5rem]  bg-background z-10">
         <div className="w-1/4 text-center border-r" onClick={handleFreeClick}>
           <div
             className={`py-3 px-[0.625rem]  ${isFree ? "border-black border-b-2" : ""}`}
@@ -108,7 +108,7 @@ function Pricing2() {
         </div>
       </div>
 
-      <div className="lg:hidden lg:px-6 space-y-5 lg:space-x-5 lg:space-y-0 ">
+      <div className="lg:hidden lg:px-6 space-y-5 lg:space-x-5 lg:space-y-0">
         {isFree && (
           <div className="border rounded-xl lg:w-1/4">
             <div className="p-5 space-y-4">
@@ -119,7 +119,7 @@ function Pricing2() {
                 <p className="font-normal text-sm"> Great for solo founders</p>
               </div>
               <div className="flex relative space-x-2">
-                <div>
+                <div className="">
                   <h1 className="font-semibold text-[2.25rem] leading-[2.75rem]">
                     $0
                   </h1>
@@ -378,7 +378,7 @@ function Pricing2() {
         )}
       </div>
 
-      <div className="lg:flex hidden lg:px-6 space-y-5 lg:space-x-5 lg:space-y-0 ">
+      <div className="lg:flex hidden space-y-5 lg:space-x-5 lg:space-y-0 ">
         <div className="border rounded-xl lg:w-1/4">
           <div className="p-5 space-y-4">
             <div className="space-y-[0.125rem]">

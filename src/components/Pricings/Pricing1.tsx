@@ -13,6 +13,37 @@ import {
 
 function Pricing1() {
   const [isBilledMonthly, setIsBilledMonthly] = useState(false);
+  const [isFree, setIsFree] = useState(true);
+  const [isBasic, setIsBasic] = useState(false);
+  const [isBusiness, setIsBusiness] = useState(false);
+  const [isEnterpise, setIsEnterprise] = useState(false);
+
+  const handleFreeClick = () => {
+    setIsFree(true);
+    setIsBasic(false);
+    setIsBusiness(false);
+    setIsEnterprise(false);
+  };
+
+  const handleBasicClick = () => {
+    setIsFree(false);
+    setIsBasic(true);
+    setIsBusiness(false);
+    setIsEnterprise(false);
+  };
+
+  const handleBusinessClick = () => {
+    setIsFree(false);
+    setIsBasic(false);
+    setIsBusiness(true);
+    setIsEnterprise(false);
+  };
+  const handleEnterpriseClick = () => {
+    setIsFree(false);
+    setIsBasic(false);
+    setIsBusiness(false);
+    setIsEnterprise(true);
+  };
 
   return (
     <div className="max-w-screen-xl flex flex-col mx-auto px-5 md:px-6 py-14 md:py-20 space-y-8">
@@ -312,42 +343,94 @@ function Pricing1() {
         View full Features List <ChevronDown />
       </Button>
 
-      <div>
-        <div className="lg:hidden border flex -mx-5 md:-mx-6">
-          <div className="w-1/4 text-center border-r">
-            <div className="py-3 px-[0.625rem] border-b-2 border-black">
+      <div className="">
+        <div className="lg:hidden border flex -mx-5 md:-mx-6 sticky top-[4.5rem] bg-background">
+          <div className="w-1/4 text-center border-r" onClick={handleFreeClick}>
+            <div className={`py-3 px-[0.625rem] ${isFree ? 'border-b-2 border-black' : ''}`}>
               Free
             </div>
           </div>
 
-          <div className="w-1/4 text-center border-r">
-            <div className="py-3 px-[0.625rem]">Basic</div>
+          <div className="w-1/4 text-center border-r" onClick={handleBasicClick}>
+            <div className={`py-3 px-[0.625rem] ${isBasic ? 'border-b-2 border-black' : ''}`}>Basic</div>
           </div>
 
-          <div className="w-1/4 text-center border-r">
-            <div className="py-3 px-[0.625rem]">Business</div>
+          <div className="w-1/4 text-center border-r" onClick={handleBusinessClick}>
+            <div className={`py-3 px-[0.625rem] ${isBusiness ? 'border-b-2 border-black' : ''}`}>Business</div>
           </div>
 
-          <div className="w-1/4 text-center">
-            <div className="py-3 px-[0.625rem]">Enterprise</div>
+          <div className="w-1/4 text-center" onClick={handleEnterpriseClick}>
+            <div className={`py-3 px-[0.625rem] ${isEnterpise ? 'border-b-2 border-black' : ''}`}>Enterprise</div>
           </div>
         </div>
 
-        <div className="py-4 space-y-2 lg:hidden">
-          <div>
-            <h1 className="font-semibold text-[1.125rem] leading-[1.75rem]">
-              Free
-            </h1>
-            <div className="flex space-x-2">
-              <p className="text-base font-semibold">$0</p>
-              <p className="text-base font-normal">per month</p>
+        {isFree && (
+          <div className="py-4 space-y-2 lg:hidden">
+            <div>
+              <h1 className="font-semibold text-[1.125rem] leading-[1.75rem]">
+                Free
+              </h1>
+              <div className="flex space-x-2">
+                <p className="text-base font-semibold">$0</p>
+                <p className="text-base font-normal">                  {isBilledMonthly ? "per year" : "per month"}
+</p>
+              </div>
             </div>
+            <Button className="w-full">Start for Free</Button>
           </div>
-          <Button className="w-full">Start for Free</Button>
-        </div>
+        )}
+
+        {isBasic && (
+          <div className="py-4 space-y-2 lg:hidden">
+            <div>
+              <h1 className="font-semibold text-[1.125rem] leading-[1.75rem]">
+                Basic
+              </h1>
+              <div className="flex space-x-2">
+                <p className="text-base font-semibold">                  {isBilledMonthly ? "$10" : "$15"}
+</p>
+                <p className="text-base font-normal">                  {isBilledMonthly ? "per year" : "per month"}
+</p>
+              </div>
+            </div>
+            <Button className="w-full">Get Started</Button>
+          </div>
+        )}
+
+        {isBusiness && (
+          <div className="py-4 space-y-2 lg:hidden">
+            <div>
+              <h1 className="font-semibold text-[1.125rem] leading-[1.75rem]">
+                Business
+              </h1>
+              <div className="flex space-x-2">
+                <p className="text-base font-semibold">{isBilledMonthly ? "$15" : "$20"}</p>
+                <p className="text-base font-normal">                  {isBilledMonthly ? "per year" : "per month"}
+</p>
+              </div>
+            </div>
+            <Button className="w-full">Get Started</Button>
+          </div>
+        )}
+
+        {isEnterpise && (
+          <div className="py-4 space-y-2 lg:hidden">
+            <div>
+              <h1 className="font-semibold text-[1.125rem] leading-[1.75rem]">
+                Enterprise
+              </h1>
+              <div className="flex space-x-2">
+                <p className="text-base font-semibold">Custom</p>
+              </div>
+            </div>
+            <Button className="w-full">Get Started</Button>
+          </div>
+        )}
 
         {/* For small screen devices */}
-        <div className="lg:hidden">
+        {
+          isFree && (
+            <div className="lg:hidden">
           <div>
             <div className="py-4 border-b">
               <h2 className="font-semibold text-base">Core Features</h2>
@@ -488,11 +571,452 @@ function Pricing1() {
             </div>
           </div>
         </div>
+          )
+        }
+
+        {
+          isBasic && (
+            <div className="lg:hidden">
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Core Features</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Ready-to-use UI Components
+                </h4>
+                <h4 className="font-medium text-sm">Full Access</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Customizable Themes</h4>
+                <h4 className="font-medium text-sm">Standard</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Integration with React</h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with TypeScript
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with Tailwind CSS
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with shadcn/ui
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Code Snippet Library</h4>
+                <h4 className="font-medium text-sm">Standard</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Collaboration Tools</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Team Members</h4>
+                <h4 className="font-medium text-sm">5 members</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Shared Design Libraries</h4>
+                <h4 className="font-medium text-sm"><CheckCircle className="text-green-600"/></h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Component Version Control</h4>
+                <h4 className="font-medium text-sm">
+                  Basic
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Support & Maintenance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Documentation Access</h4>
+                <h4 className="font-medium text-sm">Standard</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Email Support</h4>
+                <h4 className="font-medium text-sm">Standard Support</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Custom Component Requests</h4>
+                <h4 className="font-medium text-sm">
+                  Limited
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">
+                  Performance & Scalability
+                </h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Component Load Optimization
+                </h4>
+                <h4 className="font-medium text-sm">Standard</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Scalability for Large Projects
+                </h4>
+                <h4 className="font-medium text-sm">Basic</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Custom Hosting Integration
+                </h4>
+                <h4 className="font-medium text-sm">-</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Security & Compliance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Best Security</h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Role-Based Access Control</h4>
+                <h4 className="font-medium text-sm">Basic</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Compliance with Industry Standards
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+            </div>
+          </div>
+          )
+        }
+
+        {
+          isBusiness && (
+            <div className="lg:hidden">
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Core Features</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Ready-to-use UI Components
+                </h4>
+                <h4 className="font-medium text-sm">Full Access</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Customizable Themes</h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Integration with React</h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with TypeScript
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with Tailwind CSS
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with shadcn/ui
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Code Snippet Library</h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Collaboration Tools</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Team Members</h4>
+                <h4 className="font-medium text-sm">10 members</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Shared Design Libraries</h4>
+                <h4 className="font-medium text-sm"><CheckCircle className="text-green-600"/></h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Component Version Control</h4>
+                <h4 className="font-medium text-sm">
+                  Advanced
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Support & Maintenance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Documentation Access</h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Email Support</h4>
+                <h4 className="font-medium text-sm">24/7 Support</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Custom Component Requests</h4>
+                <h4 className="font-medium text-sm">
+                  Standard
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">
+                  Performance & Scalability
+                </h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Component Load Optimization
+                </h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Scalability for Large Projects
+                </h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Custom Hosting Integration
+                </h4>
+                <h4 className="font-medium text-sm">Standard</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Security & Compliance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Best Security</h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Role-Based Access Control</h4>
+                <h4 className="font-medium text-sm">Advanced</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Compliance with Industry Standards
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+            </div>
+          </div>
+          )
+        }
+        
+        {
+          isEnterpise && (
+            <div className="lg:hidden">
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Core Features</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Ready-to-use UI Components
+                </h4>
+                <h4 className="font-medium text-sm">Customizable Access</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Customizable Themes</h4>
+                <h4 className="font-medium text-sm">Full Customization</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Integration with React</h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with TypeScript
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with Tailwind CSS
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Integration with shadcn/ui
+                </h4>
+                <h4 className="font-medium text-sm">
+                  <CheckCircle className="text-green-600" />
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Code Snippet Library</h4>
+                <h4 className="font-medium text-sm">Full Access</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Collaboration Tools</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Team Members</h4>
+                <h4 className="font-medium text-sm">Custom</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Shared Design Libraries</h4>
+                <h4 className="font-medium text-sm"><CheckCircle className="text-green-600"/></h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Component Version Control</h4>
+                <h4 className="font-medium text-sm">
+                  Advanced
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Support & Maintenance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Documentation Access</h4>
+                <h4 className="font-medium text-sm">Priority Support</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Email Support</h4>
+                <h4 className="font-medium text-sm">Dedicated Support</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Custom Component Requests</h4>
+                <h4 className="font-medium text-sm">
+                  Full Access
+                </h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">
+                  Performance & Scalability
+                </h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Component Load Optimization
+                </h4>
+                <h4 className="font-medium text-sm">Custom Optimization</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Scalability for Large Projects
+                </h4>
+                <h4 className="font-medium text-sm">Full Scalability</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Custom Hosting Integration
+                </h4>
+                <h4 className="font-medium text-sm">Full Customization</h4>
+              </div>
+            </div>
+  
+            <div>
+              <div className="py-4 border-b">
+                <h2 className="font-semibold text-base">Security & Compliance</h2>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Best Security</h4>
+                <h4 className="font-medium text-sm">
+                  Custom Security
+                </h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">Role-Based Access Control</h4>
+                <h4 className="font-medium text-sm">Custom</h4>
+              </div>
+              <div className="flex justify-between py-4 border-b space-x-4">
+                <h4 className="font-medium text-sm">
+                  Compliance with Industry Standards
+                </h4>
+                <h4 className="font-medium text-sm text-right">
+                  Custom Compliance
+                </h4>
+              </div>
+            </div>
+          </div>
+          )
+        }
+ 
 
         {/* Pricing Details for large screen devices */}
         <div className="hidden lg:block">
-          <div className="">
-          <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+          <div className="sticky top-0 pt-20 bg-background">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
               <div className="relative">
                 <h2 className="font-semibold text-lg absolute bottom-4">
                   Features
@@ -501,24 +1025,22 @@ function Pricing1() {
               <h4 className="font-medium text-sm">
                 <div className="py-4 space-y-2">
                   <div>
-                    <h1 className="font-semibold text-lg">
-                      Free
-                    </h1>
+                    <h1 className="font-semibold text-lg">Free</h1>
                     <div className="flex space-x-2">
                       <p className="text-base font-semibold">$0</p>
                       <p className="text-base font-normal">per month</p>
                     </div>
                   </div>
-                  <Button className="w-full py-[0.625rem] px-[0.875rem]">Start for Free</Button>
+                  <Button className="w-full py-[0.625rem] px-[0.875rem]">
+                    Start for Free
+                  </Button>
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
                 <div className="py-4 space-y-2">
                   <div>
                     <div className="flex space-x-2">
-                      <h1 className="font-semibold text-lg">
-                        Basic
-                      </h1>
+                      <h1 className="font-semibold text-lg">Basic</h1>
                       <Badge
                         variant={"outline"}
                         className="bg-background rounded-full px-[0.625rem]  w-fit"
@@ -533,34 +1055,37 @@ function Pricing1() {
                       <p className="text-base font-normal">per month</p>
                     </div>
                   </div>
-                  <Button className="w-full py-[0.625rem] px-[0.875rem]">Get Started</Button>
+                  <Button className="w-full py-[0.625rem] px-[0.875rem]">
+                    Get Started
+                  </Button>
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
                 <div className="py-4 space-y-2">
                   <div>
-                    <h1 className="font-semibold text-lg">
-                      Business
-                    </h1>
+                    <h1 className="font-semibold text-lg">Business</h1>
                     <div className="flex space-x-2">
                       <p className="text-base font-semibold">$15</p>
                       <p className="text-base font-normal">per month</p>
                     </div>
                   </div>
-                  <Button className="w-full py-[0.625rem] px-[0.875rem]">Get Started</Button>
+                  <Button className="w-full py-[0.625rem] px-[0.875rem]">
+                    Get Started
+                  </Button>
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
                 <div className="py-4 space-y-2">
                   <div>
-                    <h1 className="font-semibold text-lg">
-                      Enterprise
-                    </h1>
+                    <h1 className="font-semibold text-lg">Enterprise</h1>
                     <div className="flex space-x-2">
                       <p className="text-base font-medium">Custom</p>
                     </div>
                   </div>
-                  <Button className="w-full py-[0.625rem] px-[0.875rem]" variant={"outline"}>
+                  <Button
+                    className="w-full py-[0.625rem] px-[0.875rem]"
+                    variant={"outline"}
+                  >
                     Contact us
                   </Button>
                 </div>

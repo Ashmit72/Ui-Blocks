@@ -22,9 +22,6 @@ RUN npm run build
 
 
 
-
-
-
 #STEP 2:SERVER WITH NGINX
 FROM nginx:1-alpine3.20
 

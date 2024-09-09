@@ -21,17 +21,17 @@ jobs:
         with:
           context: .
           push: true
-          tags: binaya1999/radian@beta
+          tags: binaya1999/radian:beta
 
   deploy:
     needs: build
     runs-on: aws-ec2
     steps:
       - name: Pull Image from Docker Hub
-        run: docker pull binaya1999/radian@beta
+        run: docker pull binaya1999/radian:beta
 
       - name: Delete Old Container
         run: docker rm -f radianContainer
 
       - name: Run the Docker Container
-        run: docker run -d --name radianContainer -p 5173:80 binaya1999/radian@beta
+        run: docker run -d --name radianContainer -p 5173:80 binaya1999/radian:beta

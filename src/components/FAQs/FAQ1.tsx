@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
 import { Badge } from "../ui/badge";
-import { ChevronDown, ChevronUp } from "@untitled-ui/icons-react";
 import faqs from "./faq-content.json";
 import {
   Accordion,
@@ -10,12 +8,6 @@ import {
 } from "./customAccordion";
 
 const FAQ1 = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number): void => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <section className="max-w-screen-xl mx-auto py-8 md:py-15 lg:py-15 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
       <div className="mx-auto text-center space-y-6 px-6">
@@ -47,28 +39,6 @@ const FAQ1 = () => {
 
       <div className="mt-10 pt-6">
         <div className="max-w-3xl mx-auto space-y-2">
-          {/* old */}
-          {/* {faqs.map((faq, index) => (
-            <div key={index} className="border rounded-xl p-4 space-y-3">
-              <button
-                className="w-full flex justify-between items-center text-left text-base font-medium focus:outline-none text-foreground"
-                onClick={() => toggleAccordion(index)}
-              >
-                {faq.question}
-                <span className="ml-1">
-                  {activeIndex === index ? <ChevronUp /> : <ChevronDown />}
-                </span>
-              </button>
-              {activeIndex === index && (
-                <div>
-                  <p className="text-muted-foreground text-base">
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))} */}
-
           {faqs.map((faq, index) => (
             <Accordion
               key={index}

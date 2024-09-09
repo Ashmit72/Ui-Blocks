@@ -1,0 +1,37 @@
+name: CI/CD
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Repository
+        uses: actions/checkout@v4
+
+      - name: Login to DockerHub Registry
+        uses: docker/login-action@v3.3.0
+        with:
+          username: ${{secrets.DOCKERHUB_USERNAME}}
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
+
+      - name: Build and Publish Docker Image to Docker Hub
+        uses: docker/build-push-action@v6.7.0
+        with:
+          context: .
+          push: true
+          tags: binaya1999/radian@beta
+
+  deploy:
+    needs: build
+    runs-on: aws-ec2
+    steps:
+      - name: Pull Image from Docker Hub
+        run: docker pull binaya1999/radian@beta
+
+      - name: Delete Old Container
+        run: docker rm -f radianContainer
+
+      - name: Run the Docker Container
+        run: docker run -d --name radianContainer -p 5173:80 binaya1999/radian@beta

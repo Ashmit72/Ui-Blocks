@@ -8,11 +8,8 @@ function Features1() {
         <div className="max-w-screen-xl mx-auto px-5 sm:px-6 flex flex-col gap-10 py-8 sm:py-[3.75rem]">
             <div className="flex flex-col lg:items-center gap-5 lg:gap-6">
                 <div className="flex flex-col lg:items-center gap-3">
-                    <Badge
-                        variant={"outline"}
-                        className="rounded-full max-w-fit bg-background px-3 py-1"
-                    >
-                        <span className="text-sm capitalize text-foreground">Features</span>
+                    <Badge variant={"outline"} className="rounded-full max-w-fit bg-background px-3 py-1">
+                        <span className="text-sm capitalize font-medium">Features</span>
                     </Badge>
                     <div className="max-w-3xl lg:text-center text-[2rem] sm:text-4xl lg:text-5xl font-semibold leading-[2.6rem] sm:leading-[2.75rem] lg:leading-[3.75rem] sm:-tracking-[0.045rem] lg:-tracking-[0.06rem]">
                         Turn ideas into projects

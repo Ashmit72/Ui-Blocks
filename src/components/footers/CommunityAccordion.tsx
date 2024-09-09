@@ -1,12 +1,10 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { ChevronDown } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 
 const solutions = [
-    { name: 'Linkedin', href: '#'},
-    { name: 'Facebook', href: '#'},
-    { name: 'Instagram', href: '#'},
+    { name: 'Linkedin', href: '#' },
+    { name: 'Facebook', href: '#' },
+    { name: 'Instagram', href: '#' },
     { name: 'Twitter', href: '#' },
 ]
 

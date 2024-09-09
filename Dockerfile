@@ -1,6 +1,7 @@
-# set the base image to create the image for react app
-FROM node:20-alpine
 
+#SETP 1: BUILD THE REACT APP
+# set the base image to create the image for react app
+FROM node:20-alpine as build
 
 # set the working directory to /app
 WORKDIR /app
@@ -16,8 +17,23 @@ RUN npm install
 # copy the rest of the files to the working directory
 COPY . .
 
-# expose port 5173 to tell Docker that the container listens on the specified network ports at runtime
-EXPOSE 5173
+# build the react application
+RUN npm run build
 
-# command to run the app
-CMD npm run start
+
+
+
+
+
+#STEP 2:SERVER WITH NGINX
+FROM nginx:1-alpine3.20
+
+WORKDIR /usr/share/nginx/html
+
+RUN rm -rf *
+
+COPY --from=dist /app/dist .
+
+EXPOSE 80
+
+ENTRYPOINT [ "nginx","-g","daemon off;" ]

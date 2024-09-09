@@ -1,14 +1,12 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
-import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 
 
 const solutions = [
-    { name: 'About', href: '#'},
-    { name: 'Carrers', href: '#'},
-    { name: 'Customers', href: '#'},
-    { name: 'Newsroom', href: '#'},
-    { name: 'Become a partner', href: '#'},
+    { name: 'About', href: '#' },
+    { name: 'Carrers', href: '#' },
+    { name: 'Customers', href: '#' },
+    { name: 'Newsroom', href: '#' },
+    { name: 'Become a partner', href: '#' },
 ]
 
 export function CompanyAccordion() {

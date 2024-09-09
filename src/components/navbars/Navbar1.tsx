@@ -8,6 +8,7 @@ import FullWidthPopover, { FullWidthAccordion } from './FullWidthPopover'
 import { useEffect, useState } from 'react'
 import { Menu01, X } from '@untitled-ui/icons-react'
 import { Accordion } from '../ui/custom/mobile-nav-accordion'
+import { Link } from 'react-router-dom'
 
 
 function Navbar1() {
@@ -32,7 +33,9 @@ function Navbar1() {
                 <div className={`px-5 lg:px-6 transition-all duration-300 ease-in-out ${isScrolled ? 'py-4 lg:py-3' : 'py-5'} max-w-screen-xl mx-auto`}>
                     <div className="flex items-center justify-between relative">
                         {/* Logo or Title  */}
-                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        <Link to={"/"}>
+                            <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        </Link>
                         {/* Menu Bar- For Responsiveness */}
                         <div className='lg:hidden'>
                             {!isOpen ?
@@ -66,8 +69,12 @@ function Navbar1() {
                             </li>
                         </ul>
                         <div className='hidden lg:flex lg:gap-2'>
-                            <Button variant={"outline"} size={"lg"}>Login</Button>
-                            <Button size={"lg"}>Get Started</Button>
+                            <Link to={"#"}>
+                                <Button variant={"outline"} size={"lg"}>Login</Button>
+                            </Link>
+                            <Link to={"#"}>
+                                <Button size={"lg"}>Get Started</Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -76,16 +83,18 @@ function Navbar1() {
                 <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-10  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
                     <div className="flex justify-between items-center px-5 py-5">
                         {/* Logo and Close Button */}
-                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        <Link to={"/"}>
+                            <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        </Link>
                         <div onClick={() => setIsOpen(false)} className="size-10 flex items-center justify-center bg-border/50 rounded-md">
                             <X className='size-6 text-foreground shrink-0' />
                         </div>
                     </div>
                     <div className="flex flex-col px-5 pb-5 gap-4">
                         <Accordion type="single" collapsible>
-                            <a href='#' className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
+                            <Link to="#" className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
                                 Non Accordion
-                            </a>
+                            </Link>
                             {/* Accordion Style Navigation Menus */}
                             <TitleAccordion />
                             <IconTitleAccordion />
@@ -94,8 +103,12 @@ function Navbar1() {
                             <FullWidthAccordion />
                         </Accordion>
                         <div className='flex flex-col gap-4 '>
-                            <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>
-                            <Button className='w-full' size={"lg"}>Get Started</Button>
+                            <Link to={"#"}>
+                                <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>
+                            </Link>
+                            <Link to={"#"}>
+                                <Button className='w-full' size={"lg"}>Get Started</Button>
+                            </Link>
                         </div>
                     </div>
 

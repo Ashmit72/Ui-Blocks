@@ -2,7 +2,7 @@ import { Badge } from "../ui/badge"
 
 function Features4() {
     return (
-        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 flex flex-col gap-10">
+        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 flex flex-col gap-10 py-8 sm:py-[3.75rem]">
             <div className="flex flex-col items-center gap-5 lg:gap-6">
                 <div className="flex flex-col items-center gap-3">
                     <Badge

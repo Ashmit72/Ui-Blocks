@@ -8,6 +8,7 @@ import FullScreenPopover, { FullWidthAccordion } from './FullWidthPopover'
 import { useState } from 'react'
 import { Menu01, X } from '@untitled-ui/icons-react'
 import { Accordion } from '../ui/custom/mobile-nav-accordion'
+import { Link } from 'react-router-dom'
 
 function Navbar2() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,9 +25,11 @@ function Navbar2() {
 
     return (
         <main className='bg-gradient-to-b from-background/20 backdrop-blur to-transparent pt-4 z-10 sticky top-0 w-full'>
-            <nav className={`px-5 sm:px-6 lg:px-3.5 py-3 max-w-[78.75rem] border border-transparent mx-auto ${isScrolled ? 'lg:bg-background/60 lg:backdrop-blur lg:border lg:border-border/80' : ''} transition-all ease-in-out rounded-xl`}>
+            <nav className={`px-5 sm:px-6 lg:px-3.5 py-3 max-w-[78.75rem] border border-transparent mx-auto ${isScrolled ? 'lg:bg-background/60 lg:backdrop-blur lg:border-border/80' : ''} transition-all ease-in-out rounded-xl`}>
                 <div className="flex items-center justify-between relative">
-                    <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                    <Link to={"/"}>
+                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                    </Link>
                     {/* Menu Bar- For Responsiveness */}
                     <div className='lg:hidden'>
                         {!isOpen ?
@@ -58,27 +61,33 @@ function Navbar2() {
                         </li>
                     </ul>
                     <div className='hidden lg:flex gap-2'>
-                        <Button variant={"outline"} size={"lg"}>Login</Button>
-                        <Button size={"lg"}>Get Started</Button>
+                        <Link to={"#"}>
+                            <Button variant={"outline"} size={"lg"}>Login</Button>
+                        </Link>
+                        <Link to={"#"}>
+                            <Button size={"lg"}>Get Started</Button>
+                        </Link>
                     </div>
                 </div>
             </nav>
 
 
             {/* Navigation Links and Accordions For Small and Medium Devices */}
-            <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-50  ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
-                <div className="flex justify-between items-center px-5 sm:px-6 py-5">
+            <nav className={`fixed top-0 left-0 w-screen h-screen bg-background overflow-y-auto z-50 pt-4 border border-transparent ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
+                <div className="flex justify-between items-center px-5 sm:px-6 py-3">
                     {/* Logo and Close Button */}
-                    <img src="Radian.png" alt="Logo" className='h-8' />
+                    <Link to={"/"}>
+                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                    </Link>
                     <div onClick={() => setIsOpen(false)} className="size-10 flex items-center justify-center bg-border/50 rounded-md">
                         <X className='size-6 text-foreground shrink-0' />
                     </div>
                 </div>
                 <div className="flex flex-col px-5 sm:px-6 pb-5 gap-4">
                     <Accordion type="single" collapsible>
-                        <a href='#' className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
+                        <Link to={"#"} className="flex flex-1 items-center justify-between py-[1.125rem] text-base text-foreground font-medium border-b cursor-pointer">
                             Non Accordion
-                        </a>
+                        </Link>
                         {/* Accordion Style Navigation Menus */}
                         <TitleAccordion />
                         <IconTitleAccordion />
@@ -87,8 +96,12 @@ function Navbar2() {
                         <FullWidthAccordion />
                     </Accordion>
                     <div className='flex flex-col gap-4 '>
-                        <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>
-                        <Button className='w-full' size={"lg"}>Get Started</Button>
+                        <Link to={"#"}>
+                            <Button variant={"outline"} size={"lg"} className='w-full'>Login</Button>
+                        </Link>
+                        <Link to={"#"}>
+                            <Button className='w-full' size={"lg"}>Get Started</Button>
+                        </Link>
                     </div>
                 </div>
 

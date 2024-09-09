@@ -4,7 +4,7 @@ import { Button } from "../../ui/button";
 function HeroSection2() {
     return (
         // CONFUSION:Vertical padding in lg-devices
-        <div className="mx-auto max-w-screen-xl space-y-14 px-5 py-14 sm:space-y-20 sm:px-6 sm:py-20 lg:space-y-24">
+        <div className="mx-auto max-w-screen-xl space-y-14 px-5 py-8 sm:space-y-20 sm:px-6 sm:py-[3.75rem] lg:space-y-24">
             <div className="mx-auto flex max-w-screen-lg flex-col gap-8 md:gap-9 lg:gap-10">
                 <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-9">
                     <div className="flex flex-col items-center gap-5 md:gap-6">
@@ -47,7 +47,7 @@ function HeroSection2() {
                 </div>
             </div>
             <div className="h-[13.75rem] sm:h-[25.3125rem] lg:h-[43.3125rem]">
-                <img src="Article1.png" alt="Hero" className="size-full object-cover" />
+                <img src="Gradient.jpg" alt="Hero" className="size-full object-cover rounded-xl" />
             </div>
         </div>
     );

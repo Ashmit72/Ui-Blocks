@@ -3,7 +3,7 @@ import data from "./data.json"
 function SocialProofCompanies1() {
     return (
         <div className='min-w-screen bg-background'>
-            <div className="max-w-screen-xl mx-auto flex flex-col items-center px-6 py-[60px]  gap-10">
+            <div className="max-w-screen-xl mx-auto flex flex-col items-center px-6 py-[60px] gap-10">
                 <div className="max-w-screen-lg text-center text-lg font-medium">
                     Thousands of businesses trust Radian to build their products
                 </div>

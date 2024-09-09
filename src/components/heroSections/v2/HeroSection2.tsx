@@ -3,7 +3,7 @@ import { Button } from "../../ui/button";
 
 function HeroSection2() {
     return (
-        <div className="min-w-screen py-14 sm:py-20 lg:py-[8.25rem]">
+        <div className="min-w-screen py-8 sm:py-[3.75rem]">
             <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-14 px-5 sm:gap-20 sm:px-6 lg:flex-row">
                 <div className="flex flex-col justify-center sm:w-[640px]">
                     <div className="flex flex-col gap-6 sm:gap-8 lg:gap-9">
@@ -49,7 +49,7 @@ function HeroSection2() {
 
                 <div className="flex h-[13.75rem] items-center justify-center sm:h-[25.313rem] lg:h-[29.75rem] lg:w-[31.375rem]">
                     <img
-                        src="Article2.png"
+                        src="Gradient.jpg"
                         alt="No preview"
                         className="size-full rounded-2xl object-cover"
                     />

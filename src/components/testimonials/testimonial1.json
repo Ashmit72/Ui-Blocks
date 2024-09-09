@@ -1,0 +1,32 @@
+{
+    "testimonials": [
+        {
+            "text": "“Building products in a large organization can be a very lengthy and expensive process. With Radian we were able to cut our development costs and time by more than 60%, which allowed our team to develop very high quality digital experiences”",
+            "author": "Nick Bayer",
+            "position": "VP of Engineering, Open Systems",
+            "image": "/Radian.png",
+            "heroImage": "./assets/photo.png"
+        },
+        {
+            "text": "“Building products in a large organization can be a very lengthy and expensive process. With Radian we were able to cut our development costs and time by more than 60%, which allowed our team to develop very high quality digital experiences”",
+            "author": "Nick Bayer",
+            "position": "VP of Engineering, Open Systems",
+            "image": "/Radian.png",
+            "heroImage": "./assets/photo1.png"
+        },
+        {
+            "text": "“Building products in a large organization can be a very lengthy and expensive process. With Radian we were able to cut our development costs and time by more than 60%, which allowed our team to develop very high quality digital experiences”",
+            "author": "Nick Bayer",
+            "position": "VP of Engineering, Open Systems",
+            "image": "/Radian.png",
+            "heroImage": "./assets/photo2.png"
+        },
+        {
+            "text": "“Building products in a large organization can be a very lengthy and expensive process. With Radian we were able to cut our development costs and time by more than 60%, which allowed our team to develop very high quality digital experiences”",
+            "author": "Nick Bayer",
+            "position": "VP of Engineering, Open Systems",
+            "image": "/Radian.png",
+            "heroImage": "./assets/photo3.png"
+        }
+    ]
+}

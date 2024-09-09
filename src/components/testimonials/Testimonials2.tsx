@@ -16,7 +16,7 @@ const Testimonials2 = () => {
                     <ul className="flex items-center justify-center md:justify-start mx-2.5 [&_img]:max-w-none  animate-infinite-slow-scroll gap-5" >
                         {
                             data.content.map((item) => (
-                                <li className="lg:min-w-[397.33px] sm:min-w-[400px] min-w-[390px] min-h-[268px] border-2 rounded-[16px] pb-6 px-6 pt-8 " key={item.id} >
+                                <li className="lg:min-w-[397.33px] sm:min-w-[400px] min-w-[390px] min-h-[268px] border-[1px] rounded-[16px] pb-6 px-6 pt-8 " key={item.id} >
                                     <p className="mb-6 text-base" >{item.content}</p>
                                     <div className="flex items-center justify-start" >
                                         <div className="w-10 h-10 mr-4" >

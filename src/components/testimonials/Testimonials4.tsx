@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Badge } from '../ui/badge';
 import data from './testimonials4.json';
 
-const Testimonials4: React.FC = () => {
+const Testimonials4 = () => {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Testimonials4: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,_black_20%,_black_calc(100%-250px),transparent_100%)] lg:[mask-image:none]">
+        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,transparent_0,_black_20%,_black_calc(100%-250px),transparent_100%)] lg:[mask-image:none]">
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 py-6">
             {contentToDisplay.map((item) => (
               <li key={item.id} className="p-6 flex flex-col gap-5 border rounded-[16px]">

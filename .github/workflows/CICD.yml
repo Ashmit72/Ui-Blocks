@@ -1,7 +1,7 @@
 name: CI/CD
 on:
   push:
-    branches: ["main"]
+    branches: ["dev"]
 
 jobs:
   build:
@@ -34,4 +34,4 @@ jobs:
         run: docker rm -f radianContainer
 
       - name: Run the Docker Container
-        run: docker run -d --name radianContainer -p 5173:80 binaya1999/radian:beta
+        run: docker run -d -p 5173:80 binaya1999/radian:beta --name radianContainer

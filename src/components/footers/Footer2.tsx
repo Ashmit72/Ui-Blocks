@@ -14,7 +14,7 @@ const Footer2 = () => {
           <div className="w-full md:w-2/5 mb-8 lg:mb-0">
             <div className="flex items-center mb-4">
               {/* Logo */}
-              <img src="Radian.webp" alt="Radian Logo" className="dark:saturate-0 dark:brightness-50 dark:invert" />
+              <img src="Radian.webp" alt="Radian Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
             </div>
             <p className="text-sm text-wrap text-muted-foreground">
               Empowering next generation of digital thinkers and creatives

@@ -15,7 +15,15 @@ import { socialProofVariations } from './liveViewer/socialProofCompanies'
 import { featuresVariations } from './liveViewer/featuresViewer'
 import { testimonialsVariations } from './liveViewer/testimonialsViewer'
 import { pricingVariations } from './liveViewer/pricingViewer'
-import { Switch } from './ui/switch'
+import { signInVariations } from './liveViewer/signInViewer'
+import { signUpVariations } from './liveViewer/signUpViewer'
+import { verifyEmailSentVariations } from './liveViewer/verifyEmailSentViewer'
+import { accountVerifiedVariations } from './liveViewer/accountVerifiedViewer'
+import { verificationLinkExpiredVariations } from './liveViewer/verificationLinkExpired'
+import { verifyEmailCodeVariations } from './liveViewer/verifyEmailCode'
+import { forgotPasswordVariations } from './liveViewer/forgotPasswordViewer'
+import { resetEmailSentVariations } from './liveViewer/resetEmailSentViewer'
+import { Switch } from '@radix-ui/react-switch'
 
 export type component = {
     name: string,
@@ -74,6 +82,49 @@ function SideBar() {
             variations: Object.keys(footerVariations)
         },
 
+    ]
+
+    const applicationComponents: component[] = [
+        {
+            name: 'Sign In',
+            componentType: 'SignIn',
+            variations: Object.keys(signInVariations)
+        },
+        {
+            name: 'Sign Up',
+            componentType: 'SignUp',
+            variations: Object.keys(signUpVariations)
+        },
+        {
+            name: 'Verify Email Sent',
+            componentType: 'VerifyEmailSent',
+            variations: Object.keys(verifyEmailSentVariations)
+        },
+        {
+            name: 'Account Verified',
+            componentType: 'AccountVerified',
+            variations: Object.keys(accountVerifiedVariations)
+        },
+        {
+            name: 'Verification Link Expired',
+            componentType: 'VerificationLinkExpired',
+            variations: Object.keys(verificationLinkExpiredVariations)
+        },
+        {
+            name: 'Verify Email Code',
+            componentType: 'VerifyEmailCode',
+            variations: Object.keys(verifyEmailCodeVariations)
+        },
+        {
+            name: 'Forgot Password',
+            componentType: 'ForgotPassword',
+            variations: Object.keys(forgotPasswordVariations)
+        },
+        {
+            name: 'Reset Email Sent',
+            componentType: 'ResetEmailSent',
+            variations: Object.keys(resetEmailSentVariations)
+        },
     ]
 
     const [isOpen, setIsOpen] = useState(false)
@@ -147,24 +198,26 @@ function SideBar() {
                                 <div className="text-sm font-semibold py-2">
                                     Application Components
                                 </div>
-                                <Accordion type='single' collapsible>
-                                    <AccordionItem value="navigation-bar">
-                                        <AccordionTrigger className='text-sm font-normal'>Login</AccordionTrigger>
-                                        <AccordionContent >
-                                            <div className="flex flex-col">
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Login 1
+                                {
+                                    applicationComponents.map((component, index) => (
+                                        <Accordion type='single' collapsible>
+                                        <AccordionItem key={`${component.componentType}-${index}`} value={`${component.componentType}-${index}`}>
+                                            <AccordionTrigger className='text-sm font-normal'>{component.name}</AccordionTrigger>
+                                            <AccordionContent >
+                                            <div className="flex flex-col gap-0.5">
+                                                    {component.variations.map((variation, index) => (
+                                                        <div key={index} onClick={() => { handleComponentChange(component.componentType, variation) }} className={`inline-flex items-center justify-between px-2 py-3 cursor-pointer rounded-xl hover:bg-secondary ${variation === selectedComponents[component.componentType] && 'bg-secondary'}`}>
+                                                            <span>{variation}</span>
+                                                            {variation === selectedComponents[component.componentType] && <Check className="size-4" />}
+                                                        </div>
+                                                    ))}
                                                 </div>
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Login 2
-                                                </div>
-                                                <div className='px-2 py-3 cursor-pointer hover:bg-secondary'>
-                                                    Login 3
-                                                </div>
-                                            </div>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    ))
+                                }
+                              
                             </div>
                         </div>
 
@@ -173,7 +226,7 @@ function SideBar() {
                             <div className='absolute bottom-3'>
                                 <div className="px-3 py-2 flex items-center space-x-2">
                                     <Switch id="dark-mode" checked={position === 'right'} onCheckedChange={() => togglePosition()} />
-                                    <Label htmlFor="dark-mode">Position Right</Label>
+                                    <Label htmlFor="dark-mode">{position === "left" ? "Position Right" : "Position Left"}</Label>
                                 </div>
                                 <ModeToggle />
                                 <div onClick={() => setIsOpen(false)} className="px-3 py-2 flex items-center space-x-2">

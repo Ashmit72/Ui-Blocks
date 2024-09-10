@@ -226,7 +226,7 @@ function SideBar() {
                             <div className='absolute bottom-3'>
                                 <div className="px-3 py-2 flex items-center space-x-2">
                                     <Switch id="dark-mode" checked={position === 'right'} onCheckedChange={() => togglePosition()} />
-                                    <Label htmlFor="dark-mode">Position Right</Label>
+                                    <Label htmlFor="dark-mode">{position === "left" ? "Position Right" : "Position Left"}</Label>
                                 </div>
                                 <ModeToggle />
                                 <div onClick={() => setIsOpen(false)} className="px-3 py-2 flex items-center space-x-2">

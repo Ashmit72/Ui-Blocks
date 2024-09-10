@@ -1,23 +1,23 @@
 {
     "companies": [
-      "/logos/Amazon.png",
-      "/logos/Clickup.png",
-      "/logos/Github.png",
-      "/logos/Google.png",
-      "/logos/Shopify.png",
-      "/logos/Krispcall.png",
-      "/logos/Mercury.png",
-      "/logos/Notion.png",
-      "/logos/Radian.png",
-      "/logos/Zapier.png"
+      "/logos/Amazon.webp",
+      "/logos/Clickup.webp",
+      "/logos/Github.webp",
+      "/logos/Google.webp",
+      "/logos/Shopify.webp",
+      "/logos/Krispcall.webp",
+      "/logos/Mercury.webp",
+      "/logos/Notion.webp",
+      "/logos/Radian.webp",
+      "/logos/Zapier.webp"
     ],
     "companies1": [
-      "/Company1.png",
-      "/Company2.png",
-      "/Company3.png",
-      "/Company4.png",
-      "/Company5.png",
-      "/Company6.png"
+      "/Company1.webp",
+      "/Company2.webp",
+      "/Company3.webp",
+      "/Company4.webp",
+      "/Company5.webp",
+      "/Company6.webp"
     ]
   }
   

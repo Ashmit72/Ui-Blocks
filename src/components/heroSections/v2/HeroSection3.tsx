@@ -34,7 +34,7 @@ function HeroSection3() {
 
                 <div className="flex h-[13.75rem] items-center justify-center sm:h-[25.313rem] lg:h-[29.75rem] lg:w-[31.375rem]">
                     <img
-                        src="Gradient.jpg"
+                        src="Gradient.webp"
                         alt="No preview"
                         className="size-full rounded-2xl object-cover"
                     />

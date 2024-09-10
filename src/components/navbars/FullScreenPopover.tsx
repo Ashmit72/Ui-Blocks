@@ -21,9 +21,9 @@ export default function FullScreenPopover() {
     ]
 
     const featuredArticles = [
-        { title: "How to build a beautiful and scalable products", image: "Article1.png" },
-        { title: "Best way to ship products that  your users find useful", image: "Article2.png" },
-        { title: "Top 5 boring fonts for your next side project", image: "Article3.png" }
+        { title: "How to build a beautiful and scalable products", image: "Gradient.webp" },
+        { title: "Best way to ship products that  your users find useful", image: "Gradient.webp" },
+        { title: "Top 5 boring fonts for your next side project", image: "Gradient.webp" }
     ]
 
     return (

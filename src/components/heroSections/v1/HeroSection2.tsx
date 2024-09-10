@@ -47,7 +47,7 @@ function HeroSection2() {
                 </div>
             </div>
             <div className="h-[13.75rem] sm:h-[25.3125rem] lg:h-[43.3125rem]">
-                <img src="Gradient.jpg" alt="Hero" className="size-full object-cover rounded-xl" />
+                <img src="Gradient.webp" alt="Hero" className="size-full object-cover rounded-xl" />
             </div>
         </div>
     );

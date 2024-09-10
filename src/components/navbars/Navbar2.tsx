@@ -28,7 +28,7 @@ function Navbar2() {
             <nav className={`px-5 sm:px-6 lg:px-3.5 py-3 max-w-[78.75rem] border border-transparent mx-auto ${isScrolled ? 'lg:bg-background/60 lg:backdrop-blur lg:border-border/80' : ''} transition-all ease-in-out rounded-xl`}>
                 <div className="flex items-center justify-between relative">
                     <Link to={"/"}>
-                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        <img src="Radian.webp" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
                     </Link>
                     {/* Menu Bar- For Responsiveness */}
                     <div className='lg:hidden'>
@@ -77,7 +77,7 @@ function Navbar2() {
                 <div className="flex justify-between items-center px-5 sm:px-6 py-3">
                     {/* Logo and Close Button */}
                     <Link to={"/"}>
-                        <img src="Radian.png" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
+                        <img src="Radian.webp" alt="Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
                     </Link>
                     <div onClick={() => setIsOpen(false)} className="size-10 flex items-center justify-center bg-border/50 rounded-md">
                         <X className='size-6 text-foreground shrink-0' />

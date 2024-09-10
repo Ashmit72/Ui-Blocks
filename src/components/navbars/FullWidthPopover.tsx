@@ -21,9 +21,9 @@ const features = [
 ]
 
 const featuredArticles = [
-    { title: "How to build a beautiful and scalable products", image: "Article1.png", href: "#" },
-    { title: "Best way to ship products that  your users find useful", image: "Article2.png", href: "#" },
-    { title: "Top 5 boring fonts for your next side project", image: "Article3.png", href: '#' }
+    { title: "How to build a beautiful and scalable products", image: "Gradient.webp", href: "#" },
+    { title: "Best way to ship products that  your users find useful", image: "Gradient.webp", href: "#" },
+    { title: "Top 5 boring fonts for your next side project", image: "Gradient.webp", href: '#' }
 ]
 
 

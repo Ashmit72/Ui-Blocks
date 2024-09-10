@@ -15,12 +15,15 @@ import { socialProofVariations } from './liveViewer/socialProofCompanies'
 import { featuresVariations } from './liveViewer/featuresViewer'
 import { testimonialsVariations } from './liveViewer/testimonialsViewer'
 import { pricingVariations } from './liveViewer/pricingViewer'
+import { Switch } from './ui/switch'
 
 export type component = {
     name: string,
     componentType: ComponentType,
     variations: string[]
 }
+
+export type position = 'left' | 'right'
 
 function SideBar() {
     const websiteComponents: component[] = [
@@ -45,9 +48,9 @@ function SideBar() {
             variations: Object.keys(featuresVariations)
         },
         {
-            name:'Testimonials',
-            componentType:'testimonials',
-            variations:Object.keys(testimonialsVariations)
+            name: 'Testimonials',
+            componentType: 'testimonials',
+            variations: Object.keys(testimonialsVariations)
         },
         {
             name: 'Pricing',
@@ -64,7 +67,7 @@ function SideBar() {
             componentType: 'cta',
             variations: Object.keys(CTAVariations)
         },
-       
+
         {
             name: 'Footer',
             componentType: 'footer',
@@ -75,6 +78,12 @@ function SideBar() {
 
     const [isOpen, setIsOpen] = useState(false)
 
+    const [position, setPosition] = useState<position>('left')
+
+    const togglePosition = () => {
+        setPosition(position === 'left' ? 'right' : 'left')
+    }
+
     const { selectedComponents, setComponentVariation } = useComponentContext();
 
     const handleComponentChange = (type: ComponentType, variation: string) => {
@@ -84,18 +93,18 @@ function SideBar() {
     return (
         <>
             {!isOpen ?
-                <div onClick={() => setIsOpen(true)} className="fixed border p-3 rounded-xl bg-background flex items-center justify-center z-50 bottom-3 left-3 cursor-pointer">
+                <div onClick={() => setIsOpen(true)} className={`fixed border p-3 rounded-xl bg-background flex items-center justify-center z-50 bottom-3 ${position === 'left' ? 'left-3' : 'right-3'} cursor-pointer`}>
                     <Settings02 className='size-6 animate-spin' />
                 </div>
                 :
-                <div className="fixed top-0 left-0 w-fit bg-background z-50 h-screen py-3 pl-3">
+                <div className={`fixed top-0 ${position === 'left' ? 'left-0 pl-3' : 'right-0 pr-3'} w-fit bg-background z-50 h-screen py-3`}>
                     <div className="relative w-[17.5rem] border rounded-xl h-full py-3 flex flex-col gap-2">
 
                         <div>
                             {/* Logo */}
                             <Link to={"/"}>
                                 <div className="px-3.5 py-2">
-                                    <img src="Radian.png" alt="Radian" className='h-6 dark:saturate-0 dark:brightness-50 dark:invert' />
+                                    <img src="Radian.webp" alt="Radian" className='h-6 dark:saturate-0 dark:brightness-50 dark:invert' />
                                 </div>
                             </Link>
                             <div className="px-2.5 py-2">
@@ -107,7 +116,7 @@ function SideBar() {
                         </div>
 
 
-                        <div className='px-3 flex flex-col gap-2 h-[calc(100vh-15rem)] overflow-y-scroll scroll-smooth no-scrollbar'>
+                        <div className='px-3 flex flex-col gap-2 h-[calc(100vh-16rem)] overflow-y-scroll scroll-smooth no-scrollbar'>
                             {/* Website Components */}
                             <div>
                                 <div className="text-sm font-semibold py-2">
@@ -162,6 +171,10 @@ function SideBar() {
                         {/* Dark Mode and Collapse */}
                         <div>
                             <div className='absolute bottom-3'>
+                                <div className="px-3 py-2 flex items-center space-x-2">
+                                    <Switch id="dark-mode" checked={position === 'right'} onCheckedChange={() => togglePosition()} />
+                                    <Label htmlFor="dark-mode">Position Right</Label>
+                                </div>
                                 <ModeToggle />
                                 <div onClick={() => setIsOpen(false)} className="px-3 py-2 flex items-center space-x-2">
                                     <Settings02 id="collapse" className='size-6' />

@@ -17,7 +17,7 @@ const FAQ1 = () => {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto py-8 md:py-15 lg:py-15 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
+    <section className="max-w-screen-xl mx-auto py-8 md:py-[3.75rem] lg:py-15 space-y-10 md:space-y-12 lg:space-y-12 px-5 md:px-6">
       <div className="mx-auto text-center space-y-6 px-6">
         <div className="space-y-3">
           <Badge
@@ -69,13 +69,8 @@ const FAQ1 = () => {
             </div>
           ))} */}
 
-          {faqs.map((faq, index) => (
-            <Accordion
-              key={index}
-              type="single"
-              collapsible
-              className="w-full space-y-3"
-            >
+          <Accordion type="single" collapsible className="w-full space-y-3">
+            {faqs.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1}`}
                 className="border rounded-xl pl-4 pr-4"
@@ -87,8 +82,8 @@ const FAQ1 = () => {
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
-          ))}
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

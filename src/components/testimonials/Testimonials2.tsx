@@ -5,6 +5,7 @@ import data from './testimonials2.json'
 
 const Testimonials2 = () => {
     const [pauseonHover, setPauseonHover] = useState(false);
+    
     return (
         // REFACTORED COMPONENT 
         <div className='max-w-screen bg-background' >

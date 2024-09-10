@@ -13,16 +13,16 @@ function HeroSection1() {
                             {/* CONFUSION: Text color for the badge */}
                             <Badge
                                 variant={"outline"}
-                                className="d-flex w-fit items-center justify-center gap-2 rounded-full bg-background p-1 text-sm"
+                                className="d-flex w-fit items-center justify-center gap-2 rounded-full bg-background p-1 text-sm font-medium"
                             >
                                 <Badge
                                     variant={"outline"}
-                                    className="rounded-full bg-background text-foreground"
+                                    className="rounded-full bg-background"
                                 >
                                     Version 1.0
                                 </Badge>
                                 <div className="flex items-center justify-center gap-1">
-                                    <span className="inline-block text-sm text-foreground">
+                                    <span className="inline-block">
                                         Announcement News
                                     </span>
                                     <ArrowRight className="size-4" />

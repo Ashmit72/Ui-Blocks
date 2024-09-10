@@ -14,7 +14,7 @@ function HeroSection2() {
                                 variant={"outline"}
                                 className="w-fit rounded-full bg-background px-3 py-1"
                             >
-                                <span className="text-sm capitalize text-foreground">
+                                <span className="text-sm capitalize font-medium">
                                     Ultimate Product Library
                                 </span>
                             </Badge>

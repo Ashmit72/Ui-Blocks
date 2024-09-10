@@ -1,10 +1,9 @@
 import { Badge } from '../ui/badge'
-import { ArrowRight } from '@untitled-ui/icons-react'
 import { Button } from '../ui/button'
 
 function CTA4() {
     return (
-        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 py-14 sm:py-20">
+        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 py-8 sm:py-[3.75rem]">
             <div className="border rounded-2xl flex flex-col gap-14  sm:gap-12 lg:flex-row lg:justify-between">
                 <div className="flex flex-col gap-8 justify-center pt-16 px-6 sm:pt-20 lg:w-[480px] lg:pt-0 lg:pl-16">
                     <div className="flex flex-col gap-6 ">
@@ -34,7 +33,7 @@ function CTA4() {
                 </div>
                 {/* CONFUSION:Height and Width of the image */}
                 <div className="flex items-center justify-center h-[16rem] sm:h-[25rem] lg:w-[35rem] lg:h-[29.75rem]">
-                    <img src="Hero.jpg" alt="No preview" className='size-full object-cover rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none' />
+                    <img src="Gradient.jpg" alt="No preview" className='size-full object-cover rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none' />
                 </div>
             </div>
         </div>

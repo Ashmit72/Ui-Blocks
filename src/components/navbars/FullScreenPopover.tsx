@@ -1,7 +1,16 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
+import { Separator } from '../ui/separator'
 
 export default function FullScreenPopover() {
+
+    const solutions = [
+        { name: 'About', description: "Learn more about our story", href: '#', icon: Flag06 },
+        { name: 'Blog', href: '#', description: "Latest product news and updates", icon: BookOpen01 },
+        { name: 'FAQ', href: '#', description: "Got any questions? Find answers", icon: HelpCircle },
+        { name: 'Customer Stories', href: '#', description: "Hear from out winning customers", icon: FaceSmile },
+        { name: 'Documentation', href: '#', description: "Knowledge base for the users", icon: LifeBuoy02 },
+    ]
 
     const features = [
         { name: 'About', description: "Learn more about our story", href: '#', icon: Flag06 },
@@ -12,9 +21,9 @@ export default function FullScreenPopover() {
     ]
 
     const featuredArticles = [
-        { title: "How to build a beautiful and scalable products", image: "Article1.png" },
-        { title: "Best way to ship products that  your users find useful", image: "Article2.png" },
-        { title: "Top 5 boring fonts for your next side project", image: "Article3.png" }
+        { title: "How to build a beautiful and scalable products", image: "Gradient.webp" },
+        { title: "Best way to ship products that  your users find useful", image: "Gradient.webp" },
+        { title: "Top 5 boring fonts for your next side project", image: "Gradient.webp" }
     ]
 
     return (
@@ -32,7 +41,7 @@ export default function FullScreenPopover() {
                             <div className="p-2 font-medium text-sm text-foreground">
                                 Solution
                             </div>
-                            {features.map((item) => (
+                            {solutions.map((item) => (
                                 <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
                                     <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-secondary rounded-xl bg-background">
                                         <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
@@ -47,8 +56,8 @@ export default function FullScreenPopover() {
                             ))}
                         </div>
 
-                        <div className="border">
-
+                        <div>
+                            <Separator orientation="vertical" />
                         </div>
 
                         <div className="p-2 flex-1">
@@ -69,8 +78,8 @@ export default function FullScreenPopover() {
                                 </div>
                             ))}
                         </div>
-                        <div className="border">
-
+                        <div>
+                            <Separator orientation="vertical" />
                         </div>
                         <div className="py-2 pl-2 flex-1">
                             <div className="p-2 font-medium text-sm text-foreground">
@@ -98,6 +107,6 @@ export default function FullScreenPopover() {
 }
 
 
-export function ComplexAccordion() {
+export function FullScreenAccordion() {
 
 }

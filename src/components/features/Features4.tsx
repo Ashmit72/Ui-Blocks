@@ -2,14 +2,11 @@ import { Badge } from "../ui/badge"
 
 function Features4() {
     return (
-        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 flex flex-col gap-10">
+        <div className="max-w-screen-xl mx-auto px-5 sm:px-6 flex flex-col gap-10 py-8 sm:py-[3.75rem]">
             <div className="flex flex-col items-center gap-5 lg:gap-6">
                 <div className="flex flex-col items-center gap-3">
-                    <Badge
-                        variant={"outline"}
-                        className="rounded-full max-w-fit bg-background px-3 py-1"
-                    >
-                        <span className="text-sm capitalize text-foreground">Features</span>
+                    <Badge variant={"outline"} className="rounded-full max-w-fit bg-background px-3 py-1">
+                        <span className="text-sm capitalize font-medium">Features</span>
                     </Badge>
                     <div className="max-w-3xl text-center text-[2rem] sm:text-4xl lg:text-5xl font-semibold leading-[2.6rem] sm:leading-[2.75rem] lg:leading-[3.75rem] sm:-tracking-[0.045rem] lg:-tracking-[0.06rem]">
                         Turn ideas into projects
@@ -23,7 +20,7 @@ function Features4() {
             <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-6 gap-5">
                 <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
                     <div className="relative size-full bg-gradient-to-b from-transparent to-background">
-                        <img src="Feature1.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                        <img src="Gradient.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
                         <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2 ">
                             <div className="font-semibold text-lg">
                                 Seamless Integration
@@ -36,7 +33,7 @@ function Features4() {
                 </div>
                 <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
                     <div className="relative size-full bg-gradient-to-b from-transparent to-background">
-                        <img src="Feature2.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                        <img src="Gradient.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
                         <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
                             <div className="font-semibold text-lg">
                                 Ready-to-use Components
@@ -49,7 +46,7 @@ function Features4() {
                 </div>
                 <div className="border h-[25rem] p-5 rounded-xl lg:col-span-2 sm:col-span-2">
                     <div className="relative size-full bg-gradient-to-b from-transparent to-background">
-                        <img src="Feature3.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                        <img src="Gradient.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
                         <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
                             <div className="font-semibold text-lg">
                                 Advanced Component Version Control
@@ -62,7 +59,7 @@ function Features4() {
                 </div>
                 <div className="border h-[25rem] p-5 rounded-xl lg:col-span-3 sm:col-span-2">
                     <div className="relative size-full bg-gradient-to-b from-transparent to-background">
-                        <img src="Feature4.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                        <img src="Gradient.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
                         <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
                             <div className="font-semibold text-lg">
                                 Customizable Themes
@@ -75,7 +72,7 @@ function Features4() {
                 </div>
                 <div className="border h-[25rem] p-5 rounded-xl lg:col-span-3 sm:col-span-4">
                     <div className="relative size-full bg-gradient-to-b from-transparent to-background">
-                        <img src="Feature5.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
+                        <img src="Gradient.jpg" alt="no-image" className="absolute -z-10 size-full object-cover rounded-lg" />
                         <div className="absolute max-w-[22.5rem] bottom-0 flex flex-col gap-2">
                             <div className="font-semibold text-lg">
                                 Collaborative Design Libraries

@@ -26,12 +26,11 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <ComponentProvider>
         <NavbarViewer />
-        <div className="mt-8" />
         <HeroViewer />
         <SocialProofViewer />
         <FeaturesViewer />
         <TestimonialViewer />
-        <PricingViewer/>
+        <PricingViewer />
         <FAQViewer />
         <CTAViewer />
         <SignInViewer/>

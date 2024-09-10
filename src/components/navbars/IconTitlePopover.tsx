@@ -1,6 +1,7 @@
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { ChevronDown, Flag06, BookOpen01, HelpCircle, FaceSmile, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
+import { Link } from 'react-router-dom'
 
 const solutions = [
     { name: 'About', href: '#', icon: Flag06 },
@@ -23,7 +24,7 @@ export default function IconTitlePopover() {
                 <div className="w-60 max-w-md flex-auto overflow-hidden text-sm leading-6">
                     <div className="p-2  flex flex-col gap-0.5">
                         {solutions.map((item) => (
-                            <div key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-border/50 ">
+                            <Link to={item.href} key={item.name} className="group relative flex gap-x-3 rounded-xl p-2 hover:bg-secondary ">
                                 <div className="flex-none items-center justify-center rounded-xl">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
                                 </div>
@@ -32,7 +33,7 @@ export default function IconTitlePopover() {
                                         {item.name}
                                     </a>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -48,16 +49,14 @@ export function IconTitleAccordion() {
             <AccordionContent>
                 <div className="w-full flex flex-col">
                     {solutions.map((item, index) => (
-                        <div key={index} className="flex gap-x-3 py-3 hover:bg-border/50">
+                        <Link to={item.href} key={index} className="flex gap-x-3 py-3 hover:bg-secondary">
                             <div className="flex-none items-center justify-center rounded-xl">
                                 <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground " />
                             </div>
-                            <div>
-                                <a href={item.href} className="font-medium text-base text-foreground">
-                                    {item.name}
-                                </a>
+                            <div className="font-medium text-base text-foreground">
+                                {item.name}
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </AccordionContent>

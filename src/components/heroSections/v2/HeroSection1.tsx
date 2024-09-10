@@ -4,7 +4,7 @@ import { Button } from "../../ui/button";
 
 function HeroSection1() {
     return (
-        <div className="min-w-screen py-14 sm:py-20 lg:py-[8.25rem]">
+        <div className="min-w-screen py-8 sm:py-[3.75rem]">
             <div className="mx-auto flex max-w-screen-xl flex-col gap-14 px-5 sm:gap-20 sm:px-6 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center sm:w-[640px]">
                     <div className="flex flex-col gap-6 sm:gap-8 lg:gap-9">
@@ -13,16 +13,16 @@ function HeroSection1() {
                             {/* CONFUSION: Text color for the badge */}
                             <Badge
                                 variant={"outline"}
-                                className="d-flex w-fit items-center justify-center gap-2 rounded-full bg-background p-1 text-sm"
+                                className="d-flex w-fit items-center justify-center gap-2 rounded-full bg-background p-1 text-sm font-medium"
                             >
                                 <Badge
                                     variant={"outline"}
-                                    className="rounded-full bg-background text-foreground"
+                                    className="rounded-full bg-background"
                                 >
                                     Version 1.0
                                 </Badge>
                                 <div className="flex items-center justify-center gap-1">
-                                    <span className="inline-block text-sm text-foreground">
+                                    <span className="inline-block">
                                         Announcement News
                                     </span>
                                     <ArrowRight className="size-4" />
@@ -59,7 +59,7 @@ function HeroSection1() {
 
                 <div className="flex h-[13.75rem] items-center justify-center sm:h-[25.313rem] lg:h-[29.75rem] lg:w-[31.375rem]">
                     <img
-                        src="Hero.jpg"
+                        src="Gradient.webp"
                         alt="No preview"
                         className="size-full rounded-2xl object-cover"
                     />

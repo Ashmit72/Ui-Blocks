@@ -17,8 +17,7 @@ const Footer4 = () => {
           <div className="hidden md:block lg:block w-full md:w-2/5 mb-8 lg:mb-0">
             <div className="flex items-center mb-4">
               {/* Logo */}
-              <img src="Radian.png" alt="Radian Logo" className="dark:saturate-0 dark:brightness-50 dark:invert w-[6.28125rem] h-[1.5rem]
-"/>
+              <img src="Radian.webp" alt="Radian Logo" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert'/>
             </div>
             <p className="text-sm text-wrap text-muted-foreground">
               Empowering next generation of digital thinkers and creatives

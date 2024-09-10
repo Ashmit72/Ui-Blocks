@@ -5,11 +5,8 @@ import { Button } from "../ui/button";
 import {
   Check,
   CheckCircle,
-  CheckDone01,
-  CheckDone02,
   ChevronDown,
-  ChevronUp,
-  ShieldTick,
+  ChevronUp
 } from "@untitled-ui/icons-react";
 
 function Pricing1() {

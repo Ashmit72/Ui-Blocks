@@ -1,13 +1,12 @@
-import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 const solutions = [
-    { name: 'Watch Demo', href: '#'},
-    { name: 'Pricing', href: '#'},
-    { name: 'Features', href: '#'},
-    { name: 'Product Roadmap', href: '#'},
-    { name: 'Download app', href: '#'},
-    { name: 'My Custom Link', href: '#'},
+    { name: 'Watch Demo', href: '#' },
+    { name: 'Pricing', href: '#' },
+    { name: 'Features', href: '#' },
+    { name: 'Product Roadmap', href: '#' },
+    { name: 'Download app', href: '#' },
+    { name: 'My Custom Link', href: '#' },
 ]
 
 

@@ -4,7 +4,7 @@ const VerificationLinkExpired1 = () => {
   return (
     <div className="w-[360px] mx-auto py-8 md:py-[3.75rem] space-y-9">
         <div>
-            <img src="Radian.png"/>
+            <img src="Radian.webp" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert'/>
         </div>
         <div className="space-y-6">
             <div className="space-y-2">

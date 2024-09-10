@@ -1,5 +1,3 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 

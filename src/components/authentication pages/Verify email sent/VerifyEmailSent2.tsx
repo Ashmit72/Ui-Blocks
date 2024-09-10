@@ -8,7 +8,7 @@ const VerifyEmailSent2 = () => {
       <div className="w-[360px] mx-auto px-6 py-8 border rounded-xl">
         <div className="space-y-9 bg-background">
           <div>
-            <img src="Radian.png" />
+            <img src="Radian.webp" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
           </div>
 
           <div className="space-y-6">

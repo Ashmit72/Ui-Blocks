@@ -1,9 +1,10 @@
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
+import { Link } from 'react-router-dom'
 
 const solutions = [
-    { name: 'About', description: "Learn more about our story", href: '#', icon: Flag06 },
+    { name: 'About', description: "Learn more about our story", href: '#t', icon: Flag06 },
     { name: 'Blog', href: '#', description: "Latest product news and updates", icon: BookOpen01 },
     { name: 'FAQ', href: '#', description: "Got any questions? Find answers", icon: HelpCircle },
     { name: 'Customer Stories', href: '#', description: "Hear from out winning customers", icon: FaceSmile },
@@ -23,13 +24,11 @@ export default function TitlePopover() {
                 <div className="w-60 max-w-full flex-auto overflow-hidden text-sm leading-6">
                     <div className="p-2 flex flex-col gap-0.5">
                         {solutions.map((item) => (
-                            <div key={item.name} className="rounded-xl py-2 px-2.5 hover:bg-border/50 ">
-                                <div>
-                                    <a href={item.href} className="font-medium text-foreground">
-                                        {item.name}
-                                    </a>
+                            <Link to={item.href} key={item.name} className="rounded-xl py-2 px-2.5 hover:bg-secondary ">
+                                <div className="font-medium text-foreground">
+                                    {item.name}
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -45,9 +44,11 @@ export function TitleAccordion() {
             <AccordionContent>
                 <div className="flex flex-col gap-0.5">
                     {solutions.map((item, index) => (
-                        <div key={index} className='py-3 text-foreground text-base font-medium cursor-pointer hover:bg-border/50'>
-                            {item.name}
-                        </div>
+                        <Link to="#">
+                            <div key={index} className='py-3 text-foreground text-base font-medium cursor-pointer hover:bg-secondary'>
+                                {item.name}
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </AccordionContent>

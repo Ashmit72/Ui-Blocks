@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Badge } from "../ui/badge";
-import { ChevronDown, ChevronUp } from "@untitled-ui/icons-react";
 import faqs from "./faq-content.json";
 import {
   Accordion,
@@ -10,12 +8,6 @@ import {
 } from "./customAccordion";
 
 const FAQ4 = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number): void => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <section className="max-w-screen-xl flex flex-col lg:flex-row mx-auto py-8 md:py-[3.75rem] lg:py-15 px-5 md:px-6 lg:space-x-20 space-y-10 md:space-y-12 lg:space-y-0">
       <div className="lg:w-2/5 w-full space-y-6">

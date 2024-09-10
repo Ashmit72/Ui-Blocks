@@ -1,15 +1,13 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { ChevronDown } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 
 
 const solutions = [
-    { name: 'Radian vs Product a', href: '#'},
-    { name: 'Radian vs Product b', href: '#'},
-    { name: 'Radian vs Product x', href: '#'},
-    { name: 'Radian vs Product y', href: '#'},
-    { name: 'Radian vs Product z', href: '#'},
-    { name: 'See all comparison', href: '#'},
+    { name: 'Radian vs Product a', href: '#' },
+    { name: 'Radian vs Product b', href: '#' },
+    { name: 'Radian vs Product x', href: '#' },
+    { name: 'Radian vs Product y', href: '#' },
+    { name: 'Radian vs Product z', href: '#' },
+    { name: 'See all comparison', href: '#' },
 ]
 
 export function ComparisonAccordion() {

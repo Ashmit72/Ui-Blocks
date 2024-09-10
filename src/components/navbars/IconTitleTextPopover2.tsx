@@ -2,6 +2,7 @@ import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover
 import { BookOpen01, ChevronDown, FaceSmile, Flag06, HelpCircle, LifeBuoy02 } from '@untitled-ui/icons-react'
 import { AccordionContent, AccordionItem, AccordionTrigger } from '../ui/custom/mobile-nav-accordion'
 import { Separator } from '../ui/separator'
+import { Link } from 'react-router-dom'
 
 
 const features = [
@@ -25,32 +26,32 @@ export default function IconTItleTextPopover2() {
                 <div className="w-screen max-w-max flex gap-2 overflow-hidden text-sm leading-6">
                     <div className="p-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item) => (
-                            <div key={item.name} className="flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                            <Link to={item.href} key={item.name} className="flex gap-x-3 rounded-xl p-2 hover:bg-secondary">
                                 <div className="flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div className='text-sm'>
-                                    <a href={item.href} className="font-medium  text-foreground">
+                                    <div className="font-medium  text-foreground">
                                         {item.name}
-                                    </a>
+                                    </div>
                                     <p className="text-muted-foreground">{item.description}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                     <div className="p-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item) => (
-                            <div key={item.name} className="flex gap-x-3 rounded-xl p-2 hover:bg-border/50">
+                            <Link to={item.href} key={item.name} className="flex gap-x-3 rounded-xl p-2 hover:bg-secondary">
                                 <div className="flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div className='text-sm'>
-                                    <a href={item.href} className="font-medium text-foreground">
+                                    <div className="font-medium text-foreground">
                                         {item.name}
-                                    </a>
+                                    </div>
                                     <p className="text-muted-foreground">{item.description}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -67,33 +68,33 @@ export function IconTitleTextAccordion2() {
                 <div className="flex flex-col">
                     <div className="py-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item, index) => (
-                            <div key={index} className="flex gap-x-3 py-3 hover:bg-border/50">
+                            <Link to={item.href} key={index} className="flex gap-x-3 py-3 hover:bg-secondary">
                                 <div className="flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div>
-                                    <a href={item.href} className="font-medium text-base text-foreground">
+                                    <div className="font-medium text-base text-foreground">
                                         {item.name}
-                                    </a>
+                                    </div>
                                     <p className="text-sm text-muted-foreground">{item.description}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                     <Separator />
                     <div className="py-2 flex-1 flex flex-col gap-0.5">
                         {features.map((item, index) => (
-                            <div key={index} className="flex gap-x-3 py-3 hover:bg-border/50">
+                            <Link to={item.href} key={index} className="flex gap-x-3 py-3 hover:bg-secondary">
                                 <div className="flex h-11 w-11 flex-none items-center justify-center border rounded-xl bg-background">
                                     <item.icon aria-hidden="true" className="h-6 w-6 text-muted-foreground" />
                                 </div>
                                 <div>
-                                    <a href={item.href} className="font-medium text-base text-foreground">
+                                    <div className="font-medium text-base text-foreground">
                                         {item.name}
-                                    </a>
+                                    </div>
                                     <p className="text-sm text-muted-foreground">{item.description}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

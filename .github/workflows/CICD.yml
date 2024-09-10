@@ -27,6 +27,9 @@ jobs:
     needs: build
     runs-on: aws-ec2
     steps:
+      - name: Log starting deployment
+        run: echo "Starting deployment on AWS EC2."
+
       - name: Pull Image from Docker Hub
         run: docker pull binaya1999/radian:beta
 

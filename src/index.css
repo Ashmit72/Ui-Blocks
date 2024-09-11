@@ -97,16 +97,9 @@
     /* Firefox */
   }
 
-  /* Try Implement the Image Dark and White mode */
-  /* .custom-filter {
-    -webkit-filter: saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
-    filter: saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
+  /* Animation to pause slider */
+  .pause{
+    animation-play-state: paused;
   }
   
-  .dark-custom-filter {
-    -webkit-filter: invert(1) saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
-    filter: invert(1) saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
-  } */
-  
-  /*Using Overlay Try Implement the Image Dark and White mode */
 }

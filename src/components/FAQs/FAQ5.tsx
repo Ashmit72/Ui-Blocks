@@ -9,7 +9,7 @@ import {
 
 const FAQ5 = () => {
   return (
-    <section className="max-w-screen-xl flex flex-col lg:flex-row mx-auto py-8 md:py-15 lg:py-15 px-5 md:px-6 lg:space-x-20 space-y-10 md:space-y-12 lg:space-y-0">
+    <section className="max-w-screen-xl flex flex-col lg:flex-row mx-auto py-8 md:py-[3.75rem] lg:py-15 px-5 md:px-6 lg:space-x-20 space-y-10 md:space-y-12 lg:space-y-0">
       <div className="lg:w-2/5 w-full space-y-6">
         <div className="space-y-3">
           <Badge
@@ -38,8 +38,31 @@ const FAQ5 = () => {
 
       <div className="w-full lg:w-3/5 lg:pt-6">
         <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => (
-            <Accordion key={index} type="single" collapsible className="w-full">
+          {/* {faqs.map((faq, index) => (
+            <div key={index} className="border-b py-4 md:py-5 lg:py-5 space-y-3">
+              <button
+                className="w-full flex justify-between items-center text-left text-base focus:outline-none font-medium text-foreground"
+                onClick={() => toggleAccordion(index)}
+              >
+                {faq.question}
+                <span className="ml-1">
+                  {activeIndex === index ? (
+                    <Minus />
+                  ) : (
+                    <Plus />
+                  )}
+                </span>
+              </button>
+              {activeIndex === index && (
+                <div>
+                  <p className="text-muted-foreground text-base">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))} */}
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
               <AccordionItem value={`item-${index + 1}`} className="border-b">
                 <AccordionTrigger className="w-full flex justify-between items-center text-left text-base font-medium text-foreground hover:no-underline">
                   {faq.question}
@@ -48,8 +71,8 @@ const FAQ5 = () => {
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
-          ))}
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

@@ -5,7 +5,8 @@ import { Button } from "../ui/button";
 import {
   Check,
   CheckCircle,
-  ChevronDown
+  ChevronDown,
+  ChevronUp
 } from "@untitled-ui/icons-react";
 
 function Pricing1() {
@@ -14,6 +15,7 @@ function Pricing1() {
   const [isBasic, setIsBasic] = useState(false);
   const [isBusiness, setIsBusiness] = useState(false);
   const [isEnterpise, setIsEnterprise] = useState(false);
+  const [isViewFeatureList, setIsViewFeatureList] = useState(false)
 
   const handleFreeClick = () => {
     setIsFree(true);
@@ -42,8 +44,12 @@ function Pricing1() {
     setIsEnterprise(true);
   };
 
+  const handleFeatureListToggle = () => {
+    setIsViewFeatureList(!isViewFeatureList)
+  }
+
   return (
-    <div className="max-w-screen-xl flex flex-col mx-auto px-5 md:px-6 py-8 md:py-15 space-y-8">
+    <div className="max-w-screen-xl flex flex-col mx-auto px-5 md:px-6 py-8 md:py-[3.75rem] space-y-8">
       <div className="text-center space-y-6">
         <div className="space-y-3 md:px-[1.5625rem]">
           <Badge
@@ -336,11 +342,12 @@ function Pricing1() {
         className="w-fit mx-auto  py-[0.625rem] px-[0.875rem] gap-1"
         variant={"outline"}
         size={"lg"}
+        onClick={handleFeatureListToggle}
       >
-        View full Features List <ChevronDown />
+        View full Features List {isViewFeatureList ? <ChevronDown /> : <ChevronUp/>}
       </Button>
 
-      <div className="">
+      <div className={`${isViewFeatureList ? 'block' : 'hidden'}`}>
         <div className="lg:hidden border flex -mx-5 md:-mx-6 sticky top-[4.5rem] bg-background">
           <div className="w-1/4 text-center border-r" onClick={handleFreeClick}>
             <div
@@ -1064,21 +1071,21 @@ function Pricing1() {
         )}
 
         {/* Pricing Details for large screen devices */}
-        <div className="hidden lg:block">
-          <div className="sticky top-0 pt-20 bg-background">
-            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-4 border-b gap-8">
+        <div className={`hidden ${isViewFeatureList ? 'lg:block' : 'lg:hidden'}`}>
+          <div className="sticky top-10 bg-background">
+            <div className="grid grid-cols-[1.64fr_1fr_1fr_1fr_1fr] py-6 border-b gap-8">
               <div className="relative">
                 <h2 className="font-semibold text-lg absolute bottom-4">
                   Features
                 </h2>
               </div>
               <h4 className="font-medium text-sm">
-                <div className="py-4 space-y-2">
+                <div className="space-y-2">
                   <div>
                     <h1 className="font-semibold text-lg">Free</h1>
                     <div className="flex space-x-2">
                       <p className="text-base font-semibold">$0</p>
-                      <p className="text-base font-normal">per month</p>
+                      <p className="text-base font-normal">{isBilledMonthly ? "per year" : "per month"}</p>
                     </div>
                   </div>
                   <Button className="w-full py-[0.625rem] px-[0.875rem]">
@@ -1087,7 +1094,7 @@ function Pricing1() {
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
-                <div className="py-4 space-y-2">
+                <div className="space-y-2">
                   <div>
                     <div className="flex space-x-2">
                       <h1 className="font-semibold text-lg">Basic</h1>
@@ -1101,8 +1108,8 @@ function Pricing1() {
                       </Badge>{" "}
                     </div>
                     <div className="flex space-x-2">
-                      <p className="text-base font-semibold">$10</p>
-                      <p className="text-base font-normal">per month</p>
+                      <p className="text-base font-semibold">{isBilledMonthly ? "$10" : "$15"}</p>
+                      <p className="text-base font-normal">{isBilledMonthly ? "per year" : "per month"}</p>
                     </div>
                   </div>
                   <Button className="w-full py-[0.625rem] px-[0.875rem]">
@@ -1111,12 +1118,12 @@ function Pricing1() {
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
-                <div className="py-4 space-y-2">
+                <div className="space-y-2">
                   <div>
                     <h1 className="font-semibold text-lg">Business</h1>
                     <div className="flex space-x-2">
-                      <p className="text-base font-semibold">$15</p>
-                      <p className="text-base font-normal">per month</p>
+                      <p className="text-base font-semibold">{isBilledMonthly ? "$15" : "$20"}</p>
+                      <p className="text-base font-normal">{isBilledMonthly ? "per year" : "per month"}</p>
                     </div>
                   </div>
                   <Button className="w-full py-[0.625rem] px-[0.875rem]">
@@ -1125,7 +1132,7 @@ function Pricing1() {
                 </div>
               </h4>
               <h4 className="font-medium text-sm">
-                <div className="py-4 space-y-2">
+                <div className="space-y-2">
                   <div>
                     <h1 className="font-semibold text-lg">Enterprise</h1>
                     <div className="flex space-x-2">

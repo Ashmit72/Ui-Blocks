@@ -36,7 +36,7 @@ const Testimonials4 = () => {
           </p>
         </div>
 
-        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,transparent_0,_black_20%,_black_calc(100%-250px),transparent_100%)] lg:[mask-image:none]">
+        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,_black_20%,_black_calc(100%-250px),transparent_100%)]">
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 py-6">
             {contentToDisplay.map((item) => (
               <li key={item.id} className="p-6 flex flex-col gap-5 border rounded-[16px]">
@@ -51,7 +51,7 @@ const Testimonials4 = () => {
                     </div>
                   </div>
                   <div className="w-14 h-14">
-                    <img className="w-full h-full object-contain grayscale contrast-100 dark:invert" src="/logos/Notion.png" alt="logo" />
+                    <img className="w-full h-full object-contain grayscale contrast-100 dark:invert" src="/logos/Notion.webp" alt="logo" />
                   </div>
                 </section>
                 <p className="text-sm">{item.content}</p>

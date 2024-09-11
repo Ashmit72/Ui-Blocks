@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features' | 'testimonials' | 'pricing' | 'SignIn' | 'SignUp' | 'VerifyEmailSent' | 'AccountVerified' | 'VerificationLinkExpired' | 'VerifyEmailCode' | 'ForgotPassword' | 'ResetEmailSent';
+export type ComponentType = 'navbar' | 'hero' | 'footer' | 'cta' | 'faq' | 'socialProofCompany' | 'features' | 'testimonials' | 'pricing' | 'SignIn' | 'SignUp' | 'VerifyEmailSent' | 'AccountVerified' | 'VerificationLinkExpired' | 'VerifyEmailCode' | 'ForgotPassword' | 'ResetEmailSent' | 'NewPassword';
 
 export type ComponentContextType = {
     selectedComponents: Record<ComponentType, string>;
@@ -27,7 +27,8 @@ export const ComponentProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         VerificationLinkExpired: 'Verification Link Expired 1',
         VerifyEmailCode: 'Verify Email Code 1',
         ForgotPassword: 'Forgot Password 1',
-        ResetEmailSent: 'Reset Email Sent 1'
+        ResetEmailSent: 'Reset Email Sent 1',
+        NewPassword: 'New Password 1'
     });
 
     const setComponentVariation = (type: ComponentType, variation: string) => {

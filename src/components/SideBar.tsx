@@ -24,6 +24,7 @@ import { verifyEmailCodeVariations } from './liveViewer/verifyEmailCode'
 import { forgotPasswordVariations } from './liveViewer/forgotPasswordViewer'
 import { resetEmailSentVariations } from './liveViewer/resetEmailSentViewer'
 import { Switch } from '@radix-ui/react-switch'
+import { newPasswordVariations } from './liveViewer/newPasswordViewer'
 
 export type component = {
     name: string,
@@ -124,6 +125,11 @@ function SideBar() {
             name: 'Reset Email Sent',
             componentType: 'ResetEmailSent',
             variations: Object.keys(resetEmailSentVariations)
+        },
+        {
+            name: 'New Password',
+            componentType: 'NewPassword',
+            variations: Object.keys(newPasswordVariations)
         },
     ]
 

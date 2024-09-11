@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { GoogleChrome } from "@untitled-ui/icons-react";
-import React from "react";
 
 const VerifyEmailSent2 = () => {
   return (

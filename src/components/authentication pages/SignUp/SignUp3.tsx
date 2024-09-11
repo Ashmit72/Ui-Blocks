@@ -1,6 +1,5 @@
 import { Eye, GoogleChrome } from "@untitled-ui/icons-react";
 import { Input } from "../../ui/input";
-import { Checkbox } from "../../ui/checkbox";
 import { Button } from "../../ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

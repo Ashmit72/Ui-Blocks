@@ -101,5 +101,9 @@
   .pause{
     animation-play-state: paused;
   }
+  /* Prevents text selection While dragging */
+  .no-select {
+    user-select: none;
+  }
   
 }

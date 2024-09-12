@@ -35,7 +35,7 @@ COPY --from=build /app/dist .
 RUN mkdir -p /etc/nginx/ssl
 
 # Copy your SSL certificate and key into the container
-COPY cert/dev_radianos.cert /etc/nginx/ssl/dev_radianos.crt
+COPY cert/dev_radianos.crt /etc/nginx/ssl/dev_radianos.crt
 COPY cert/dev_radianos.key /etc/nginx/ssl/dev_radainos.key
 
 # Create a basic Nginx configuration using heredoc

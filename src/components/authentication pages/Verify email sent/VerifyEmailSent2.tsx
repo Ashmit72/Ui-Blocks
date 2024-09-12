@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { GoogleChrome } from "@untitled-ui/icons-react";
-import React from "react";
 
 const VerifyEmailSent2 = () => {
   return (
     <div className="py-8 md:py-[3.75rem]">
-      <div className="w-[360px] mx-auto px-6 py-8 border rounded-xl">
-        <div className="space-y-9 bg-background">
+      <div className="w-[408px] mx-auto px-6 py-8 border rounded-xl">
+        <div className="space-y-9 w-[360px] bg-background">
           <div>
             <img src="Radian.webp" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
           </div>

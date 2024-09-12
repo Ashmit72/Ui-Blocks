@@ -1,6 +1,5 @@
 import { Eye, GoogleChrome } from "@untitled-ui/icons-react";
 import { Input } from "../../ui/input";
-import { Checkbox } from "../../ui/checkbox";
 import { Button } from "../../ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,8 +33,8 @@ const SignUp3 = () => {
 
   return (
     <div className="h-screen flex items-center justify-center bg-gray-200">
-      <div className="w-[360px] mx-auto px-6 py-8 border rounded-xl bg-background">
-      <div className="space-y-9">
+      <div className="w-[408px] mx-auto px-6 py-8 border rounded-xl bg-background">
+      <div className="space-y-9 w-[360px]">
       <div>
         <img src="Radian.webp" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
       </div>

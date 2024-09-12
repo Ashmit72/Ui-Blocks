@@ -115,9 +115,9 @@ const SignIn2 = () => {
               </Button>
             </div>
             <div className="flex items-center justify-center w-full">
-              <hr className="flex-1 border-t border-gray-300" />
-              <span className="mx-4 text-gray-500">or</span>
-              <hr className="flex-1 border-t border-gray-300" />
+              <hr className="flex-1 border-t" />
+              <span className="mx-[0.625rem] text-muted-foreground">or</span>
+              <hr className="flex-1 border-t" />
             </div>
             <div className="">
               <Button variant={"outline"} className="w-full text-foreground gap-[0.375rem]  py-[0.625rem] px-[0.875rem]">

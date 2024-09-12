@@ -20,8 +20,6 @@ COPY . .
 # build the react application
 RUN npm run build
 
-
-
 #STEP 2:SERVER WITH NGINX
 FROM nginx:1-alpine3.20
 
@@ -30,36 +28,6 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 
 COPY --from=build /app/dist .
-
-# Create a directory for SSL certificates
-RUN mkdir -p /etc/nginx/ssl
-
-# Copy your SSL certificate and key into the container
-COPY cert/dev_radianos.crt /etc/nginx/ssl/dev_radianos.crt
-COPY cert/dev_radianos.key /etc/nginx/ssl/dev_radainos.key
-
-# Create a basic Nginx configuration using heredoc
-RUN cat <<EOF > /etc/nginx/conf.d/default.conf
-server {
-    listen 80;
-    server_name dev.radianos.com www.dev.radianos.com;
-    return 301 https://\$host\$request_uri;
-}
-
-server {
-    listen 443 ssl;
-    server_name dev.radianos.com www.dev.radianos.com;
-
-    ssl_certificate /etc/nginx/ssl/dev_radianos.crt;
-    ssl_certificate_key /etc/nginx/ssl/dev_radianos.key;
-
-    location / {
-        root /usr/share/nginx/html;
-        index index.html index.htm;
-        try_files \$uri \$uri/ /index.html;
-    }
-}
-EOF
 
 EXPOSE 80
 

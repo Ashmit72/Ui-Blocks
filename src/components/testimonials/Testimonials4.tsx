@@ -36,7 +36,7 @@ const Testimonials4 = () => {
           </p>
         </div>
 
-        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,transparent_0,_black_20%,_black_calc(100%-250px),transparent_100%)]">
+        <div className="max-w-screen-xl [mask-image:_linear-gradient(to_bottom,_black_20%,_black_calc(100%-250px),transparent_100%)]">
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 py-6">
             {contentToDisplay.map((item) => (
               <li key={item.id} className="p-6 flex flex-col gap-5 border rounded-[16px]">

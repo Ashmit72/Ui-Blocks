@@ -31,8 +31,8 @@ const SignIn4 = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   return (
-    <div className="hidden md:flex lg:flex h-screen mx-auto ">
-      <div className="w-3/5">
+    <div className="lg:flex lg:h-screen mx-auto">
+      <div className="lg:w-3/5">
         <div className="space-y-9 w-[360px] mx-auto py-8 md:py-[3.75rem]">
           <div>
             <img
@@ -116,9 +116,9 @@ const SignIn4 = () => {
                 </Button>
               </div>
               <div className="flex items-center justify-center w-full">
-                <hr className="flex-1 border-t border-gray-300" />
-                <span className="mx-4 text-gray-500">or</span>
-                <hr className="flex-1 border-t border-gray-300" />
+                <hr className="flex-1 border-t"/>
+                <span className="mx-[0.625rem] text-muted-foreground">or</span>
+                <hr className="flex-1 border-t" />
               </div>
               <div className="">
                 <Button
@@ -134,7 +134,7 @@ const SignIn4 = () => {
         </div>
       </div>
 
-      <div className="relative w-2/5">
+      <div className="hidden lg:block relative w-2/5">
         <img src="./assets/photo.webp" className="h-full w-full object-cover" />
         <div className="space-y-6 p-8 border rounded-xl absolute bottom-8 bg-background overflow-hidden mx-[32px]">
           <p className="font-medium text-lg">
@@ -156,3 +156,7 @@ const SignIn4 = () => {
 };
 
 export default SignIn4;
+
+
+
+

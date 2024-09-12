@@ -43,7 +43,7 @@ jobs:
         run: docker rm -f radianContainer
 
       - name: Run the Docker Container
-        run: docker run -d -p 80:80 --name radianContainer binaya1999/radian:beta
+        run: docker run -d -p 80:80 -p 443:443 --name radianContainer binaya1999/radian:beta
 
       - name: Remove unused Docker images
         run: docker image prune -f

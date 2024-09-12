@@ -23,7 +23,7 @@ import { verificationLinkExpiredVariations } from './liveViewer/verificationLink
 import { verifyEmailCodeVariations } from './liveViewer/verifyEmailCode'
 import { forgotPasswordVariations } from './liveViewer/forgotPasswordViewer'
 import { resetEmailSentVariations } from './liveViewer/resetEmailSentViewer'
-import { Switch } from '@radix-ui/react-switch'
+import { Switch } from './ui/switch'
 
 export type component = {
     name: string,
@@ -201,23 +201,23 @@ function SideBar() {
                                 {
                                     applicationComponents.map((component, index) => (
                                         <Accordion type='single' collapsible>
-                                        <AccordionItem key={`${component.componentType}-${index}`} value={`${component.componentType}-${index}`}>
-                                            <AccordionTrigger className='text-sm font-normal'>{component.name}</AccordionTrigger>
-                                            <AccordionContent >
-                                            <div className="flex flex-col gap-0.5">
-                                                    {component.variations.map((variation, index) => (
-                                                        <div key={index} onClick={() => { handleComponentChange(component.componentType, variation) }} className={`inline-flex items-center justify-between px-2 py-3 cursor-pointer rounded-xl hover:bg-secondary ${variation === selectedComponents[component.componentType] && 'bg-secondary'}`}>
-                                                            <span>{variation}</span>
-                                                            {variation === selectedComponents[component.componentType] && <Check className="size-4" />}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
+                                            <AccordionItem key={`${component.componentType}-${index}`} value={`${component.componentType}-${index}`}>
+                                                <AccordionTrigger className='text-sm font-normal'>{component.name}</AccordionTrigger>
+                                                <AccordionContent >
+                                                    <div className="flex flex-col gap-0.5">
+                                                        {component.variations.map((variation, index) => (
+                                                            <div key={index} onClick={() => { handleComponentChange(component.componentType, variation) }} className={`inline-flex items-center justify-between px-2 py-3 cursor-pointer rounded-xl hover:bg-secondary ${variation === selectedComponents[component.componentType] && 'bg-secondary'}`}>
+                                                                <span>{variation}</span>
+                                                                {variation === selectedComponents[component.componentType] && <Check className="size-4" />}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </Accordion>
                                     ))
                                 }
-                              
+
                             </div>
                         </div>
 
@@ -225,8 +225,8 @@ function SideBar() {
                         <div>
                             <div className='absolute bottom-3'>
                                 <div className="px-3 py-2 flex items-center space-x-2">
-                                    <Switch id="dark-mode" checked={position === 'right'} onCheckedChange={() => togglePosition()} />
-                                    <Label htmlFor="dark-mode">{position === "left" ? "Position Right" : "Position Left"}</Label>
+                                    <Switch id="position" checked={position === 'right'} onCheckedChange={() => togglePosition()} />
+                                    <Label htmlFor="position">{position === "left" ? "Position Right" : "Position Left"}</Label>
                                 </div>
                                 <ModeToggle />
                                 <div onClick={() => setIsOpen(false)} className="px-3 py-2 flex items-center space-x-2">

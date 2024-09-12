@@ -33,4 +33,6 @@ COPY --from=build /app/dist .
 
 EXPOSE 80
 
+EXPOSE 443
+
 ENTRYPOINT [ "nginx","-g","daemon off;" ]

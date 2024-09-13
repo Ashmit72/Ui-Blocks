@@ -30,7 +30,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 # Copy SSL certificate and key
 COPY assets/ssl/ssl_certificate.crt /etc/ssl/certs/certificate.crt
-COPY assets/ssl/ssl_key.key /etc/ssl/private/private.key
+COPY assets/ssl/ssl_key /etc/ssl/private/private.key
 
 # Copy the NGINX configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf

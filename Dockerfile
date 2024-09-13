@@ -22,15 +22,15 @@ RUN npm run build
 #STEP 2:SERVER WITH NGINX
 FROM nginx:1-alpine3.20
 
-WORKDIR /usr/share/nginx/html
+# WORKDIR /usr/share/nginx/html
 
 RUN rm -rf *
 
-COPY --from=build /app/dist .
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Copy SSL certificate and key
-COPY /assets/ssl/ssl_certificate.crt /etc/ssl/certs/certificate.crt
-COPY /assets/ssl/ssl_key.key /etc/ssl/private/private.key
+COPY assets/ssl/ssl_certificate.crt /etc/ssl/certs/certificate.crt
+COPY assets/ssl/ssl_key.key /etc/ssl/private/private.key
 
 # Copy the NGINX configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf

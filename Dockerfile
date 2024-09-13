@@ -31,7 +31,7 @@ COPY --from=build /app/dist .
 
 # Copy SSL certificate and key
 COPY /cert/dev_radianos.crt /etc/ssl/certs/certificate.crt
-COPY /cert/dev_radiasos.key /etc/ssl/private/private.key
+COPY /cert/dev_radianos.key /etc/ssl/private/private.key
 
 # Copy the NGINX configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf

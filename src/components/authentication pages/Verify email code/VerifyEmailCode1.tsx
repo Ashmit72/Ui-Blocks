@@ -54,7 +54,7 @@ const VerifyEmailCode1 = () => {
               <Input
                 ref={(element) => (inputRef.current[index] = element)}
                 key={index}
-                className="w-[53.33px] h-[48px] rounded-md p-[0.75rem]"
+                className="w-[53.33px] h-[48px] rounded-md p-[0.75rem] text-center"
                 maxLength={1}
                 value={letter}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

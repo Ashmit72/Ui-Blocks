@@ -125,6 +125,16 @@ function SideBar() {
             componentType: 'ResetEmailSent',
             variations: Object.keys(resetEmailSentVariations)
         },
+        {
+            name: 'New Password',
+            componentType: 'NewPassword',
+            variations: Object.keys(newPasswordVariations)
+        },
+        {
+            name: 'Password Changed',
+            componentType: 'PasswordChanged',
+            variations: Object.keys(passwordChangedVariations)
+        },
     ]
 
     const [isOpen, setIsOpen] = useState(false)

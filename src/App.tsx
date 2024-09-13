@@ -18,6 +18,8 @@ import VerificationLinkExpiredViewer from './components/liveViewer/verificationL
 import VerifyEmailCodeViewer from './components/liveViewer/verifyEmailCode'
 import ForgotPasswordViewer from './components/liveViewer/forgotPasswordViewer'
 import ResetEmailSentViewer from './components/liveViewer/resetEmailSentViewer'
+import NewPasswordViewer from './components/liveViewer/newPasswordViewer'
+import PasswordChangedViewer from './components/liveViewer/passwordChanged'
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
         <VerifyEmailCodeViewer/>
         <ForgotPasswordViewer/>
         <ResetEmailSentViewer/>
+        <NewPasswordViewer/>
+        <PasswordChangedViewer/>
         <FooterViewer />
         <SideBar />
       </ComponentProvider>

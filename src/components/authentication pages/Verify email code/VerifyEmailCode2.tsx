@@ -38,8 +38,8 @@ const VerifyEmailCode2 = () => {
   return (
     <div className="py-8 md:py-[3.75rem]">
 
-    <div className="w-[360px] mx-auto px-6 py-8 border rounded-xl">
-      <div className="space-y-9 bg-background">
+    <div className="w-[408px] mx-auto px-6 py-8 border rounded-xl">
+      <div className="w-[360px] space-y-9 bg-background">
         <div>
           <img src="Radian.webp" className='h-8 dark:saturate-0 dark:brightness-50 dark:invert' />
         </div>
@@ -58,7 +58,7 @@ const VerifyEmailCode2 = () => {
                 <Input
                   ref={(element) => (inputRef.current[index] = element)}
                   key={index}
-                  className="rounded-md p-[0.75rem]"
+                  className="w-[53.33px] h-[48px] rounded-md p-[0.75rem]"
                   maxLength={1}
                   value={letter}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

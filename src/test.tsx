@@ -7,7 +7,6 @@ import SocialProofCompanies1 from "./components/socialProofCompanies/socialProof
 import Footer2 from "./components/footers/Footer2"
 import { ModeToggle } from "./components/ModeSwitch"
 import Pricing1 from "./components/Pricings/Pricing1"
-import SignIn4 from "./components/authentication pages/SignIn/SignIn4"
 import SignUp4 from "./components/authentication pages/SignUp/SignUp4"
 
 
@@ -20,8 +19,8 @@ function Test() {
                     <HeroSection1 />
                     <CTA3 />
                     <SocialProofCompanies1 />
-                    <Pricing1/>
-                    <SignUp4/>
+                    <Pricing1 />
+                    <SignUp4 />
                     <Footer2 />
                     <div className="fixed bottom-3 left-3">
                         <ModeToggle />

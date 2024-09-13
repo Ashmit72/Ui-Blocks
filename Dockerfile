@@ -1,6 +1,6 @@
 #SETP 1: BUILD THE REACT APP
 # set the base image to create the image for react app
-FROM node:20-alpine as build
+FROM node:20-alpine AS build
 
 # set the working directory to /app 
 WORKDIR /app
@@ -28,12 +28,12 @@ RUN rm -rf *
 
 COPY --from=build /app/dist .
 
-# # Copy SSL certificate and key
-# COPY /ssl/certificate.crt /etc/ssl/certs/certificate.crt
-# COPY /ssl/private.key /etc/ssl/private/private.key
+# Copy SSL certificate and key
+COPY assets/ssl/certificate.crt /etc/ssl/certs/certificate.crt
+COPY assets/ssl/private.key /etc/ssl/private/private.key
 
-# # Copy the NGINX configuration file
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy the NGINX configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

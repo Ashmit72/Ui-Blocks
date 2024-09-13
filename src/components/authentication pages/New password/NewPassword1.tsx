@@ -12,7 +12,7 @@ import { NewPasswordSchema } from "@/schema/newPassword";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
 import { Eye } from "@untitled-ui/icons-react";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const NewPassword1 = () => {

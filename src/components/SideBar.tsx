@@ -24,6 +24,8 @@ import { verifyEmailCodeVariations } from './liveViewer/verifyEmailCode'
 import { forgotPasswordVariations } from './liveViewer/forgotPasswordViewer'
 import { resetEmailSentVariations } from './liveViewer/resetEmailSentViewer'
 import { Switch } from './ui/switch'
+import { newPasswordVariations } from './liveViewer/newPasswordViewer'
+import { passwordChangedVariations } from './liveViewer/passwordChanged'
 
 export type component = {
     name: string,

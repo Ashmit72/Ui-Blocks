@@ -29,6 +29,13 @@ RUN rm -rf *
 
 COPY --from=build /app/dist .
 
+# Copy SSL certificate and key
+COPY /cert/dev_radianos.crt /etc/ssl/certs/certificate.crt
+COPY /cert/dev_radiasos.key /etc/ssl/private/private.key
+
+# Copy the NGINX configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 EXPOSE 443

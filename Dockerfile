@@ -1,4 +1,3 @@
-
 #SETP 1: BUILD THE REACT APP
 # set the base image to create the image for react app
 FROM node:20-alpine as build

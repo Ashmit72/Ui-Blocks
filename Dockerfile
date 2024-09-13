@@ -3,7 +3,7 @@
 # set the base image to create the image for react app
 FROM node:20-alpine as build
 
-# set the working directory to /app
+# set the working directory to /app 
 WORKDIR /app
 
 # copy package.json and package-lock.json to the working directory

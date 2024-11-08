@@ -19,17 +19,23 @@ COPY . .
 # build the react application
 RUN npm run build
 
-#STEP 2:SERVER WITH NGINX
+# Uses the official Nginx 1 Alpine image as the base image
 FROM nginx:1-alpine3.20
 
-# WORKDIR /usr/share/nginx/html
+# Sets the working directory for Nginx to serve files
+WORKDIR /usr/share/nginx/html
 
+# Removes any existing files in the Nginx default directory
 RUN rm -rf *
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy the built React app from the previous stage into the Nginx
+COPY --from=build /app/dist .
 
+# Exposes port 80 for HTTP traffic
 EXPOSE 80
 
+# Exposes port 443 for HTTPS traffic (if SSL is configured)
 EXPOSE 443
 
-ENTRYPOINT [ "nginx","-g","daemon off;" ]
+# Sets the command to run Nginx in the foreground
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]

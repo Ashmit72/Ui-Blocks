@@ -12,6 +12,7 @@ dist
 .github/*
 .vite/*
 Dockerfile
+.dockerignore
 README.Docker.md
 nginx.*
 dist-ssr

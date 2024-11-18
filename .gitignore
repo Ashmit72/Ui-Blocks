@@ -10,8 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 .github/*
+.vite/*
 Dockerfile
-Readme.Docker.md
+README.Docker.md
 nginx.*
 dist-ssr
 *.local
